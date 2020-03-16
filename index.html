@@ -9,6 +9,7 @@
     <meta name="description" content="시큐어도그 홈페이지입니다. 솔루션, 의뢰, 공유, 고객지원 소개">
     <!-- SEO END -->
     <title>시큐어도그</title>
+    <script src="./src/lib/js/jquery-2.1.4.min.js"></script>
     <!-- 
 <link rel="shortcut icon" type="image/x-icon" href="/lib/images/common/logo_32x32.png">
 <link rel="image_src" href="http://www.sk.co.kr/lib/images/common/sk_image.png">
@@ -38,7 +39,7 @@
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff"> -->
     <link rel="stylesheet" href="./src/css/common.css">
-    <link rel="stylesheet" href="./src/scss/common/common.scss">
+    <link rel="stylesheet" href="./src/css/layout.css">
 </head>
 <body>
     <div id="acc-nav">
@@ -48,66 +49,75 @@
     <div id="wrap">
         <!-- header -->
         <header id="header">
-            <h1><a href="/"><span class="blind">시큐어링크</span></a></h1>
+            <div class="inner">
+                <!-- 로고 -->
+                <h1 class="logo"><a href="/"><span class="blind">시큐어링크</span></a></h1>
 
-            <nav id="gnb">
-                <li>
-                    <a href="#">솔루션</a>
-                    <ul class="depth2">
-                        <li>
-                            <a href="#">자사보안</a>
-                            <ul class="depth3">
-                                <li><a href="#">Ransome keeper</a></li>
-                                <li><a href="#">Pharming Keeper</a></li>
-                                <li><a href="#">SPK Solution</a></li>
-                                <li><a href="#">ONE PASS</a></li>
-                                <li><a href="#">One Power</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#">타사보안</a>
-                            <ul>
-                                <li><a href="#">OTP인증</a></li>
-                                <li><a href="#">파일박스</a></li>
-                                <li><a href="#">시큐레터</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#">SI</a>
-                            <ul>
-                                <li><a href="#">검색엔진</a></li>
-                                <li><a href="#">레포팅툴</a></li>
-                                <li><a href="#">조직도 관리</a></li>
-                                <li><a href="#">ctI솔루션</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#">의뢰</a>
-                    <ul>
-                        <li><a href="#">개발자의뢰</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#">공유</a>
-                    <ul>
-                        <li><a href="#">보안뉴스</a></li>
-                        <li><a href="#">OPEN 소스</a></li>
-                        <li><a href="#">자료실</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#">고객지원</a>
-                    <ul>
-                        <li><a href="#">공지사항</a></li>
-                        <li><a href="#">문의하기</a></li>
-                    </ul>
-                </li>
-            </nav>
-            <div class="util">
-                <a href="">login</a>
-                <a href="">회원가입</a>
+                <!-- 모바일메뉴 버튼 -->
+                <a href="#m_layer_menu" id="btn_m_menu" class="btn_m_menu" title="모바일 메뉴열기"></a>
+    
+                <!-- 메뉴 -->
+                <nav id="gnb">
+                    <li>
+                        <a href="#">솔루션</a>
+                        <ul class="depth2">
+                            <li>
+                                <a href="#">자사보안</a>
+                                <ul class="depth3">
+                                    <li><a href="#">Ransome keeper</a></li>
+                                    <li><a href="#">Pharming Keeper</a></li>
+                                    <li><a href="#">SPK Solution</a></li>
+                                    <li><a href="#">ONE PASS</a></li>
+                                    <li><a href="#">One Power</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">타사보안</a>
+                                <ul>
+                                    <li><a href="#">OTP인증</a></li>
+                                    <li><a href="#">파일박스</a></li>
+                                    <li><a href="#">시큐레터</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">SI</a>
+                                <ul>
+                                    <li><a href="#">검색엔진</a></li>
+                                    <li><a href="#">레포팅툴</a></li>
+                                    <li><a href="#">조직도 관리</a></li>
+                                    <li><a href="#">ctI솔루션</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">의뢰</a>
+                        <ul>
+                            <li><a href="#">개발자의뢰</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">공유</a>
+                        <ul>
+                            <li><a href="#">보안뉴스</a></li>
+                            <li><a href="#">OPEN 소스</a></li>
+                            <li><a href="#">자료실</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">고객지원</a>
+                        <ul>
+                            <li><a href="#">공지사항</a></li>
+                            <li><a href="#">문의하기</a></li>
+                        </ul>
+                    </li>
+                </nav>
+
+                <!-- 유틸 -->
+                <div class="util">
+                    <a href="#" class="btn_login">login</a>
+                    <a href="#" class="btn_join">회원가입</a>
+                </div>
             </div>
         </header>
         <!-- //header -->
@@ -163,9 +173,105 @@
 
     </div>
     <!-- 모바일 레이어메뉴 -->
-    <div id="layer_menu">
+    <div id="m_layer_menu">
+        <h1 class="blind">모바일 사이드 메뉴</h1>
+        <div class="layer_bg"></div>
+        <div class="layer_wrap">
+            <!-- 로고 -->
+            <h1 class="logo"><a href="/"><span class="blind">시큐어링크</span></a></h1>
 
+            <!-- 닫기버튼 -->
+            <a href="#btn_m_menu" class="btn_close_m_menu" title="모바일 메뉴 닫기">닫기</a>
+
+            <!-- 유틸 -->
+            <div class="util">
+                <a href="#" class="btn_login">login</a>
+                <a href="#" class="btn_join">회원가입</a>
+            </div>
+
+            <!-- 메뉴 -->
+            <nav id="m_gnb">
+                <li>
+                    <button>솔루션</button>
+                    <ul class="depth2">
+                        <li>
+                            <button>자사보안</button>
+                            <ul class="depth3">
+                                <li><a href="#">Ransome keeper</a></li>
+                                <li><a href="#">Pharming Keeper</a></li>
+                                <li><a href="#">SPK Solution</a></li>
+                                <li><a href="#">ONE PASS</a></li>
+                                <li><a href="#">One Power</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <button>타사보안</button>
+                            <ul>
+                                <li><a href="#">OTP인증</a></li>
+                                <li><a href="#">파일박스</a></li>
+                                <li><a href="#">시큐레터</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <button>SI</button>
+                            <ul>
+                                <li><a href="#">검색엔진</a></li>
+                                <li><a href="#">레포팅툴</a></li>
+                                <li><a href="#">조직도 관리</a></li>
+                                <li><a href="#">ctI솔루션</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <button>의뢰</button>
+                    <ul>
+                        <li><a href="#">개발자의뢰</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <button>공유</button>
+                    <ul>
+                        <li><a href="#">보안뉴스</a></li>
+                        <li><a href="#">OPEN 소스</a></li>
+                        <li><a href="#">자료실</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <button>고객지원</button>
+                    <ul>
+                        <li><a href="#">공지사항</a></li>
+                        <li><a href="#">문의하기</a></li>
+                    </ul>
+                </li>
+            </nav>
+            <!-- //메뉴 -->
+
+        </div>
     </div>
     <!-- // 모바일 레이어메뉴 -->
+
+    <script>
+        $(function(){
+            var m_layer_menu = $('#m_layer_menu');
+
+            // 모바일 메뉴 열기
+            $('#btn_m_menu').on('click', function(){
+                if(m_layer_menu.css('display') === 'block'){
+                    m_layer_menu.removeClass('menuOpen');
+                }else{
+                    m_layer_menu.addClass('menuOpen');
+                }
+            });
+
+            // 모바일 메뉴 닫기
+            $('.btn_close_m_menu').on('click', function(){
+                if(m_layer_menu.css('display') === 'block'){
+                    m_layer_menu.removeClass('menuOpen');
+                }
+            });
+
+        });
+    </script>
 </body>
 </html>

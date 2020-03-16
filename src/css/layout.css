@@ -1,0 +1,43 @@
+#acc-nav { position: relative; width: 100%; z-index: 201; }
+
+#acc-nav > a { position: absolute; top: -4rem; left: 0; right: 0; height: 4rem; padding: 0 20px 0 26px; border-bottom: 1px solid #6d6d6d; font-size: 2rem; line-height: 4rem; background-color: #474747; color: #ffffff; text-align: center; }
+
+#acc-nav > a:active, #acc-nav > a:focus { overflow: hidden; top: 0; text-decoration: none; }
+
+#header { position: fixed; top: 0; right: 0; left: 0; z-index: 99; width: 100%; margin: 0 auto; background-color: #ffffff; }
+
+#header .inner { position: relative; width: 100%; margin: 0 auto; padding: 0 20px; text-align: center; max-width: 100%; min-width: 320px; overflow: hidden; border-bottom: 1px solid #000; }
+
+#header .logo { width: 107px; height: 26px; margin: 12px 0; background: url(../img/common/logo.png) 0 0 no-repeat; background-size: auto 100%; }
+
+#header .btn_m_menu { position: absolute; top: 18px; right: 20px; display: block; width: 16px; height: 14px; background: url(../img/common/btn_m_menu.png) 0 0 no-repeat; background-size: 100% auto; }
+
+#header #gnb { display: none; }
+
+#header .util { display: none; position: absolute; right: 0; }
+
+#m_layer_menu { display: none; position: fixed; top: 0; left: 0; z-index: 999999; width: 100%; height: 100%; overflow: hidden; }
+
+#m_layer_menu .layer_bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: #000; opacity: 0; -webkit-transition: opacity .3s; transition: opacity .3s; content: ''; }
+
+#m_layer_menu .layer_wrap { position: absolute; top: -100px; left: 0; width: 100%; height: 100%; background-color: #345299; overflow: auto; -webkit-transition: top .3s; transition: top .3s; }
+
+#m_layer_menu .logo { width: 107px; height: 26px; margin: 12px 0; background: url(../img/common/logo_white.png) 0 0 no-repeat; background-size: auto 100%; }
+
+#m_layer_menu .util { text-align: right; padding: 0 20px; background-color: #ffffff; }
+
+#m_layer_menu .util > a { position: relative; display: inline-block; height: 60px; line-height: 60px; font-size: 14px; color: #4464af; font-weight: 500; }
+
+#m_layer_menu .util > a:before { display: inline-block; width: 1px; height: 14px; margin: 0 9px -2px 9px; background-color: #4464af; content: ''; }
+
+#m_layer_menu .util > a:first-child:before { display: none; }
+
+#m_layer_menu .btn_close_m_menu { position: absolute; top: 18px; right: 20px; width: 14px; height: 14px; background: url(../img/common/btn_close.png) 0 0 no-repeat; background-size: 100% auto; content: ''; font-size: 0; }
+
+#m_layer_menu #m_gnb { background-color: #4464af; overflow-y: scroll; }
+
+#m_layer_menu.menuOpen { display: block; }
+
+#m_layer_menu.menuOpen .layer_bg { opacity: .7; }
+
+#m_layer_menu.menuOpen .layer_wrap { top: 0; }
