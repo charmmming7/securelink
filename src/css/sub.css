@@ -1,0 +1,187 @@
+@font-face {
+  font-family: 'Noto Sans Korean';
+  font-style: normal;
+  font-weight: 300;
+  src: local("Noto Sans Light"), local("NotoSans-Light"), local("NotoSansKR Light"), url(../fonts/NotoSans-Light.eot?#iefix) format("embedded-opentype"), url(../fonts/NotoSans-Light.woff) format("woff"), url(../fonts/NotoSans-Light.woff2) format("woff2"), url(../fonts/NotoSans-Light.otf) format("opentype");
+}
+
+@font-face {
+  font-family: 'Noto Sans Korean';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Noto Sans Regular"), local("NotoSans-Regular"), local("NotoSansKR Regular"), url(../fonts/NotoSans-Regular.eot?#iefix) format("embedded-opentype"), url(../fonts/NotoSans-Regular.woff) format("woff"), url(../fonts/NotoSans-Regular.woff2) format("woff2"), url(../fonts/NotoSans-Regular.otf) format("opentype");
+}
+
+@font-face {
+  font-family: 'Noto Sans Korean';
+  font-style: normal;
+  font-weight: 500;
+  src: local("Noto Sans Medium"), local("NotoSans-Medium"), local("NotoSansKR Medium"), url(../fonts/NotoSans-Medium.eot?#iefix) format("embedded-opentype"), url(../fonts/NotoSans-Medium.woff) format("woff"), url(../fonts/NotoSans-Medium.woff2) format("woff2"), url(../fonts/NotoSans-Medium.otf) format("opentype");
+}
+
+@font-face {
+  font-family: 'Noto Sans Korean';
+  font-style: normal;
+  font-weight: 700;
+  src: local("Noto Sans Bold"), local("NotoSans-Bold"), local("NotoSansKR Bold"), url(../fonts/NotoSans-Bold.eot?#iefix) format("embedded-opentype"), url(../fonts/NotoSans-Bold.woff) format("woff"), url(../fonts/NotoSans-Bold.woff2) format("woff2"), url(../fonts/NotoSans-Bold.otf) format("opentype");
+}
+
+@font-face {
+  font-family: 'Noto Sans Korean';
+  font-style: normal;
+  font-weight: 900;
+  src: local("Noto Sans Black"), local("NotoSans-Black"), local("NotoSansKR Black"), url(../fonts/NotoSans-Black.eot?#iefix) format("embedded-opentype"), url(../fonts/NotoSans-Black.woff) format("woff"), url(../fonts/NotoSans-Black.woff2) format("woff2"), url(../fonts/NotoSans-Black.otf) format("opentype");
+}
+
+.banner {
+  position: relative;
+  display: table;
+  width: 100%;
+  height: 115px;
+  background: url(../img/page/solution/m_banner.jpg) 50% 50% no-repeat;
+  background-size: cover;
+}
+
+.banner .inner {
+  display: table-cell;
+  width: 100%;
+  padding: 20px;
+  vertical-align: middle;
+  text-align: center;
+  word-wrap: break-word;
+  word-break: keep-all;
+}
+
+.banner h1 {
+  font-weight: 900;
+  font-size: 21px;
+  line-height: 21px;
+  color: #2d5ba8;
+}
+
+.banner p {
+  font-weight: 300;
+  font-size: 7px;
+  margin-top: 5px;
+}
+
+.breadcrumb {
+  text-align: right;
+  padding: 0 20px;
+  border-bottom: 1px solid #ebebeb;
+}
+
+.breadcrumb ul {
+  overflow: hidden;
+}
+
+.breadcrumb li {
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 10px;
+  line-height: 25px;
+  height: 25px;
+}
+
+.breadcrumb li:after {
+  display: inline-block;
+  content: '>';
+  margin-left: 10px;
+}
+
+.breadcrumb li:last-child {
+  margin-right: 0;
+}
+
+.breadcrumb li:last-child:after {
+  display: none;
+}
+
+.solution_lst {
+  padding: 0 20px;
+}
+
+.solution_lst .box {
+  position: relative;
+  overflow: hidden;
+  height: 165px;
+  margin-bottom: 25px;
+}
+
+.solution_lst .box .category {
+  background-color: #f57b05;
+}
+
+.solution_lst .box figure {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 160px;
+  height: 100%;
+  overflow: hidden;
+  vertical-align: middle;
+  z-index: 1;
+}
+
+.solution_lst .box .info {
+  height: 100%;
+  padding-left: 160px;
+  overflow: hidden;
+}
+
+.solution_lst .box .info .inner {
+  padding: 20px 12px 35px;
+}
+
+.solution_lst .box .info .title {
+  display: block;
+  margin-bottom: 12px;
+  font-size: 15px;
+}
+
+.solution_lst .box .info .sub {
+  margin-bottom: 10px;
+  font-size: 9px;
+  line-height: 15px;
+  font-weight: 600;
+}
+
+.solution_lst .box .info .txt {
+  font-size: 8px;
+  line-height: 12px;
+  font-weight: 300;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 3;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+}
+
+.solution_lst .box .info .btn_view {
+  position: absolute;
+  right: 15px;
+  bottom: 15px;
+  width: 50px;
+  height: 15px;
+  padding: 0 14px 0 8px;
+  font-size: 7px;
+  color: #4464af;
+  opacity: .8;
+  text-align: center;
+  border: 1px solid #4464af;
+  background: url(../img/common/ico_m_view.png) 34px 4px no-repeat;
+  background-size: 7px 7px;
+  overflow: hidden;
+  -webkit-border-top-left-radius: 7px;
+  -webkit-border-top-right-radius: 7px;
+  -webkit-border-bottom-left-radius: 7px;
+  -webkit-border-bottom-right-radius: 7px;
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px;
+}
