@@ -157,8 +157,6 @@ body, button, h1, h2, h3, h4, h5, h6, input, select, table, textarea {
   text-align: center;
   max-width: 100%;
   min-width: 320px;
-  overflow: hidden;
-  border-bottom: 1px solid #000;
 }
 
 #header .logo {
@@ -182,12 +180,97 @@ body, button, h1, h2, h3, h4, h5, h6, input, select, table, textarea {
 
 #header #gnb {
   display: none;
+  margin-left: 280px;
+}
+
+#header #gnb .depth1 {
+  position: relative;
+}
+
+#header #gnb .depth1:before {
+  position: absolute;
+  left: 26px;
+  bottom: -33px;
+  width: 553px;
+  height: 1px;
+  background-color: #cfcfcf;
+  content: '';
+}
+
+#header #gnb .depth1 > li {
+  float: left;
+  margin-left: 140px;
+}
+
+#header #gnb .depth1 > li > a {
+  position: relative;
+  font-size: 18px;
+}
+
+#header #gnb .depth1 > li > a:after {
+  position: absolute;
+  left: 50%;
+  bottom: -11px;
+  width: 7px;
+  height: 7px;
+  background-color: #cfcfcf;
+  content: '';
+  -webkit-border-top-left-radius: 50%;
+  -webkit-border-top-right-radius: 50%;
+  -webkit-border-bottom-left-radius: 50%;
+  -webkit-border-bottom-right-radius: 50%;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+}
+
+#header #gnb .depth1 > li:first-child {
+  margin-left: 0;
+}
+
+#header #gnb .depth1 > li.menuOpen .depth2 {
+  display: block;
+}
+
+#header #gnb .depth2 {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 25px 0 35px 0;
+}
+
+#header #gnb .depth3 {
+  display: none;
 }
 
 #header .util {
   display: none;
   position: absolute;
+  top: 27px;
   right: 0;
+}
+
+#header .util > a {
+  display: inline-block;
+  width: 100px;
+  height: 35px;
+  font-size: 14px;
+  line-height: 30px;
+  text-align: center;
+}
+
+#header .util .btn_login {
+  color: #2d5ba8;
+  border: 1px solid #2d5ba8;
+}
+
+#header .util .btn_join {
+  color: #ffffff;
+  background-color: #2d5ba8;
+  border: 1px solid #2d5ba8;
 }
 
 #container {
@@ -571,6 +654,34 @@ body, button, h1, h2, h3, h4, h5, h6, input, select, table, textarea {
   }
   .onlypc {
     display: block;
+  }
+  #header {
+    text-align: left;
+  }
+  #header .inner {
+    padding: 0;
+    max-width: 1200px;
+    border-bottom: none;
+  }
+  #header .btn_m_menu {
+    display: none;
+  }
+  #header .logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 171px;
+    height: 42px;
+  }
+  #header #gnb {
+    display: inline-block;
+    text-align: left;
+  }
+  #header .util {
+    display: block;
+  }
+  #m_layer_menu {
+    display: none;
   }
   .box-wrap .box:hover {
     webkit-box-shadow: 0, 0, 5px, 10px, rgba(177, 177, 177, 0.2);

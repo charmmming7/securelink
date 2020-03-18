@@ -54,8 +54,7 @@ body,button,h1,h2,h3,h4,h5,h6,input,select,table,textarea{font-family:'Noto Sans
 #header{
     position:fixed;top:0;right:0;left:0;z-index:99;width:100%;margin:0 auto;background-color:$white;
     .inner{
-        position:relative;width:100%;margin:0 auto;padding:0 20px;text-align:center;max-width:100%;min-width:320px;overflow:hidden;
-        border-bottom: 1px solid #000;
+        position:relative;width:100%;margin:0 auto;padding:0 20px;text-align:center;max-width:100%;min-width:320px;
     }
     .logo{
         width:107px;height:26px;margin:12px 0;background:url(../img/common/logo.png) 0 0 no-repeat;background-size:auto 100%;
@@ -64,13 +63,42 @@ body,button,h1,h2,h3,h4,h5,h6,input,select,table,textarea{font-family:'Noto Sans
         position:absolute;top:9px;right:10px;display:block;width:36px;height:34px;background:url(../img/common/btn_m_menu.png) 50% 50% no-repeat;background-size:16px 14px;
     }
     #gnb{
-        display: none;
+        display:none;margin-left:280px;
+        .depth1{
+            position:relative;
+            &:before{
+                position:absolute;left:26px;bottom:-33px;width:553px;height:1px;background-color:$gray3;content:'';
+            }
+            > li {
+                float:left;margin-left:140px;
+                > a{
+                    position:relative;font-size:18px;
+                    &:after{
+                        position:absolute;left:50%;bottom:-11px;width:7px;height:7px;background-color:$gray3;content:'';
+                        @include rnded(50%);
+                    }
+                }
+                &:first-child{margin-left:0;}
+                &.menuOpen{
+                    .depth2{
+                        display:block;
+                    }
+                }
+            }
+        }
+        .depth2{
+            display:none;
+            position:absolute;top:0;left:0;right:0;padding:25px 0 35px 0;
+        }
+        .depth3{
+            display:none;
+        }
     }
-
     .util{
-        display:none;position:absolute;right:0;
-        .btn_login{}
-        .btn_join{}
+        display:none;position:absolute;top:27px;right:0;
+        > a {display:inline-block;width:100px;height:35px;font-size:14px;line-height:30px;text-align:center;}
+        .btn_login{color:$darkBlue2;border: 1px solid $darkBlue2;}
+        .btn_join{color:$white;background-color:$darkBlue2;border: 1px solid $darkBlue2;}
     }
 }
 // [E] header
@@ -125,9 +153,6 @@ body,button,h1,h2,h3,h4,h5,h6,input,select,table,textarea{font-family:'Noto Sans
 // [S] m_layer_menu
 #m_layer_menu{
     display:none;position:fixed;top:0;left:0;z-index:999999;width:100%;height:100%;overflow:hidden;background-color:$blue2;
-    // .layer_bg{
-    //     position:absolute;top:0;left:0;width:100%;height:100%;background:#000;opacity:0;transition:opacity .3s;content:'';
-    // }
     .layer_wrap{
         position:absolute;top:-100px;left:0;width:100%;height:100%;overflow:auto;transition:top .3s;
         .top{overflow:hidden;background-color:$blue1;}
@@ -159,7 +184,7 @@ body,button,h1,h2,h3,h4,h5,h6,input,select,table,textarea{font-family:'Noto Sans
         position:absolute;top:9px;right:10px;width:34px;height:34px;background:url(../img/common/btn_close.png) 50% 50% no-repeat;background-size:14px 14px;content:'';font-size:0;
     }
     #m_gnb{
-        background-color:$blue2;overflow-y: scroll;
+        background-color:$blue2;overflow-y:scroll;
         button, a {width:100%;cursor:pointer;text-align:left;}
         .depth1{
             > li{
@@ -232,13 +257,11 @@ body,button,h1,h2,h3,h4,h5,h6,input,select,table,textarea{font-family:'Noto Sans
             }
         }
     }
-
     .contact{
         margin-top:20px;padding:0 20px 0 75px;color:$white;background:url(../img/common/ico_m_call.png) 20px 50% no-repeat;background-size:40px 40px;
         .phone{font-size:20px;}
         .hour{display:block;font-size:12px;}
     }
-
     &.menuOpen{
         display:block;
         .layer_bg{
@@ -254,6 +277,23 @@ body,button,h1,h2,h3,h4,h5,h6,input,select,table,textarea{font-family:'Noto Sans
 @media all and (min-width:1200px) {
     .onlymobile{display:none;}
     .onlypc{display:block;}
+    
+    // header
+    #header{
+        text-align:left;
+        .inner{
+            padding:0;max-width:1200px;border-bottom:none;
+        }
+        .btn_m_menu{display:none;}
+        .logo{
+            position:absolute;top:0;left:0;width:171px;height:42px;
+        }
+        #gnb{display:inline-block;text-align:left;}
+        .util{display:block;}
+    }
+
+    // m_layer_menu
+    #m_layer_menu{display:none;}
 
     .box-wrap{
         .box{
