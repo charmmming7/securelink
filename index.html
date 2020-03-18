@@ -191,59 +191,61 @@
 
             <!-- 메뉴 -->
             <nav id="m_gnb">
-                <li>
-                    <button>솔루션</button>
-                    <ul class="depth2">
-                        <li>
-                            <button>자사보안</button>
-                            <ul class="depth3">
-                                <li><a href="#">Ransome keeper</a></li>
-                                <li><a href="#">Pharming Keeper</a></li>
-                                <li><a href="#">SPK Solution</a></li>
-                                <li><a href="#">ONE PASS</a></li>
-                                <li><a href="#">One Power</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <button>타사보안</button>
-                            <ul>
-                                <li><a href="#">OTP인증</a></li>
-                                <li><a href="#">파일박스</a></li>
-                                <li><a href="#">시큐레터</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <button>SI</button>
-                            <ul>
-                                <li><a href="#">검색엔진</a></li>
-                                <li><a href="#">레포팅툴</a></li>
-                                <li><a href="#">조직도 관리</a></li>
-                                <li><a href="#">ctI솔루션</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <button>의뢰</button>
-                    <ul>
-                        <li><a href="#">개발자의뢰</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <button>공유</button>
-                    <ul>
-                        <li><a href="#">보안뉴스</a></li>
-                        <li><a href="#">OPEN 소스</a></li>
-                        <li><a href="#">자료실</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <button>고객지원</button>
-                    <ul>
-                        <li><a href="#">공지사항</a></li>
-                        <li><a href="#">문의하기</a></li>
-                    </ul>
-                </li>
+                <ul class="depth1">
+                    <li>
+                        <button>솔루션</button>
+                        <ul class="depth2">
+                            <li>
+                                <button>자사보안</button>
+                                <ul class="depth3">
+                                    <li><a href="#">Ransome keeper</a></li>
+                                    <li><a href="#">Pharming Keeper</a></li>
+                                    <li><a href="#">SPK Solution</a></li>
+                                    <li><a href="#">ONE PASS</a></li>
+                                    <li><a href="#">One Power</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <button>타사보안</button>
+                                <ul class="depth3">
+                                    <li><a href="#">OTP인증</a></li>
+                                    <li><a href="#">파일박스</a></li>
+                                    <li><a href="#">시큐레터</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <button>SI</button>
+                                <ul class="depth3">
+                                    <li><a href="#">검색엔진</a></li>
+                                    <li><a href="#">레포팅툴</a></li>
+                                    <li><a href="#">조직도 관리</a></li>
+                                    <li><a href="#">ctI솔루션</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <button>의뢰</button>
+                        <ul class="depth2">
+                            <li><a href="#">개발자의뢰</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <button>공유</button>
+                        <ul class="depth2">
+                            <li><a href="#">보안뉴스</a></li>
+                            <li><a href="#">OPEN 소스</a></li>
+                            <li><a href="#">자료실</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <button>고객지원</button>
+                        <ul class="depth2">
+                            <li><a href="#">공지사항</a></li>
+                            <li><a href="#">문의하기</a></li>
+                        </ul>
+                    </li>
+                </ul>
             </nav>
             <!-- //메뉴 -->
 
@@ -268,6 +270,32 @@
             $('.btn_close_m_menu').on('click', function(){
                 if(m_layer_menu.css('display') === 'block'){
                     m_layer_menu.removeClass('menuOpen');
+                }
+            });
+
+            //모바일 서브메뉴 열기
+            m_layer_menu.find('.depth1 > li').on('click', function(){
+                var $thisLi = $(this);
+
+                if($thisLi.has('ul')){
+                    if($thisLi.find('.depth2').css('display') === 'block'){
+                        $thisLi.find('.depth2').removeClass('menuOpen');
+                    }else{
+                        $thisLi.find('.depth2').removeClass('menuOpen');
+                    }
+                    
+                }
+            });
+
+            m_layer_menu.find('.depth2 > li').on('click', function(){
+                var $thisLi = $(this);
+                if($thisLi.has('ul')){
+                    if($thisLi.find('.depth3').css('display') === 'block'){
+                        $thisLi.find('.depth3').removeClass('menuOpen');
+                    }else{
+                        $thisLi.find('.depth3').removeClass('menuOpen');
+                    }
+                    
                 }
             });
 
