@@ -17,7 +17,7 @@
 <link rel="icon" href="/lib/images/common/logo_192x192.png">
 <link rel="apple-touch-icon-precomposed" href="/lib/images/common/logo_180x180.png">
 <meta name="msapplication-TileImage" content="/lib/images/common/logo_270x270.png">
-<meta name="naver-site-verification" content="c32beaab50ad6e214abfd49b7361bf500adcd76e">
+<meta name="naver-site-verification" content="c32beaab50ad6e214abfd49b7371bf500adcd76e">
 <meta name="robots" content="index,follow">
  -->
 <!--     
@@ -51,7 +51,7 @@
         <header id="header">
             <div class="inner">
                 <!-- 로고 -->
-                <h1 class="logo"><a href="/"><span class="blind">시큐어링크</span></a></h1>
+                <h1 class="logo"><a href="/"><span class="blind">시큐어도그</span></a></h1>
 
                 <!-- 모바일메뉴 버튼 -->
                 <a href="#m_layer_menu" id="btn_m_menu" class="btn_m_menu" title="모바일 메뉴열기"></a>
@@ -122,19 +122,20 @@
         </header>
         <!-- //header -->
 
-        <div id="container">
+        <!-- container -->
+        <main id="container">
             <div id="content">
 
             </div>
-        </div>
+        </main>
+        <!-- // container -->
 
         <!-- footer -->
         <footer id="footer" role="contentinfo">
             <div class="inner">
                 <h2 class="blind">푸터 메뉴</h2>
-
-                <div class="rel_foot">
-                    <ul class="terms_link">
+                <div class="ft_terms">
+                    <ul>
                         <li><a href="#">이용안내</a></li>
                         <li><a href="#">개인정보취급방침</a></li>
                         <li><a href="#">이용약관</a></li>
@@ -143,12 +144,13 @@
 
                 <div class="ft_btm">
                     <div class="ft_policy">
-                        <a class="ft_logo" href="/"><img src="./src/img/common/logo_footer.png" alt="시큐어도그"></a>
+                        <img class="logo onlypc" src="./src/img/common/logo_footer.png" alt="시큐어도그">
+                        <img class="logo onlymobile" src="./src/img/common/logo_m_footer.png" alt="시큐어도그">
                         <ul class="ft_info">
+                            <li class="title onlymobile"><span class="blind">상호</span>(주) SECUDOG</li>
                             <li>
                                 <address class="ft_address">
                                     <h3 class="blind">시큐어도그 사업자 정보</h3>
-                                    <span class="info onlymobile"><span class="tit blind">상호</span>(주) SECUDOG</span>
                                     <span class="info"><span class="tit">주소</span>(06730)서울특별시 서초구 강남대로39길 26-7, 2층</span>
                                     <span class="info"><span class="tit">대표</span>고 준 용</span>
                                     <span class="info"><span class="tit">사업자등록번호</span>655-87-00515</span>
@@ -161,7 +163,7 @@
                     <div class="ft_contact onlypc">
                         <span class="tit">고객센터</span>
                         <a href="tel:070-4470-00261">070-4470-00261</a>
-                        <span class="busi_hour">
+                        <span class="hour">
                             <span class="category">평일</span>09:30 - 17:30<br>
                             <span class="category">점심시간</span>12:30 - 13:30
                         </span>
@@ -175,13 +177,15 @@
     <!-- 모바일 레이어메뉴 -->
     <div id="m_layer_menu">
         <h1 class="blind">모바일 사이드 메뉴</h1>
-        <div class="layer_bg"></div>
+        <!-- <div class="layer_bg"></div> -->
         <div class="layer_wrap">
-            <!-- 로고 -->
-            <h1 class="logo"><a href="/"><span class="blind">시큐어링크</span></a></h1>
-
-            <!-- 닫기버튼 -->
-            <a href="#btn_m_menu" class="btn_close_m_menu" title="모바일 메뉴 닫기">닫기</a>
+            <div class="top">
+                <!-- 로고 -->
+                <h1 class="logo"><a href="/"><span class="blind">시큐어도그</span></a></h1>
+    
+                <!-- 닫기버튼 -->
+                <a href="#btn_m_menu" class="btn_close_m_menu" title="모바일 메뉴 닫기">닫기</a>
+            </div>
 
             <!-- 유틸 -->
             <div class="util">
@@ -249,6 +253,20 @@
             </nav>
             <!-- //메뉴 -->
 
+            <div class="terms_link">
+                <ul>
+                    <li><a href="#">이용안내</a></li>
+                    <li><a href="#">개인정보취급방침</a></li>
+                    <li><a href="#">이용약관</a></li>
+                </ul>
+            </div>
+
+            <div class="contact">
+                <span class="blind">고객센터</span>
+                <a href="tel:070-4470-00261" class="phone">070-4470-00261</a>
+                <span class="hour">상담시간 : 09:00 - 18:00 (평일)</span>
+            </div>
+
         </div>
     </div>
     <!-- // 모바일 레이어메뉴 -->
@@ -274,28 +292,21 @@
             });
 
             //모바일 서브메뉴 열기
-            m_layer_menu.find('.depth1 > li').on('click', function(){
-                var $thisLi = $(this);
-
-                if($thisLi.has('ul')){
-                    if($thisLi.find('.depth2').css('display') === 'block'){
-                        $thisLi.find('.depth2').removeClass('menuOpen');
-                    }else{
-                        $thisLi.find('.depth2').removeClass('menuOpen');
-                    }
-                    
+            m_layer_menu.find('.depth1 > li > button').on('click', function(){
+                var $thisLi = $(this).parent('li');
+                if($thisLi.hasClass('menuOpen')){
+                    $thisLi.removeClass('menuOpen');
+                }else{
+                    $thisLi.addClass('menuOpen');
                 }
             });
 
-            m_layer_menu.find('.depth2 > li').on('click', function(){
-                var $thisLi = $(this);
-                if($thisLi.has('ul')){
-                    if($thisLi.find('.depth3').css('display') === 'block'){
-                        $thisLi.find('.depth3').removeClass('menuOpen');
-                    }else{
-                        $thisLi.find('.depth3').removeClass('menuOpen');
-                    }
-                    
+            m_layer_menu.find('.depth2 > li > button').on('click', function(){
+                var $thisLi = $(this).parent('li');
+                if($thisLi.hasClass('menuOpen')){
+                    $thisLi.removeClass('menuOpen');
+                }else{
+                    $thisLi.addClass('menuOpen');
                 }
             });
 

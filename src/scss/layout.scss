@@ -1,6 +1,43 @@
 @charset "utf-8";
+@import "./_webfont";
 @import "./_variables";
 @import "./_mixin";
+
+body,button,h1,h2,h3,h4,h5,h6,input,select,table,textarea{font-family:'Noto Sans KR'}
+.onlymobile{display:block;}
+.onlypc{display:none;}
+
+// form 요소
+.u_tab{
+    overflow:hidden;width:100%;margin:25px 0;border:1px solid $darkBlue2;border-bottom-width:3px;
+    li{
+        float:left;border-left:1px solid $darkBlue2;text-align:center;
+        a {height:32px;line-height:30px;font-size:12px;}
+        &:first-child{border-left:0;}
+        &.on{
+            background-color:$darkBlue2;color:$white;
+        }
+    }
+    &.tab3 li{
+        width:33%;
+    }
+    &.tab4 li{
+        width:25%;
+    }
+}
+
+.box-wrap{
+    .box{
+        position:relative;border: 1px solid $gray4;
+        .category{
+            position:absolute;top:14px;left:14px;width:24px;height:24px;color:$white;text-align:center;line-height:24px;z-index:2;
+            @include rnded(50%);
+        }
+        .info{
+            background-color:$lightgray;
+        }
+    }
+}
 
 // 접근성 메뉴
 #acc-nav{
@@ -24,7 +61,7 @@
         width:107px;height:26px;margin:12px 0;background:url(../img/common/logo.png) 0 0 no-repeat;background-size:auto 100%;
     }
     .btn_m_menu{
-        position:absolute;top:18px;right:20px;display:block;width:16px;height:14px;background:url(../img/common/btn_m_menu.png) 0 0 no-repeat;background-size:100% auto;
+        position:absolute;top:9px;right:10px;display:block;width:36px;height:34px;background:url(../img/common/btn_m_menu.png) 50% 50% no-repeat;background-size:16px 14px;
     }
     #gnb{
         display: none;
@@ -38,14 +75,62 @@
 }
 // [E] header
 
+// [S] container
+#container{
+    padding-top:51px;
+}
+// [E] container
+
+// [S] footer
+#footer{
+    background-color:$gray6;
+    .inner{
+        .ft_terms{
+            overflow:hidden;padding: 0 20px;text-align:center;border-top: 1px solid $gray2;border-bottom: 1px solid $gray2;
+            li{
+                display:inline-block;margin:0 20px;font-size:12px;line-height:48px;color:$darkgray2;
+            }
+        }
+        .ft_btm{
+            padding: 20px 20px 25px;
+            .logo{
+                width:39.5px;height:28px;background:url(../img/common/logo_m_footer.png) 0 0 no-repeat;background-size:100% auto;
+            }
+            .ft_info{
+                margin-top:5px;
+                .ft_address{
+                    overflow:hidden;font-size:8px;line-height:24px;color:$darkgray2;
+                    .title{
+                        color:$blue2;font-weight:600;
+                    }
+                    .info{float:left;margin-right:20px}
+                    .tit{
+                        position:relative;margin-right:4px;font-weight:600;
+                        &:after{
+                            display:inline-block;margin-left:5px;content:'.';
+                        }
+                    }
+                    .btn_busi_info{
+                        //82 17
+                        background-color:$white;padding:5px 14px;border: 1px solid #959595;
+                    }
+                }
+                .copyright{color:$darkgray2;font-size:7px;}
+            }
+        }
+    }
+}
+// [E] footer
+
 // [S] m_layer_menu
 #m_layer_menu{
-    display:none;position:fixed;top:0;left:0;z-index:999999;width:100%;height:100%;overflow:hidden;
-    .layer_bg{
-        position:absolute;top:0;left:0;width:100%;height:100%;background:#000;opacity:0;transition:opacity .3s;content:'';
-    }
+    display:none;position:fixed;top:0;left:0;z-index:999999;width:100%;height:100%;overflow:hidden;background-color:$blue2;
+    // .layer_bg{
+    //     position:absolute;top:0;left:0;width:100%;height:100%;background:#000;opacity:0;transition:opacity .3s;content:'';
+    // }
     .layer_wrap{
-        position:absolute;top:-100px;left:0;width:100%;height:100%;background-color:$blue1;overflow:auto;transition:top .3s;
+        position:absolute;top:-100px;left:0;width:100%;height:100%;overflow:auto;transition:top .3s;
+        .top{overflow:hidden;background-color:$blue1;}
     }
     .logo{
         width:107px;height:26px;margin:12px 0;background:url(../img/common/logo_white.png) 0 0 no-repeat;background-size:auto 100%;
@@ -71,17 +156,17 @@
         }
     }
     .btn_close_m_menu{
-        position:absolute;top:18px;right:20px;width:14px;height:14px;background:url(../img/common/btn_close.png) 0 0 no-repeat;background-size:100% auto;content:'';font-size:0;
+        position:absolute;top:9px;right:10px;width:34px;height:34px;background:url(../img/common/btn_close.png) 50% 50% no-repeat;background-size:14px 14px;content:'';font-size:0;
     }
     #m_gnb{
         background-color:$blue2;overflow-y: scroll;
-        button, a {cursor:pointer;}
-        > ul{
+        button, a {width:100%;cursor:pointer;text-align:left;}
+        .depth1{
             > li{
                 line-height:50px;
                 > button,
                 > a {
-                    position:relative;width:100%;height:50px;line-height:50px;padding-left:45px;font-size:15px;text-align:left;color:$white;border-bottom: 1px solid rgba(255,255,255,0.3);
+                    position:relative;height:50px;line-height:50px;padding-left:45px;font-size:15px;text-align:left;color:$white;border-bottom: 1px solid rgba(255,255,255,0.3);
                     &:before{
                         position:absolute;top:50%;left:20px;width:12px;height:5px;margin-top:-2px;background-color:$white;opacity:0.5;content:'';
                         @include rnded(5px);
@@ -90,7 +175,11 @@
                 &:last-child{
                     > button,
                     > a {border-bottom:none;}
-
+                }
+                &.menuOpen{
+                    > .depth2{
+                        display:block !important;
+                    }        
                 }
             }
         }
@@ -104,6 +193,11 @@
                     &:before{
                         display:inline-block;margin-right:7px;content:'-';
                     }
+                }
+                &.menuOpen{
+                    .depth3{
+                        display:block;
+                    }        
                 }
             }
         }
@@ -122,6 +216,29 @@
             }
         }
     }
+    .terms_link{
+        overflow:hidden;margin-top:73px;padding:0 20px;
+        &:before{
+            display:inline-block;width:20px;height:2px;margin-bottom:25px;background-color:$white;content:'';
+        }
+        li{
+            float:left;position:relative;font-size:12px;color:$white;margin-left:16px;
+            &:before{
+                display:inline-block;content:'|';margin-right:16px;
+            }
+            &:first-child{
+                margin-left:0;
+                &:before{display:none;}
+            }
+        }
+    }
+
+    .contact{
+        margin-top:20px;padding:0 20px 0 75px;color:$white;background:url(../img/common/ico_m_call.png) 20px 50% no-repeat;background-size:40px 40px;
+        .phone{font-size:20px;}
+        .hour{display:block;font-size:12px;}
+    }
+
     &.menuOpen{
         display:block;
         .layer_bg{
@@ -133,3 +250,16 @@
     }
 }
 // [E] m_layer_menu
+
+@media all and (min-width:1200px) {
+    .onlymobile{display:none;}
+    .onlypc{display:block;}
+
+    .box-wrap{
+        .box{
+            &:hover{
+                @include boxShadow(0, 0, 5px, 10px, rgba(177, 177, 177, 0.2));
+            }
+        }
+    }
+}

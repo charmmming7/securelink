@@ -11,6 +11,12 @@
 	border-bottom-right-radius:$rndValue;
 }
 
+@mixin boxShadow ($x, $y, $blur, $spread, $color) {
+	webkit-box-shadow: $x, $y, $blur, $spread, $color;
+	-moz-box-shadow: $x, $y, $blur, $spread, $color;
+	box-shadow: $x, $y, $blur, $spread, $color;
+}
+
 @mixin midCenterTransform ($x, $y) {
 	-webkit-transform:translate($x, $y);
 	transform:translate($x, $y);
