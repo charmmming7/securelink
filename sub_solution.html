@@ -9,38 +9,11 @@
     <meta name="description" content="시큐어도그 홈페이지입니다. 솔루션, 의뢰, 공유, 고객지원 소개">
     <!-- SEO END -->
     <title>시큐어도그</title>
-    <script src="./src/lib/js/jquery-2.1.4.min.js"></script>
-    <!-- 
-<link rel="shortcut icon" type="image/x-icon" href="/lib/images/common/logo_32x32.png">
-<link rel="image_src" href="http://www.sk.co.kr/lib/images/common/sk_image.png">
-<link rel="canonical" href="http://www.sk.co.kr">
-<link rel="icon" href="/lib/images/common/logo_192x192.png">
-<link rel="apple-touch-icon-precomposed" href="/lib/images/common/logo_180x180.png">
-<meta name="msapplication-TileImage" content="/lib/images/common/logo_270x270.png">
-<meta name="naver-site-verification" content="c32beaab50ad6e214abfd49b7371bf500adcd76e">
-<meta name="robots" content="index,follow">
- -->
-<!--     
-    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/manifest.json">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff"> -->
     <link rel="stylesheet" href="./src/css/reset.css">
     <link rel="stylesheet" href="./src/css/layout.css">
     <link rel="stylesheet" href="./src/css/sub.css">
+    <script src="./src/lib/js/jquery-2.1.4.min.js"></script>
+    <script src="./src/js/common_ui.js"></script>
 </head>
 <body>
     <div id="acc-nav">
@@ -361,66 +334,5 @@
         </div>
     </div>
     <!-- // 모바일 레이어메뉴 -->
-
-    <script>
-        $(function(){
-            var header = $('#header');
-            var m_layer_menu = $('#m_layer_menu');
-            var pc_gnb = $('#gnb');
-
-            // 모바일 메뉴 열기
-            $('#btn_m_menu').on('click', function(){
-                if(m_layer_menu.css('display') === 'block'){
-                    m_layer_menu.removeClass('menuOpen');
-                }else{
-                    m_layer_menu.addClass('menuOpen');
-                }
-            });
-
-            // 모바일 메뉴 닫기
-            $('.btn_close_m_menu').on('click', function(){
-                if(m_layer_menu.css('display') === 'block'){
-                    m_layer_menu.removeClass('menuOpen');
-                }
-            });
-
-            //모바일 서브메뉴 depth1 열기
-            m_layer_menu.find('.depth1 > li > button').on('click', function(){
-                var $thisLi = $(this).parent('li');
-                if($thisLi.hasClass('menuOpen')){
-                    $thisLi.removeClass('menuOpen');
-                }else{
-                    $thisLi.addClass('menuOpen');
-                }
-            });
-
-            //모바일 서브메뉴 depth2 열기
-            m_layer_menu.find('.depth2 > li > button').on('click', function(){
-                var $thisLi = $(this).parent('li');
-                if($thisLi.hasClass('menuOpen')){
-                    $thisLi.removeClass('menuOpen');
-                }else{
-                    $thisLi.addClass('menuOpen');
-                }
-            });
-
-            // pc 메뉴 열기
-            pc_gnb.find('.depth1 > li').on('mouseover', function(){
-                var $thisLi = $(this);
-                // $thisLi.addClass('menuOpen').siblings().removeClass('menuOpen');
-                header.find('.gnb_bg').show();
-            });
-
-            // pc 메뉴 닫기
-            pc_gnb.find('.depth1 > li').on('mouseout', function(){
-                var $thisLi = $(this);
-                // $thisLi.removeClass('menuOpen');
-                header.find('.gnb_bg').hide();
-            });
-
-            
-
-        });
-    </script>
 </body>
 </html>
