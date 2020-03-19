@@ -1,5 +1,8 @@
 @charset "utf-8";
+
+
 *{margin:0;padding:0;box-sizing:border-box;}
+
 /* mobile reset */
 html{font-size:10px;}
 html,body{overflow:hidden;width:100%;height:100%}
@@ -22,10 +25,10 @@ input,label{vertical-align:middle}
 button{background:0 0;color:inherit}
 textarea{appearance:none;-webkit-appearance:none;-webkit-border-radius:0;border-radius:0;-webkit-box-shadow:none;box-shadow:none}
 h1,h2,h3,h4,h5,h6{font-size:100%}
-body,button,h1,h2,h3,h4,h5,h6,input,select,table,textarea{font-family:-apple-system-font,'Apple SD Gothic Neo',Helvetica,sans-serif;letter-spacing:-.05rem}
+/* body,button,h1,h2,h3,h4,h5,h6,input,select,table,textarea{font-family:-apple-system-font,'Apple SD Gothic Neo',Helvetica,sans-serif;letter-spacing:-.05rem} */
 .blind{overflow:hidden;position:absolute;clip:rect(0 0 0 0);width:1px;height:1px;line-height:0;margin:-1px}
 .btn{display:inline-block;overflow:hidden;width:100%;height:4.3rem;border:1px solid #d9d9d9;background:#fff;text-align:center;font-size:1.8rem;cursor:pointer;-webkit-box-sizing:border-box;box-sizing:border-box;-webkit-border-top-left-radius:2px;-webkit-border-top-right-radius:2px;-webkit-border-bottom-left-radius:2px;-webkit-border-bottom-right-radius:2px;border-top-left-radius:2px;border-top-right-radius:2px;border-bottom-left-radius:2px;border-bottom-right-radius:2px}
-
+button:hover,a:hover{cursor:pointer;}
 /* 폼요소 */
 .form_item{display:block;position:relative;border:1px solid #e6e6e6}
 .form_item .lbl{position:absolute;top:0.9rem;left:1rem;z-index:10;font-size:1.4rem;line-height:1.9rem;color:#959595}
@@ -33,10 +36,10 @@ body,button,h1,h2,h3,h4,h5,h6,input,select,table,textarea{font-family:-apple-sys
 .form_item .inp_txtarea{resize:none}
 .form_item .inp_select{padding:0 3.6rem 0 1rem;background:url(../img/arrow_down.png) 100% 50% no-repeat #fff;background-size:27px auto}
 
-@media all and (min-width:768px) {
+/* @media all and (min-width:768px) {
     html{font-size:12px;}
     #container{width:80%;margin:0 auto}
-}
+} */
 
 @media all and (min-width:1200px) {
     /* pc reset */
@@ -47,7 +50,7 @@ body,button,h1,h2,h3,h4,h5,h6,input,select,table,textarea{font-family:-apple-sys
     li,ol,ul{list-style:none}
     address,em{font-style:normal}
     a{color:inherit;text-decoration:none}
-    a:active,a:focus,a:hover{text-decoration:underline}
+    /* a:active,a:focus,a:hover{text-decoration:underline} */
     button{border:0;background:0 0;cursor:pointer}
     table{border-collapse:collapse;border-spacing:0}
     input,select{-webkit-appearance:none;-moz-appearance:none;-o-appearance:none;appearance:none;-webkit-border-radius:0;-moz-border-radius:0;-o-border-radius:0;border-radius:0;-webkit-box-shadow:none;-moz-box-shadow:none;-o-box-shadow:none}
@@ -56,7 +59,6 @@ body,button,h1,h2,h3,h4,h5,h6,input,select,table,textarea{font-family:-apple-sys
     input[type=search]::-ms-clear,input[type=search]::-ms-reveal,input[type=text]::-ms-clear,input[type=text]::-ms-reveal{display:none;width:0;height:0}
     input[type=search]::-webkit-search-cancel-button{-webkit-appearance:none}
     .blind,legend{visibility:hidden;overflow:hidden;position:absolute;top:0;left:0;width:1px;height:1px;font-size:0;line-height:0}
-    
     .btn{display:inline-block;overflow:hidden;width:100%;height:43px;border:1px solid #d9d9d9;background:#fff;text-align:center;font-size:18px;cursor:pointer;-webkit-box-sizing:border-box;box-sizing:border-box;-webkit-border-top-left-radius:2px;-webkit-border-top-right-radius:2px;-webkit-border-bottom-left-radius:2px;-webkit-border-bottom-right-radius:2px;border-top-left-radius:2px;border-top-right-radius:2px;border-bottom-left-radius:2px;border-bottom-right-radius:2px}
     
     /* 폼요소 */

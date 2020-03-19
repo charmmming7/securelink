@@ -9,7 +9,7 @@
     .inner{
         display:table-cell;width:100%;padding:20px;vertical-align:middle;text-align:center;word-wrap: break-word;word-break: keep-all;
     }
-    h1{font-weight:900;font-size:21px;line-height:21px;color:$darkBlue2;}
+    h1{font-weight:700;font-size:21px;line-height:21px;color:$darkBlue3;}
     p{font-weight:300;font-size:7px;margin-top:5px;}
 }
 .breadcrumb{
@@ -32,29 +32,31 @@
     padding:0 20px;
     .box{
         position:relative;overflow:hidden;height:165px;margin-bottom:25px;
-        .category{background-color:$orange;}
+        .category{position:absolute;left:15px;top:15px;display:inline-block;background-color:$orange;z-index:2;}
+        .btn_view{
+            position:absolute;right:15px;bottom:15px;display:inline-block;width:50px;height:15px;line-height:13px;padding:0 14px 0 8px;font-size:7px;color:$blue2;opacity:.8;text-align:center;                
+            border: 1px solid $blue2;background:url(../img/common/ico_m_view.png) 34px 4px no-repeat;background-size:7px 7px;overflow:hidden;z-index:2;
+            @include rnded(7px);
+        }
         figure{
             position:absolute;top:0;left:0;bottom:0;width:160px;height:100%;overflow:hidden;vertical-align:middle;z-index:1;
         }
         .info{
-            height:100%;padding-left:160px;overflow:hidden;
+            height:100%;padding-left:160px;
             .inner{
                 padding:20px 12px 35px;
             }
             .title{
                 display:block;margin-bottom:12px;font-size:15px;
+                @include ellipsis;
             }
             .sub{
-                margin-bottom:10px;font-size:9px;line-height:15px;font-weight:600;
+                margin-bottom:10px;font-size:9px;line-height:15px;font-weight:500;
+                @include ellipsis;
             }
             .txt{
                 font-size:8px;line-height:12px;font-weight:300;
                 @include clampNum(3);
-            }
-            .btn_view{
-                position:absolute;right:15px;bottom:15px;width:50px;height:15px;padding:0 14px 0 8px;font-size:7px;color:$blue2;opacity:.8;text-align:center;                
-                border: 1px solid $blue2;background:url(../img/common/ico_m_view.png) 34px 4px no-repeat;background-size:7px 7px;overflow:hidden;
-                @include rnded(7px);
             }
         }
     }
@@ -64,6 +66,53 @@
 // [E] container
 
 
-@media all and (min-width:768px) {
+@media all and (min-width:1200px) {
+    .banner{
+        height:200px;background:url(../img/page/solution/banner.jpg) 50% 50% no-repeat;background-size:cover;
+        .inner{padding:20px;}
+        h1{
+            position:relative;font-size:40px;line-height:40px;margin-top:35px;
+            &:after{
+                position:absolute;top:-15px;left:50%;width:40px;height:5px;margin-left:-20px;background-color:$darkBlue3;content:'';
+            }
+        }
+        p{font-size:16px;margin-top:6px;}
+    }
+    .breadcrumb{
+        padding:0;
+        ul{max-width:1200px;margin:0 auto;}
+        li{
+            margin-right:10px;font-size:14px;line-height:40px;height:40px;
+            &:after{margin-left:10px;}
+        }
+    }
 
+    .solution_lst{
+        padding:0;overflow:hidden;padding-top:20px;
+        .box{
+            float:left;width:580px;height:240px;margin-bottom:50px;border:1px solid $gray4;
+            &:nth-child(odd){margin-right:20px;}
+            &:nth-child(even){margin-left:20px;}
+            .category{position:unset;margin-right:10px;}
+            .btn_view{position:unset;width:25px;height:25px;padding:0;font-size:0;opacity:1;border:none;background:url(../img/common/ico_view.png) 50% 50% no-repeat;background-size:25px 25px;
+                @include rnded(0);
+            }
+            figure{
+                position:absolute;top:30px;left:30px;bottom:unset;width:180px;height:180px;border:1px solid $gray4;
+            }
+            .info{
+                height:240px;padding-left:210px;background-color:$white;
+                .inner{padding:29px;}
+                .title{
+                    margin-top:5px;margin-bottom:9px;font-size:24px;line-height:30px;
+                }
+                .sub{
+                    margin-bottom:7px;font-size:18px;line-height:30px;
+                }
+                .txt{
+                    font-size:15px;line-height:18px;
+                }
+            }
+        }
+    }
 }

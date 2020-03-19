@@ -11,10 +11,16 @@
 	border-bottom-right-radius:$rndValue;
 }
 
-@mixin boxShadow ($x, $y, $blur, $spread, $color) {
-	webkit-box-shadow: $x, $y, $blur, $spread, $color;
-	-moz-box-shadow: $x, $y, $blur, $spread, $color;
-	box-shadow: $x, $y, $blur, $spread, $color;
+@mixin boxShadow ($x, $y, $blur, $spread, $color, $inset: false) {
+	@if $inset {
+		webkit-box-shadow: $inset $x $y $blur $spread $color;
+		-moz-box-shadow: $inset $x $y $blur $spread $color;
+		box-shadow: $inset $x $y $blur $spread $color;
+	} @else {
+		webkit-box-shadow: $x $y $blur $spread $color;
+		-moz-box-shadow: $x $y $blur $spread $color;
+		box-shadow: $x $y $blur $spread $color;
+	}
 }
 
 @mixin midCenterTransform ($x, $y) {

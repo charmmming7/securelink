@@ -38,7 +38,7 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff"> -->
-    <link rel="stylesheet" href="./src/css/common.css">
+    <link rel="stylesheet" href="./src/css/reset.css">
     <link rel="stylesheet" href="./src/css/layout.css">
     <link rel="stylesheet" href="./src/css/sub.css">
 </head>
@@ -50,6 +50,7 @@
     <main id="wrap">
         <!-- header -->
         <header id="header">
+            <div class="gnb_bg"></div>
             <div class="inner">
                 <!-- 로고 -->
                 <h1 class="logo"><a href="/"><span class="blind">시큐어도그</span></a></h1>
@@ -61,7 +62,7 @@
                 <nav id="gnb">
                     <ul class="depth1">
                         <li>
-                            <a href="#">솔루션</a>
+                            <a href="sub_solution.html">솔루션</a>
                             <ul class="depth2">
                                 <li>
                                     <a href="#">자사보안</a>
@@ -131,8 +132,8 @@
                 <!-- banner -->
                 <div class="banner">
                     <div class="inner">
-                        <h1>SOLUTION</h1>
-                        <p>secudog의 솔루션 제품을 소개합니다. 클릭하시면 상세페이지로 이동합니다.</p>
+                        <h1>Solution</h1>
+                        <p class="onlymobile">secudog의 솔루션 제품을 소개합니다. 클릭하시면 상세페이지로 이동합니다.</p>
                     </div>
                 </div>
 
@@ -158,56 +159,56 @@
                         </div>
                         <!-- tab content -->
                         <div class="tab_body">
-                            <div class="solution_lst box-wrap">
+                            <div class="solution_lst box_wrap">
                                 <!-- box 반복 시작 -->
                                 <div class="box">
-                                    <div class="category"><span class="blind">카테고리</span>보안</div>
                                     <figure><img src="./src/img/page/prd/prd_ransome_keeper.jpg" alt="Ransome Keeper"></figure>
                                     <div class="info">
                                         <div class="inner">
+                                            <div class="category"><span class="blind">카테고리</span>보안</div>
+                                            <a href="" class="btn_view" title="자세히 보기"><span class="blind">자세히보기</span>VIEW</a>
                                             <strong class="title">Ransome Keeper</strong>
                                             <p class="sub">랜섬웨어로 인한 피해 예방 솔루션</p>
                                             <p class="txt">랜섬웨어로 인한 피해 예방 솔루션<br>랜섬웨어로 인한 피해 예방 솔루션</p>
-                                            <a href="" class="btn_view"><span class="blind">자세히보기</span>VIEW</a>
                                         </div>
                                     </div>
                                 </div>
                                 <!-- // box -->
                                 <div class="box">
-                                    <div class="category"><span class="blind">카테고리</span>보안</div>
                                     <figure><img src="./src/img/page/prd/prd_spk_solution.jpg" alt="Pharming Keeper"></figure>
                                     <div class="info">
                                         <div class="inner">
+                                            <div class="category"><span class="blind">카테고리</span>보안</div>
+                                            <a href="" class="btn_view" title="자세히 보기"><span class="blind">자세히보기</span>VIEW</a>
                                             <strong class="title">Pharming Keeper</strong>
                                             <p class="sub">개인정보 및 문서 유출방지를 위한 통합보안 솔루션</p>
                                             <p class="txt">개인정보 및 문서 유출방지를 위한 통합보안 솔루션<br>개인정보 및 문서 유출방지를 위한 통합보안 솔루션</p>
-                                            <a href="" class="btn_view"><span class="blind">자세히보기</span>VIEW</a>
                                         </div>
                                     </div>
                                 </div>
                                 <!-- // box -->
                                 <div class="box">
-                                    <div class="category"><span class="blind">카테고리</span>보안</div>
                                     <figure><img src="./src/img/page/prd/prd_one_pass.jpg" alt="One Power"></figure>
                                     <div class="info">
                                         <div class="inner">
+                                            <div class="category"><span class="blind">카테고리</span>보안</div>
+                                            <a href="" class="btn_view" title="자세히 보기"><span class="blind">자세히보기</span>VIEW</a>
                                             <strong class="title">One Power</strong>
                                             <p class="sub">작업능률 향상 솔루션</p>
                                             <p class="txt">PC의 전원 및 근무시간관리를 통한 작업능률 향상 솔루션 입니다.</p>
-                                            <a href="" class="btn_view"><span class="blind">자세히보기</span>VIEW</a>
                                         </div>
                                     </div>
                                 </div>
                                 <!-- // box -->
                                 <div class="box">
-                                    <div class="category"><span class="blind">카테고리</span>보안</div>
                                     <figure><img src="./src/img/page/prd/prd_pharming_keeper.jpg" alt="Pharming Keeper"></figure>
                                     <div class="info">
                                         <div class="inner">
-                                            <strong class="title">Pharming Keeper</strong>
-                                            <p class="sub">인터넷 뱅킹을 실시간 보호</p>
+                                            <div class="category"><span class="blind">카테고리</span>보안</div>
+                                            <a href="" class="btn_view" title="자세히 보기"><span class="blind">자세히보기</span>VIEW</a>                                    
+                                            <strong class="title">Pharming Keeper Pharming Keeper</strong>
+                                            <p class="sub">인터넷 뱅킹을 실시간 보호 인터넷 뱅킹을 실시간 보호</p>
                                             <p class="txt">인터넷 뱅킹 환경에서 발생 할 수 있는 다양한 변종 악성코드의 파밍 공격으로부터 인터넷 뱅킹을 실시간 보호합니다. 인터넷 뱅킹 환경에서 발생 할 수 있는 다양한 변종 악성코드의 파밍 공격으로부터 인터넷 뱅킹을 실시간 보호합니다.</p>
-                                            <a href="" class="btn_view"><span class="blind">자세히보기</span>VIEW</a>
                                         </div>
                                     </div>
                                 </div>
@@ -234,9 +235,8 @@
                 </div>
 
                 <div class="ft_btm">
+                    <div class="logo"><span class="blind">시큐어도그</span></div>
                     <div class="ft_policy">
-                        <img class="logo onlypc" src="./src/img/common/logo_footer.png" alt="시큐어도그">
-                        <img class="logo onlymobile" src="./src/img/common/logo_m_footer.png" alt="시큐어도그">
                         <ul class="ft_info">
                             <li class="title onlymobile"><span class="blind">상호</span>(주) SECUDOG</li>
                             <li>
@@ -253,7 +253,7 @@
                     </div>
                     <div class="ft_contact onlypc">
                         <span class="tit">고객센터</span>
-                        <a href="tel:070-4470-00261">070-4470-00261</a>
+                        <a class="phone" href="tel:070-4470-00261">070-4470-00261</a>
                         <span class="hour">
                             <span class="category">평일</span>09:30 - 17:30<br>
                             <span class="category">점심시간</span>12:30 - 13:30
@@ -364,6 +364,7 @@
 
     <script>
         $(function(){
+            var header = $('#header');
             var m_layer_menu = $('#m_layer_menu');
             var pc_gnb = $('#gnb');
 
@@ -383,7 +384,7 @@
                 }
             });
 
-            //모바일 서브메뉴 열기
+            //모바일 서브메뉴 depth1 열기
             m_layer_menu.find('.depth1 > li > button').on('click', function(){
                 var $thisLi = $(this).parent('li');
                 if($thisLi.hasClass('menuOpen')){
@@ -393,6 +394,7 @@
                 }
             });
 
+            //모바일 서브메뉴 depth2 열기
             m_layer_menu.find('.depth2 > li > button').on('click', function(){
                 var $thisLi = $(this).parent('li');
                 if($thisLi.hasClass('menuOpen')){
@@ -405,13 +407,18 @@
             // pc 메뉴 열기
             pc_gnb.find('.depth1 > li').on('mouseover', function(){
                 var $thisLi = $(this);
-                $thisLi.addClass('menuOpen').siblings().removeClass('menuOpen');
+                // $thisLi.addClass('menuOpen').siblings().removeClass('menuOpen');
+                header.find('.gnb_bg').show();
             });
 
-            // pc_gnb.find('.depth1 > li').on('mouseout', function(){
-            //     var $thisLi = $(this);
-            //     $thisLi.removeClass('menuOpen');
-            // });
+            // pc 메뉴 닫기
+            pc_gnb.find('.depth1 > li').on('mouseout', function(){
+                var $thisLi = $(this);
+                // $thisLi.removeClass('menuOpen');
+                header.find('.gnb_bg').hide();
+            });
+
+            
 
         });
     </script>
