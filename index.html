@@ -20,16 +20,17 @@
         <a href="#content">본문 바로가기</a>
     </div>
     <div id="wrap">
+        
         <!-- header -->
         <header id="header">
             <div class="gnb_bg"></div>
             <div class="inner">
                 <!-- 로고 -->
                 <h1 class="logo"><a href="/"><span class="blind">시큐어도그</span></a></h1>
-
+        
                 <!-- 모바일메뉴 버튼 -->
                 <a href="#m_layer_menu" id="btn_m_menu" class="btn_m_menu" title="모바일 메뉴열기"></a>
-    
+        
                 <!-- 메뉴 -->
                 <nav id="gnb">
                     <ul class="depth1">
@@ -88,7 +89,7 @@
                         </li>
                     </ul>
                 </nav>
-
+        
                 <!-- 유틸 -->
                 <div class="util">
                     <a href="#" class="btn_login">login</a>
@@ -117,7 +118,7 @@
                         <li><a href="#">이용약관</a></li>
                     </ul>
                 </div>
-
+        
                 <div class="ft_btm">
                     <div class="logo"><span class="blind">시큐어도그</span></div>
                     <div class="ft_policy">
@@ -152,7 +153,6 @@
     <!-- 모바일 레이어메뉴 -->
     <div id="m_layer_menu">
         <h1 class="blind">모바일 사이드 메뉴</h1>
-        <!-- <div class="layer_bg"></div> -->
         <div class="layer_wrap">
             <div class="top">
                 <!-- 로고 -->
@@ -161,13 +161,13 @@
                 <!-- 닫기버튼 -->
                 <a href="#btn_m_menu" class="btn_close_m_menu" title="모바일 메뉴 닫기">닫기</a>
             </div>
-
+    
             <!-- 유틸 -->
             <div class="util">
                 <a href="#" class="btn_login">login</a>
                 <a href="./join.html" class="btn_join">회원가입</a>
             </div>
-
+    
             <!-- 메뉴 -->
             <nav id="m_gnb">
                 <ul class="depth1">
@@ -227,7 +227,7 @@
                 </ul>
             </nav>
             <!-- //메뉴 -->
-
+    
             <div class="terms_link">
                 <ul>
                     <li><a href="#">이용안내</a></li>
@@ -235,57 +235,15 @@
                     <li><a href="#">이용약관</a></li>
                 </ul>
             </div>
-
+    
             <div class="contact">
                 <span class="blind">고객센터</span>
                 <a href="tel:070-4470-00261" class="phone">070-4470-00261</a>
                 <span class="hour">상담시간 : 09:00 - 18:00 (평일)</span>
             </div>
-
+    
         </div>
     </div>
     <!-- // 모바일 레이어메뉴 -->
-
-    <script>
-        $(function(){
-            var m_layer_menu = $('#m_layer_menu');
-
-            // 모바일 메뉴 열기
-            $('#btn_m_menu').on('click', function(){
-                if(m_layer_menu.css('display') === 'block'){
-                    m_layer_menu.removeClass('menuOpen');
-                }else{
-                    m_layer_menu.addClass('menuOpen');
-                }
-            });
-
-            // 모바일 메뉴 닫기
-            $('.btn_close_m_menu').on('click', function(){
-                if(m_layer_menu.css('display') === 'block'){
-                    m_layer_menu.removeClass('menuOpen');
-                }
-            });
-
-            //모바일 서브메뉴 열기
-            m_layer_menu.find('.depth1 > li > button').on('click', function(){
-                var $thisLi = $(this).parent('li');
-                if($thisLi.hasClass('menuOpen')){
-                    $thisLi.removeClass('menuOpen');
-                }else{
-                    $thisLi.addClass('menuOpen');
-                }
-            });
-
-            m_layer_menu.find('.depth2 > li > button').on('click', function(){
-                var $thisLi = $(this).parent('li');
-                if($thisLi.hasClass('menuOpen')){
-                    $thisLi.removeClass('menuOpen');
-                }else{
-                    $thisLi.addClass('menuOpen');
-                }
-            });
-
-        });
-    </script>
 </body>
 </html>
