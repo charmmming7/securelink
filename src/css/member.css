@@ -1,71 +1,387 @@
-@font-face { font-family: 'Noto Sans KR'; font-style: normal; font-weight: 300; src: url(../fonts/NotoSans-Light.eot); src: local("Noto Sans Light"), local("NotoSans-Light"), local("NotoSansKR Light"), local("Noto Sans KR Light"), local("NotoSans Korean Light"), local("Noto Sans Korean Light"), url(../fonts/NotoSans-Light.eot?#iefix) format("embedded-opentype"), url(../fonts/NotoSans-Light.woff) format("woff"), url(../fonts/NotoSans-Light.woff2) format("woff2"), url(../fonts/NotoSans-Light.otf) format("opentype"); }
+@font-face {
+  font-family: 'Noto Sans KR';
+  font-style: normal;
+  font-weight: 300;
+  src: url(../fonts/NotoSans-Light.eot);
+  src: local("Noto Sans Light"), local("NotoSans-Light"), local("NotoSansKR Light"), local("Noto Sans KR Light"), local("NotoSans Korean Light"), local("Noto Sans Korean Light"), url(../fonts/NotoSans-Light.eot?#iefix) format("embedded-opentype"), url(../fonts/NotoSans-Light.woff) format("woff"), url(../fonts/NotoSans-Light.woff2) format("woff2"), url(../fonts/NotoSans-Light.otf) format("opentype");
+}
 
-@font-face { font-family: 'Noto Sans KR'; font-style: normal; font-weight: 400; src: url(../fonts/NotoSans-Regular.eot); src: local("Noto Sans Regular"), local("NotoSans-Regular"), local("NotoSansKR Regular"), local("Noto Sans KR Regular"), local("NotoSans Korean Regular"), local("Noto Sans Korean Regular"), url(../fonts/NotoSans-Regular.eot?#iefix) format("embedded-opentype"), url(../fonts/NotoSans-Regular.woff) format("woff"), url(../fonts/NotoSans-Regular.woff2) format("woff2"), url(../fonts/NotoSans-Regular.otf) format("opentype"); }
+@font-face {
+  font-family: 'Noto Sans KR';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/NotoSans-Regular.eot);
+  src: local("Noto Sans Regular"), local("NotoSans-Regular"), local("NotoSansKR Regular"), local("Noto Sans KR Regular"), local("NotoSans Korean Regular"), local("Noto Sans Korean Regular"), url(../fonts/NotoSans-Regular.eot?#iefix) format("embedded-opentype"), url(../fonts/NotoSans-Regular.woff) format("woff"), url(../fonts/NotoSans-Regular.woff2) format("woff2"), url(../fonts/NotoSans-Regular.otf) format("opentype");
+}
 
-@font-face { font-family: 'Noto Sans KR'; font-style: normal; font-weight: 500; src: local("Noto Sans Medium"), local("NotoSans-Medium"), local("NotoSansKR Medium"), url(../fonts/NotoSans-Medium.eot?#iefix) format("embedded-opentype"), url(../fonts/NotoSans-Medium.woff) format("woff"), url(../fonts/NotoSans-Medium.woff2) format("woff2"), url(../fonts/NotoSans-Medium.otf) format("opentype"); }
+@font-face {
+  font-family: 'Noto Sans KR';
+  font-style: normal;
+  font-weight: 500;
+  src: local("Noto Sans Medium"), local("NotoSans-Medium"), local("NotoSansKR Medium"), url(../fonts/NotoSans-Medium.eot?#iefix) format("embedded-opentype"), url(../fonts/NotoSans-Medium.woff) format("woff"), url(../fonts/NotoSans-Medium.woff2) format("woff2"), url(../fonts/NotoSans-Medium.otf) format("opentype");
+}
 
-@font-face { font-family: 'Noto Sans KR'; font-style: normal; font-weight: 700; src: local("Noto Sans Bold"), local("NotoSans-Bold"), local("NotoSansKR Bold"), url(../fonts/NotoSans-Bold.eot?#iefix) format("embedded-opentype"), url(../fonts/NotoSans-Bold.woff) format("woff"), url(../fonts/NotoSans-Bold.woff2) format("woff2"), url(../fonts/NotoSans-Bold.otf) format("opentype"); }
+@font-face {
+  font-family: 'Noto Sans KR';
+  font-style: normal;
+  font-weight: 700;
+  src: local("Noto Sans Bold"), local("NotoSans-Bold"), local("NotoSansKR Bold"), url(../fonts/NotoSans-Bold.eot?#iefix) format("embedded-opentype"), url(../fonts/NotoSans-Bold.woff) format("woff"), url(../fonts/NotoSans-Bold.woff2) format("woff2"), url(../fonts/NotoSans-Bold.otf) format("opentype");
+}
 
-@font-face { font-family: 'Noto Sans KR'; font-style: normal; font-weight: 900; src: local("Noto Sans Black"), local("NotoSans-Black"), local("NotoSansKR Black"), url(../fonts/NotoSans-Black.eot?#iefix) format("embedded-opentype"), url(../fonts/NotoSans-Black.woff) format("woff"), url(../fonts/NotoSans-Black.woff2) format("woff2"), url(../fonts/NotoSans-Black.otf) format("opentype"); }
+@font-face {
+  font-family: 'Noto Sans KR';
+  font-style: normal;
+  font-weight: 900;
+  src: local("Noto Sans Black"), local("NotoSans-Black"), local("NotoSansKR Black"), url(../fonts/NotoSans-Black.eot?#iefix) format("embedded-opentype"), url(../fonts/NotoSans-Black.woff) format("woff"), url(../fonts/NotoSans-Black.woff2) format("woff2"), url(../fonts/NotoSans-Black.otf) format("opentype");
+}
 
-.title_wrap { position: relative; text-align: center; padding-top: 35px; margin-bottom: 50px; border-top: 1px solid #cfcfcf; }
+.title_wrap {
+  position: relative;
+  text-align: center;
+  padding-top: 25px;
+  margin-bottom: 30px;
+  border-top: 1px solid #cfcfcf;
+}
 
-.title_wrap:after { position: absolute; top: 0; left: 50%; width: 200px; height: 5px; margin-left: -100px; background-color: #cfcfcf; content: ''; }
+.title_wrap:after {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 200px;
+  height: 5px;
+  margin-left: -100px;
+  background-color: #cfcfcf;
+  content: '';
+}
 
-.title_wrap h2 { font-size: 30px; line-height: 30px; font-weight: 500; }
+.title_wrap h2 {
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 500;
+}
 
-.member_step { overflow: hidden; border-bottom: 5px solid #2d5ba8; }
+.member_step {
+  overflow: hidden;
+  border-bottom: 5px solid #2d5ba8;
+  padding: 0 20px;
+}
 
-.member_step .u_tab { max-width: 746px; margin: 0 auto; border: 2px solid #2d5ba8; margin-bottom: -2px; }
+.member_step .u_tab {
+  margin: 0 auto;
+  border: 2px solid #2d5ba8;
+  margin-bottom: -2px;
+}
 
-.member_step .u_tab li { text-align: center; }
+.member_step .u_tab li {
+  text-align: center;
+}
 
-.member_step .u_tab li span { display: block; font-size: 22px; line-height: 50px; color: #2d5ba8; border-left: 2px solid #2d5ba8; }
+.member_step .u_tab li span {
+  display: block;
+  font-size: 16px;
+  line-height: 40px;
+  color: #2d5ba8;
+  border-left: 2px solid #2d5ba8;
+}
 
-.member_step .u_tab li.on { position: relative; }
+.member_step .u_tab li.on {
+  position: relative;
+}
 
-.member_step .u_tab li.on span { color: #ffffff; font-weight: 500; background-color: #2d5ba8; }
+.member_step .u_tab li.on span {
+  color: #ffffff;
+  font-weight: 500;
+  background-color: #2d5ba8;
+}
 
-.member_step .u_tab li.on:after { position: absolute; top: -2px; left: 100%; display: block; content: ''; width: 0; height: 0; border: 0 solid transparent; border-bottom-width: 27px; border-top-width: 27px; border-left: 23px solid #2d5ba8; z-index: 2; }
+.member_step .u_tab li.on:after {
+  position: absolute;
+  top: -2px;
+  left: 100%;
+  display: block;
+  content: '';
+  width: 0;
+  height: 0;
+  border: 0 solid transparent;
+  border-bottom-width: 22px;
+  border-top-width: 22px;
+  border-left: 14px solid #2d5ba8;
+  z-index: 2;
+}
 
-.member_step .u_tab li:first-child span { border-left: none; }
+.member_step .u_tab li:first-child span {
+  border-left: none;
+}
 
-.member_step .u_tab li:last-child.on:after { display: none; }
+.member_step .u_tab li:last-child.on:after {
+  display: none;
+}
 
-.u_ipbx { overflow: hidden; display: block; position: relative; }
+.ipbx_item {
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 10px;
+}
 
-.ipbx_item { position: relative; margin-bottom: 30px; }
+.ipbx_item input::-webkit-input-placeholder, .ipbx_item textarea::-webkit-input-placeholder {
+  color: #878787;
+  font-weight: 300;
+}
 
-.ipbx_item input::-webkit-input-placeholder, .ipbx_item textarea::-webkit-input-placeholder { color: #878787; }
+.ipbx_item input:-ms-input-placeholder, .ipbx_item textarea:-ms-input-placeholder {
+  color: #878787;
+  font-weight: 300;
+}
 
-.ipbx_item input:-ms-input-placeholder, .ipbx_item textarea:-ms-input-placeholder { color: #878787; }
+.ipbx_item input::-ms-input-placeholder, .ipbx_item textarea::-ms-input-placeholder {
+  color: #878787;
+  font-weight: 300;
+}
 
-.ipbx_item input::-ms-input-placeholder, .ipbx_item textarea::-ms-input-placeholder { color: #878787; }
+.ipbx_item input::placeholder, .ipbx_item textarea::placeholder {
+  color: #878787;
+  font-weight: 300;
+}
 
-.ipbx_item input::placeholder, .ipbx_item textarea::placeholder { color: #878787; }
+.ipbx_item .u_ipbx {
+  position: relative;
+  overflow: hidden;
+  display: block;
+}
 
-.ipbx_item .u_ipbx .int { position: relative; width: 100%; border: 1px solid #cfcfcf; font-size: 14px; line-height: 14px; color: #212121; height: 40px; padding: 13px 15px 12px 15px; }
+.ipbx_item .u_ipbx .int {
+  position: relative;
+  width: 100%;
+  height: 40px;
+  padding: 11px 8px;
+  font-size: 14px;
+  line-height: 14px;
+  color: #212121;
+  border: 1px solid #cfcfcf;
+}
 
-.ipbx_item.ipbx_id { padding-right: 110px; }
+.ipbx_item .u_ipbx.w420 {
+  float: left;
+  width: calc( 60% - 10px);
+  margin-right: 10px;
+}
 
-.ipbx_item.ipbx_id .id_chk { position: absolute; top: 0; right: 0; width: 90px; height: 40px; font-size: 14px; line-height: 40px; color: #ffffff; background-color: #7b9ad8; }
+.ipbx_item .u_ipbx.w420 + span {
+  float: left;
+  width: 40%;
+}
 
-.ipbx_item.ip_pw .u_ipbx { margin-top: 30px; }
+.ipbx_item.ipbx_id, .ipbx_item.ipbx_email {
+  padding-right: 100px;
+}
 
-.ipbx_item.ip_pw .int.pw { background: url(../img/page/member/ico_pwd.png) 97% 50% no-repeat; background-size: 19px 23px; }
+.ipbx_item .btn_chk {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 90px;
+  height: 40px;
+  font-size: 14px;
+  line-height: 40px;
+  color: #ffffff;
+  background-color: #7b9ad8;
+}
 
-.ipbx_item.ip_pw .int.pw.success { background: url(../img/page/member/ico_pwd_suc.png) 97% 50% no-repeat; background-size: 19px 23px; }
+.ipbx_item.ipbx_pw .u_ipbx {
+  margin-top: 10px;
+}
 
-.ipbx_item.ip_pw .int.re_pw { background: url(../img/page/member/ico_repwd.png) 97% 50% no-repeat; background-size: 19px 23px; }
+.ipbx_item.ipbx_pw .u_ipbx:first-child {
+  margin-top: 0;
+}
 
-.ipbx_item.ip_pw .int.re_pw.success { background: url(../img/page/member/ico_repwd_suc.png) 97% 50% no-repeat; background-size: 19px 23px; }
+.ipbx_item.ipbx_pw .int {
+  padding: 11px 30px 11px 8px;
+}
 
-.ipbx_item [class^="txt_"] { font-size: 13px; }
+.ipbx_item.ipbx_pw .int.pw {
+  background: url(../img/page/member/ico_pwd.png) 97% 50% no-repeat;
+  background-size: 19px 23px;
+}
 
-.ipbx_item .txt_warning { color: #eb3671; }
+.ipbx_item.ipbx_pw .int.pw.success {
+  background: url(../img/page/member/ico_pwd_suc.png) 97% 50% no-repeat;
+  background-size: 19px 23px;
+}
 
-.ipbx_item .txt_accept { color: #1d4695; }
+.ipbx_item.ipbx_pw .int.re_pw {
+  background: url(../img/page/member/ico_repwd.png) 97% 50% no-repeat;
+  background-size: 19px 23px;
+}
 
-.field_join { max-width: 640px; width: 100%; margin: 50px auto; }
+.ipbx_item.ipbx_pw .int.re_pw.success {
+  background: url(../img/page/member/ico_repwd_suc.png) 97% 50% no-repeat;
+  background-size: 19px 23px;
+}
 
-.field_join hr { border: 3px solid #7b9ad8; margin: 40px 0; }
+.ipbx_item [class^="txt_"] {
+  font-size: 13px;
+}
+
+.ipbx_item .txt_warning {
+  color: #eb3671;
+}
+
+.ipbx_item .txt_accept {
+  color: #1d4695;
+}
+
+.ipbx_item .u_radio {
+  overflow: hidden;
+  font-size: 0;
+}
+
+.ipbx_item .u_radio input[type="radio"] + label {
+  float: left;
+  display: block;
+  width: 50%;
+  height: 40px;
+  line-height: 40px;
+  font-size: 14px;
+  cursor: pointer;
+  text-align: center;
+  border: 1px solid #cfcfcf;
+  color: #878787;
+}
+
+.ipbx_item .u_radio input[type="radio"]:checked + label {
+  background-color: #707070;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.ipbx_item .u_radio label:last-child {
+  margin-right: 0 !important;
+}
+
+.ipbx_item .u_selbox {
+  position: relative;
+  overflow: hidden;
+  display: block;
+}
+
+.ipbx_item .u_selbox .sel {
+  position: relative;
+  width: 100%;
+  border: 1px solid #cfcfcf;
+  font-size: 14px;
+  line-height: 14px;
+  color: #212121;
+  height: 40px;
+  padding: 11px 15px 11px 15px;
+}
+
+.ipbx_item .u_selbox .sel:after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  content: '';
+}
+
+.field_join {
+  max-width: 640px;
+  width: 100%;
+  margin: 20px auto;
+  padding: 0 20px;
+}
+
+.field_join hr {
+  border: none;
+  background-color: #7b9ad8;
+  height: 2px;
+  margin: 20px 0;
+}
+
+.field_join .ipbx_phone > span {
+  float: left;
+  width: calc( 33.3% - 7px);
+  margin-right: 10px;
+  overflow: visible;
+}
+
+.field_join .ipbx_phone > span:last-child {
+  margin-right: 0;
+}
+
+.field_join .ipbx_phone > span:last-child:after {
+  display: none;
+}
+
+.field_join .ipbx_phone > span:after {
+  position: absolute;
+  top: 0;
+  right: -6px;
+  display: block;
+  content: '-';
+  line-height: 40px;
+}
+
+@media all and (min-width: 1200px) {
+  .title_wrap {
+    padding-top: 35px;
+    margin-bottom: 50px;
+  }
+  .title_wrap h2 {
+    font-size: 30px;
+    line-height: 30px;
+  }
+  .member_step {
+    padding: 0;
+  }
+  .member_step .u_tab {
+    max-width: 746px;
+  }
+  .member_step .u_tab li span {
+    font-size: 22px;
+    line-height: 50px;
+  }
+  .member_step .u_tab li.on:after {
+    border-bottom-width: 27px;
+    border-top-width: 27px;
+    border-left: 23px solid #2d5ba8;
+  }
+  .ipbx_item {
+    margin-bottom: 30px;
+  }
+  .ipbx_item .u_ipbx .int {
+    padding: 13px 15px 12px 15px;
+  }
+  .ipbx_item .u_ipbx.w420 {
+    width: 420px;
+    margin-right: 20px;
+  }
+  .ipbx_item .u_ipbx.w420 + span {
+    width: 200px;
+  }
+  .ipbx_item .u_radio input[type="radio"] + label {
+    width: 95px;
+    height: 40px;
+    line-height: 40px;
+    margin-right: 10px;
+  }
+  .ipbx_item.ipbx_id, .ipbx_item.ipbx_email {
+    padding-right: 110px;
+  }
+  .ipbx_item.ipbx_pw .u_ipbx {
+    margin-top: 30px;
+  }
+  .ipbx_item.ipbx_pw .int {
+    padding: 13px 15px 12px 15px;
+  }
+  .field_join {
+    margin: 50px auto;
+    padding: 0;
+  }
+  .field_join hr {
+    height: 3px;
+    margin: 40px 0;
+  }
+  .field_join .ipbx_phone > span {
+    width: 200px;
+  }
+}

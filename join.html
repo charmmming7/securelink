@@ -137,13 +137,13 @@
                                 <!-- id -->
                                 <div class="ipbx_item ipbx_id">
                                     <span class="u_ipbx"><input type="text" class="int" autocapitalize="off" maxlength="16" placeholder="아이디 (6 ~ 16자 영문 / 숫자)"></span>
-                                    <button type="button" class="u_btn id_chk">중복확인</button>
+                                    <button type="button" class="btn_chk">중복확인</button>
                                     <!-- [D] 사용자 입력시 경고 메세지 (확인을 위해 메세지를 보이게 해놓은 상태고, 개발 시 처음엔 display:none 상태로 만들어주세요) -->
                                     <p class="txt_warning">아이디 중복체크를 해주십시오.</p>
                                     <p class="txt_accept">사용가능한 아이디 입니다.</p>
                                 </div>
                                 <!-- pw -->
-                                <div class="ipbx_item ip_pw">
+                                <div class="ipbx_item ipbx_pw">
                                     <span class="u_ipbx success"> 
                                         <!-- [D] 비밀번호 규칙 준수, 비밀번호 일치 할 경우 각 input.int 에 .success 클래스 붙여주세요 
                                             아래 success 클래스는 예시로 붙여둔 것입니다.
@@ -165,16 +165,37 @@
                                 </div>
                                 <!-- 이름 -->
                                 <div class="ipbx_item ipbx_name">
-                                    <span class="u_ipbx"><input type="text" class="int" placeholder="이름"></span>
+                                    <span class="u_ipbx w420"><input type="text" class="int" placeholder="이름"></span>
                                     <span class="u_ipbx"><input type="text" class="int" placeholder="직급"></span>
                                 </div>
                                 <!-- 생년월일 -->
                                 <div class="ipbx_item ipbx_birthdate">
-                                    <span class="u_ipbx"><input type="text" class="int" placeholder="901230"></span>
-                                    <input type="radio" class="u_btn" name="gender" checked="checked" value="남자" /> 남자
-                                    <input type="radio" class="u_btn" name="gender" value="여자" /> 여자
-                                    
-                                </div>                                
+                                    <!-- [D] 생년월일 placeholder 는 개발가이드에 따라 수정해주세요 -->
+                                    <span class="u_ipbx w420"><input type="text" class="int" placeholder="생년월일 (예:19900101)"></span>
+                                    <span class="u_radio">
+                                        <input type="radio" id="radio1" name="gender" checked="checked" />
+                                        <label for="radio1">남자</label>
+                                        <input type="radio" id="radio2" name="gender" />
+                                        <label for="radio2">여자</label>
+                                    </span>
+                                </div> 
+                                <!-- 전화번호 -->
+                                <div class="ipbx_item ipbx_phone">
+                                    <span class="u_selbox">
+                                        <label for="cell_no1"><span class="blind">휴대폰 앞자리</span></label>
+                                        <select id="cell_no1" name="cell_no1" class="sel"><option value="">선택</option><option value="010">010</option><option value="011">011</option><option value="016">016</option><option value="017">017</option><option value="018">018</option><option value="019">019</option></select>
+                                    </span>
+                                    <span class="u_ipbx"><input type="text" class="int" title="휴대폰번호 중간자리" maxlength="4"></span>
+                                    <span class="u_ipbx"><input type="text" class="int" title="휴대폰번호 마지막자리" maxlength="4"></span>
+                                </div>  
+                                <!-- email -->
+                                <div class="ipbx_item ipbx_email">
+                                    <span class="u_ipbx"><input type="text" class="int" autocapitalize="off" placeholder="이메일"></span>
+                                    <button type="button" class="btn_chk">중복확인</button>
+                                    <!-- [D] 사용자 입력시 경고 메세지 (확인을 위해 메세지를 보이게 해놓은 상태고, 개발 시 처음엔 display:none 상태로 만들어주세요) -->
+                                    <p class="txt_warning">이메일 중복체크를 해주십시오.</p>
+                                    <p class="txt_accept">사용가능한 이메일 입니다.</p>
+                                </div>                             
                             </div>
                         </form>
                     </div>
