@@ -105,7 +105,7 @@
   border: 0 solid transparent;
   border-bottom-width: 22px;
   border-top-width: 22px;
-  border-left: 14px solid #2d5ba8;
+  border-left: 12px solid #2d5ba8;
   z-index: 2;
 }
 
@@ -153,7 +153,7 @@
   position: relative;
   width: 100%;
   height: 40px;
-  padding: 11px 8px;
+  padding: 11px 8px 10px 8px;
   font-size: 14px;
   line-height: 14px;
   color: #212121;
@@ -161,14 +161,16 @@
 }
 
 .ipbx_item .u_ipbx.w420 {
-  float: left;
-  width: calc( 60% - 10px);
+  width: 100%;
   margin-right: 10px;
+  padding-right: 40%;
 }
 
 .ipbx_item .u_ipbx.w420 + span {
-  float: left;
-  width: 40%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: calc( 40% - 10px);
 }
 
 .ipbx_item.ipbx_id, .ipbx_item.ipbx_email {
@@ -217,6 +219,37 @@
 .ipbx_item.ipbx_pw .int.re_pw.success {
   background: url(../img/page/member/ico_repwd_suc.png) 97% 50% no-repeat;
   background-size: 19px 23px;
+}
+
+.ipbx_item.ipbx_phone > span {
+  float: left;
+  width: calc( 33.3% - 7px);
+  margin-right: 10px;
+  overflow: visible;
+}
+
+.ipbx_item.ipbx_phone > span:last-child {
+  margin-right: 0;
+}
+
+.ipbx_item.ipbx_phone > span:last-child:after {
+  display: none;
+}
+
+.ipbx_item.ipbx_phone > span:after {
+  position: absolute;
+  top: 0;
+  right: -6px;
+  display: block;
+  content: '-';
+  line-height: 40px;
+}
+
+.ipbx_item.ipbx_birthdate .u_radio {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 90px;
 }
 
 .ipbx_item [class^="txt_"] {
@@ -298,30 +331,6 @@
   margin: 20px 0;
 }
 
-.field_join .ipbx_phone > span {
-  float: left;
-  width: calc( 33.3% - 7px);
-  margin-right: 10px;
-  overflow: visible;
-}
-
-.field_join .ipbx_phone > span:last-child {
-  margin-right: 0;
-}
-
-.field_join .ipbx_phone > span:last-child:after {
-  display: none;
-}
-
-.field_join .ipbx_phone > span:after {
-  position: absolute;
-  top: 0;
-  right: -6px;
-  display: block;
-  content: '-';
-  line-height: 40px;
-}
-
 @media all and (min-width: 1200px) {
   .title_wrap {
     padding-top: 35px;
@@ -355,6 +364,7 @@
   .ipbx_item .u_ipbx.w420 {
     width: 420px;
     margin-right: 20px;
+    padding-right: 0;
   }
   .ipbx_item .u_ipbx.w420 + span {
     width: 200px;
@@ -374,6 +384,9 @@
   .ipbx_item.ipbx_pw .int {
     padding: 13px 15px 12px 15px;
   }
+  .ipbx_item.ipbx_phone > span {
+    width: 200px;
+  }
   .field_join {
     margin: 50px auto;
     padding: 0;
@@ -381,8 +394,5 @@
   .field_join hr {
     height: 3px;
     margin: 40px 0;
-  }
-  .field_join .ipbx_phone > span {
-    width: 200px;
   }
 }
