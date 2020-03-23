@@ -24,7 +24,7 @@ body, button, h1, h2, h3, h4, h5, h6, input, select, table, textarea { font-fami
 
 .u_tab li.on a { background-color: #2d5ba8; color: #ffffff; }
 
-.u_tab.tab3 li { width: 33%; }
+.u_tab.tab3 li { width: 33.333%; }
 
 .u_tab.tab4 li { width: 25%; }
 

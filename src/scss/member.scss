@@ -1,0 +1,98 @@
+@charset "utf-8";
+@import "./_webfont";
+@import "./_variables";
+@import "./_mixin";
+
+// 타이틀
+.title_wrap{
+    position:relative;text-align:center;padding-top:35px;margin-bottom:50px;border-top:1px solid $gray3;
+    &:after{position:absolute;top:0;left:50%;width:200px;height:5px;margin-left:-100px;background-color: $gray3;content: '';}
+    h2{font-size:30px;line-height:30px;font-weight:500;}
+}
+
+// 진행과정
+.member_step{
+    overflow:hidden;border-bottom:5px solid $darkBlue3;
+    .u_tab{
+        max-width:746px;margin:0 auto;border:2px solid $darkBlue3;margin-bottom:-2px;
+        li{
+            text-align:center;
+            span{
+                display:block;font-size:22px;line-height:50px;color:$darkBlue3;border-left:2px solid $darkBlue3;
+            }
+            &.on{
+                position:relative;
+                span{
+                    color:$white;font-weight:500;background-color:$darkBlue3;
+                }
+                &:after{
+                    position:absolute;top:-2px;left:100%;display:block;content:'';width:0;height:0;border:0 solid transparent;border-bottom-width:27px;border-top-width:27px;border-left:23px solid $darkBlue3;z-index: 2;
+                }
+            }
+            &:first-child span{border-left:none;}
+            &:last-child.on{
+                &:after{display:none;}
+            }
+        }
+    }
+}
+
+// 폼
+.u_ipbx {
+    overflow: hidden;display: block;position: relative;
+}
+.ipbx_item {
+    position:relative;margin-bottom:30px;
+    input, textarea {
+        &::placeholder{color:$gray1;}
+    }
+    .u_ipbx {
+        .int{
+            position:relative;width:100%;// padding:11px 11px 10px 11px;
+            border:1px solid $gray3;font-size:14px;line-height:14px;color:$black;height:40px;padding:13px 15px 12px 15px;
+        }
+    }
+    &.ipbx_id{
+        padding-right:110px;
+        .id_chk{position:absolute;top:0;right:0;width:90px;height:40px;font-size:14px;line-height:40px;color:$white;background-color:#7b9ad8;}
+    }
+    &.ip_pw{
+        .u_ipbx{margin-top:30px;}
+        .int{
+            &.pw{
+                background:url(../img/page/member/ico_pwd.png) 97% 50% no-repeat;background-size:19px 23px;
+                &.success{
+                    background:url(../img/page/member/ico_pwd_suc.png) 97% 50% no-repeat;background-size:19px 23px;
+                }
+            }
+            &.re_pw{
+                background:url(../img/page/member/ico_repwd.png) 97% 50% no-repeat;background-size:19px 23px;
+                &.success{
+                    background:url(../img/page/member/ico_repwd_suc.png) 97% 50% no-repeat;background-size:19px 23px;
+                }
+            }
+        }
+    }
+    [class^="txt_"]{
+        font-size:13px;
+    }
+    .txt_warning{
+        color:#eb3671;
+    }
+    .txt_accept{
+        color:$darkBlue1;
+    }
+}
+
+// 회원가입
+.field_join{
+    max-width:640px;width:100%;margin:50px auto;
+    hr{
+        border:3px solid #7b9ad8;margin:40px 0;
+    }
+}
+
+
+@media all and (min-width:1200px) {
+    
+}

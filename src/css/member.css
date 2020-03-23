@@ -1,0 +1,71 @@
+@font-face { font-family: 'Noto Sans KR'; font-style: normal; font-weight: 300; src: url(../fonts/NotoSans-Light.eot); src: local("Noto Sans Light"), local("NotoSans-Light"), local("NotoSansKR Light"), local("Noto Sans KR Light"), local("NotoSans Korean Light"), local("Noto Sans Korean Light"), url(../fonts/NotoSans-Light.eot?#iefix) format("embedded-opentype"), url(../fonts/NotoSans-Light.woff) format("woff"), url(../fonts/NotoSans-Light.woff2) format("woff2"), url(../fonts/NotoSans-Light.otf) format("opentype"); }
+
+@font-face { font-family: 'Noto Sans KR'; font-style: normal; font-weight: 400; src: url(../fonts/NotoSans-Regular.eot); src: local("Noto Sans Regular"), local("NotoSans-Regular"), local("NotoSansKR Regular"), local("Noto Sans KR Regular"), local("NotoSans Korean Regular"), local("Noto Sans Korean Regular"), url(../fonts/NotoSans-Regular.eot?#iefix) format("embedded-opentype"), url(../fonts/NotoSans-Regular.woff) format("woff"), url(../fonts/NotoSans-Regular.woff2) format("woff2"), url(../fonts/NotoSans-Regular.otf) format("opentype"); }
+
+@font-face { font-family: 'Noto Sans KR'; font-style: normal; font-weight: 500; src: local("Noto Sans Medium"), local("NotoSans-Medium"), local("NotoSansKR Medium"), url(../fonts/NotoSans-Medium.eot?#iefix) format("embedded-opentype"), url(../fonts/NotoSans-Medium.woff) format("woff"), url(../fonts/NotoSans-Medium.woff2) format("woff2"), url(../fonts/NotoSans-Medium.otf) format("opentype"); }
+
+@font-face { font-family: 'Noto Sans KR'; font-style: normal; font-weight: 700; src: local("Noto Sans Bold"), local("NotoSans-Bold"), local("NotoSansKR Bold"), url(../fonts/NotoSans-Bold.eot?#iefix) format("embedded-opentype"), url(../fonts/NotoSans-Bold.woff) format("woff"), url(../fonts/NotoSans-Bold.woff2) format("woff2"), url(../fonts/NotoSans-Bold.otf) format("opentype"); }
+
+@font-face { font-family: 'Noto Sans KR'; font-style: normal; font-weight: 900; src: local("Noto Sans Black"), local("NotoSans-Black"), local("NotoSansKR Black"), url(../fonts/NotoSans-Black.eot?#iefix) format("embedded-opentype"), url(../fonts/NotoSans-Black.woff) format("woff"), url(../fonts/NotoSans-Black.woff2) format("woff2"), url(../fonts/NotoSans-Black.otf) format("opentype"); }
+
+.title_wrap { position: relative; text-align: center; padding-top: 35px; margin-bottom: 50px; border-top: 1px solid #cfcfcf; }
+
+.title_wrap:after { position: absolute; top: 0; left: 50%; width: 200px; height: 5px; margin-left: -100px; background-color: #cfcfcf; content: ''; }
+
+.title_wrap h2 { font-size: 30px; line-height: 30px; font-weight: 500; }
+
+.member_step { overflow: hidden; border-bottom: 5px solid #2d5ba8; }
+
+.member_step .u_tab { max-width: 746px; margin: 0 auto; border: 2px solid #2d5ba8; margin-bottom: -2px; }
+
+.member_step .u_tab li { text-align: center; }
+
+.member_step .u_tab li span { display: block; font-size: 22px; line-height: 50px; color: #2d5ba8; border-left: 2px solid #2d5ba8; }
+
+.member_step .u_tab li.on { position: relative; }
+
+.member_step .u_tab li.on span { color: #ffffff; font-weight: 500; background-color: #2d5ba8; }
+
+.member_step .u_tab li.on:after { position: absolute; top: -2px; left: 100%; display: block; content: ''; width: 0; height: 0; border: 0 solid transparent; border-bottom-width: 27px; border-top-width: 27px; border-left: 23px solid #2d5ba8; z-index: 2; }
+
+.member_step .u_tab li:first-child span { border-left: none; }
+
+.member_step .u_tab li:last-child.on:after { display: none; }
+
+.u_ipbx { overflow: hidden; display: block; position: relative; }
+
+.ipbx_item { position: relative; margin-bottom: 30px; }
+
+.ipbx_item input::-webkit-input-placeholder, .ipbx_item textarea::-webkit-input-placeholder { color: #878787; }
+
+.ipbx_item input:-ms-input-placeholder, .ipbx_item textarea:-ms-input-placeholder { color: #878787; }
+
+.ipbx_item input::-ms-input-placeholder, .ipbx_item textarea::-ms-input-placeholder { color: #878787; }
+
+.ipbx_item input::placeholder, .ipbx_item textarea::placeholder { color: #878787; }
+
+.ipbx_item .u_ipbx .int { position: relative; width: 100%; border: 1px solid #cfcfcf; font-size: 14px; line-height: 14px; color: #212121; height: 40px; padding: 13px 15px 12px 15px; }
+
+.ipbx_item.ipbx_id { padding-right: 110px; }
+
+.ipbx_item.ipbx_id .id_chk { position: absolute; top: 0; right: 0; width: 90px; height: 40px; font-size: 14px; line-height: 40px; color: #ffffff; background-color: #7b9ad8; }
+
+.ipbx_item.ip_pw .u_ipbx { margin-top: 30px; }
+
+.ipbx_item.ip_pw .int.pw { background: url(../img/page/member/ico_pwd.png) 97% 50% no-repeat; background-size: 19px 23px; }
+
+.ipbx_item.ip_pw .int.pw.success { background: url(../img/page/member/ico_pwd_suc.png) 97% 50% no-repeat; background-size: 19px 23px; }
+
+.ipbx_item.ip_pw .int.re_pw { background: url(../img/page/member/ico_repwd.png) 97% 50% no-repeat; background-size: 19px 23px; }
+
+.ipbx_item.ip_pw .int.re_pw.success { background: url(../img/page/member/ico_repwd_suc.png) 97% 50% no-repeat; background-size: 19px 23px; }
+
+.ipbx_item [class^="txt_"] { font-size: 13px; }
+
+.ipbx_item .txt_warning { color: #eb3671; }
+
+.ipbx_item .txt_accept { color: #1d4695; }
+
+.field_join { max-width: 640px; width: 100%; margin: 50px auto; }
+
+.field_join hr { border: 3px solid #7b9ad8; margin: 40px 0; }

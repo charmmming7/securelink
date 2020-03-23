@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta content="index,follow" name="robots">
+    <meta name="Author" content="">
+    <meta name="description" content="시큐어도그 홈페이지입니다. 솔루션, 의뢰, 공유, 고객지원 소개">
+    <!-- SEO END -->
+    <title>시큐어도그</title>
+    <link rel="stylesheet" href="./src/css/reset.css">
+    <link rel="stylesheet" href="./src/css/layout.css">
+    <link rel="stylesheet" href="./src/css/sub.css">
+    <link rel="stylesheet" href="./src/css/member.css">
+    <script src="./src/lib/js/jquery-2.1.4.min.js"></script>
+    <script src="./src/js/common_ui.js"></script>
+</head>
+<body>
+    <div id="acc-nav">
+        <a href="#gnb">메뉴 바로가기</a>
+        <a href="#content">본문 바로가기</a>
+    </div>
+    <main id="wrap">
+        <!-- header -->
+        <header id="header">
+            <div class="gnb_bg"></div>
+            <div class="inner">
+                <!-- 로고 -->
+                <h1 class="logo"><a href="/"><span class="blind">시큐어도그</span></a></h1>
+
+                <!-- 모바일메뉴 버튼 -->
+                <a href="#m_layer_menu" id="btn_m_menu" class="btn_m_menu" title="모바일 메뉴열기"></a>
+    
+                <!-- 메뉴 -->
+                <nav id="gnb">
+                    <ul class="depth1">
+                        <li>
+                            <a href="sub_solution.html">솔루션</a>
+                            <ul class="depth2">
+                                <li>
+                                    <a href="#">자사보안</a>
+                                    <ul class="depth3">
+                                        <li><a href="#">Ransome keeper</a></li>
+                                        <li><a href="#">Pharming Keeper</a></li>
+                                        <li><a href="#">SPK Solution</a></li>
+                                        <li><a href="#">ONE PASS</a></li>
+                                        <li><a href="#">One Power</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#">타사보안</a>
+                                    <ul class="depth3">
+                                        <li><a href="#">OTP인증</a></li>
+                                        <li><a href="#">파일박스</a></li>
+                                        <li><a href="#">시큐레터</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#">SI</a>
+                                    <ul class="depth3">
+                                        <li><a href="#">검색엔진</a></li>
+                                        <li><a href="#">레포팅툴</a></li>
+                                        <li><a href="#">조직도 관리</a></li>
+                                        <li><a href="#">ctI솔루션</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">의뢰</a>
+                            <ul class="depth2">
+                                <li><a href="#">개발자의뢰</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">공유</a>
+                            <ul class="depth2">
+                                <li><a href="#">보안뉴스</a></li>
+                                <li><a href="#">OPEN 소스</a></li>
+                                <li><a href="#">자료실</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">고객지원</a>
+                            <ul class="depth2">
+                                <li><a href="#">공지사항</a></li>
+                                <li><a href="#">문의하기</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+
+                <!-- 유틸 -->
+                <div class="util">
+                    <a href="#" class="btn_login">login</a>
+                    <a href="#" class="btn_join">회원가입</a>
+                </div>
+            </div>
+        </header>
+        <!-- //header -->
+
+        <!-- container -->
+        <main id="container">
+            <div id="content">
+                <!-- banner -->
+                <div class="banner">
+                    <div class="inner">
+                    </div>
+                </div>
+
+                <!-- breadcrumb -->
+                <div class="breadcrumb">
+                    <ul>
+                        <li><a href="">HOME</a></li>
+                        <li><a href="">솔루션</a></li>
+                        <li><a href="">자사보안</a></li>
+                    </ul>
+                </div>
+
+                <div class="container">
+                    <div class="wrap_join">
+                        <div class="title_wrap">
+                            <h2>회원가입</h2>
+                        </div>
+
+                        <div class="member_step">
+                            <ul class="u_tab tab3">
+                                <li><span>약관동의</span></li>
+                                <li class="on"><span>정보입력</span></li>
+                                <li><span>가입완료</span></li>
+                            </ul>
+                        </div>
+
+                        <form action="">
+                            <div class="field_join">
+                                <!-- id -->
+                                <div class="ipbx_item ipbx_id">
+                                    <span class="u_ipbx"><input type="text" class="int" autocapitalize="off" maxlength="16" placeholder="아이디 (6 ~ 16자 영문 / 숫자)"></span>
+                                    <button type="button" class="u_btn id_chk">중복확인</button>
+                                    <!-- [D] 사용자 입력시 경고 메세지 (확인을 위해 메세지를 보이게 해놓은 상태고, 개발 시 처음엔 display:none 상태로 만들어주세요) -->
+                                    <p class="txt_warning">아이디 중복체크를 해주십시오.</p>
+                                    <p class="txt_accept">사용가능한 아이디 입니다.</p>
+                                </div>
+                                <!-- pw -->
+                                <div class="ipbx_item ip_pw">
+                                    <span class="u_ipbx success"> 
+                                        <!-- [D] 비밀번호 규칙 준수, 비밀번호 일치 할 경우 각 input.int 에 .success 클래스 붙여주세요 
+                                            아래 success 클래스는 예시로 붙여둔 것입니다.
+                                        -->
+                                        <input type="password" class="int pw success" maxlength="20" placeholder="비밀번호 입력 (8~20자의 영.숫자,특수문자)"> 
+                                    </span>
+                                    <!-- [D] 사용가능 특수문자는 개발가이드에 따라 수정하시면 됩니다. -->
+                                    <p class="txt_warning">사용가능 특수문자 : !"#$%&'()*+,-./:;<=>?@[＼]^_`{|}</p> 
+                                    <span class="u_ipbx"> 
+                                        <!-- [D] 비밀번호 규칙 준수, 비밀번호 일치 할 경우 각 input.int 에 .success 클래스 붙여주세요 -->
+                                        <input type="password" class="int re_pw" maxlength="20" placeholder="비밀번호 재확인">
+                                    </span>
+                                    <p class="txt_warning">비밀번호가 일치하지 않습니다.</p>
+                                </div>
+                                <hr>
+                                <!-- 회사명 -->
+                                <div class="ipbx_item ipbx_company">
+                                    <span class="u_ipbx"><input type="text" class="int" placeholder="회사 상호명"></span>
+                                </div>
+                                <!-- 이름 -->
+                                <div class="ipbx_item ipbx_name">
+                                    <span class="u_ipbx"><input type="text" class="int" placeholder="이름"></span>
+                                    <span class="u_ipbx"><input type="text" class="int" placeholder="직급"></span>
+                                </div>
+                                <!-- 생년월일 -->
+                                <div class="ipbx_item ipbx_birthdate">
+                                    <span class="u_ipbx"><input type="text" class="int" placeholder="901230"></span>
+                                    <input type="radio" class="u_btn" name="gender" checked="checked" value="남자" /> 남자
+                                    <input type="radio" class="u_btn" name="gender" value="여자" /> 여자
+                                    
+                                </div>                                
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <!-- // container -->
+
+        <!-- footer -->
+        <footer id="footer" role="contentinfo">
+            <div class="inner">
+                <h2 class="blind">푸터 메뉴</h2>
+                <div class="ft_terms">
+                    <ul>
+                        <li><a href="#">이용안내</a></li>
+                        <li><a href="#">개인정보취급방침</a></li>
+                        <li><a href="#">이용약관</a></li>
+                    </ul>
+                </div>
+
+                <div class="ft_btm">
+                    <div class="logo"><span class="blind">시큐어도그</span></div>
+                    <div class="ft_policy">
+                        <ul class="ft_info">
+                            <li class="title onlymobile"><span class="blind">상호</span>(주) SECUDOG</li>
+                            <li>
+                                <address class="ft_address">
+                                    <h3 class="blind">시큐어도그 사업자 정보</h3>
+                                    <span class="info"><span class="tit">주소</span>(06730)서울특별시 서초구 강남대로39길 26-7, 2층</span>
+                                    <span class="info"><span class="tit">대표</span>고 준 용</span>
+                                    <span class="info"><span class="tit">사업자등록번호</span>655-87-00515</span>
+                                    <span class="info"><span class="tit">통신판매업신고</span><button class="btn_busi_info">사업자정보확인</button></span>
+                                </address>
+                            </li>
+                            <li><span class="copyright">Copyright © secudog ALL Rights Reserved</span></li>
+                        </ul>
+                    </div>
+                    <div class="ft_contact onlypc">
+                        <span class="tit">고객센터</span>
+                        <a class="phone" href="tel:070-4470-00261">070-4470-00261</a>
+                        <span class="hour">
+                            <span class="category">평일</span>09:30 - 17:30<br>
+                            <span class="category">점심시간</span>12:30 - 13:30
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- //footer -->
+
+    </div>
+    <!-- 모바일 레이어메뉴 -->
+    <div id="m_layer_menu">
+        <h1 class="blind">모바일 사이드 메뉴</h1>
+        <!-- <div class="layer_bg"></div> -->
+        <div class="layer_wrap">
+            <div class="top">
+                <!-- 로고 -->
+                <h1 class="logo"><a href="/"><span class="blind">시큐어도그</span></a></h1>
+    
+                <!-- 닫기버튼 -->
+                <a href="#btn_m_menu" class="btn_close_m_menu" title="모바일 메뉴 닫기">닫기</a>
+            </div>
+
+            <!-- 유틸 -->
+            <div class="util">
+                <a href="#" class="btn_login">login</a>
+                <a href="#" class="btn_join">회원가입</a>
+            </div>
+
+            <!-- 메뉴 -->
+            <nav id="m_gnb">
+                <ul class="depth1">
+                    <li>
+                        <button>솔루션</button>
+                        <ul class="depth2">
+                            <li>
+                                <button>자사보안</button>
+                                <ul class="depth3">
+                                    <li><a href="#">Ransome keeper</a></li>
+                                    <li><a href="#">Pharming Keeper</a></li>
+                                    <li><a href="#">SPK Solution</a></li>
+                                    <li><a href="#">ONE PASS</a></li>
+                                    <li><a href="#">One Power</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <button>타사보안</button>
+                                <ul class="depth3">
+                                    <li><a href="#">OTP인증</a></li>
+                                    <li><a href="#">파일박스</a></li>
+                                    <li><a href="#">시큐레터</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <button>SI</button>
+                                <ul class="depth3">
+                                    <li><a href="#">검색엔진</a></li>
+                                    <li><a href="#">레포팅툴</a></li>
+                                    <li><a href="#">조직도 관리</a></li>
+                                    <li><a href="#">ctI솔루션</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <button>의뢰</button>
+                        <ul class="depth2">
+                            <li><a href="#">개발자의뢰</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <button>공유</button>
+                        <ul class="depth2">
+                            <li><a href="#">보안뉴스</a></li>
+                            <li><a href="#">OPEN 소스</a></li>
+                            <li><a href="#">자료실</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <button>고객지원</button>
+                        <ul class="depth2">
+                            <li><a href="#">공지사항</a></li>
+                            <li><a href="#">문의하기</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <!-- //메뉴 -->
+
+            <div class="terms_link">
+                <ul>
+                    <li><a href="#">이용안내</a></li>
+                    <li><a href="#">개인정보취급방침</a></li>
+                    <li><a href="#">이용약관</a></li>
+                </ul>
+            </div>
+
+            <div class="contact">
+                <span class="blind">고객센터</span>
+                <a href="tel:070-4470-00261" class="phone">070-4470-00261</a>
+                <span class="hour">상담시간 : 09:00 - 18:00 (평일)</span>
+            </div>
+
+        </div>
+    </div>
+    <!-- // 모바일 레이어메뉴 -->
+</body>
+</html>
