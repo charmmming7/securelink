@@ -13,7 +13,7 @@ body,button,h1,h2,h3,h4,h5,h6,input,select,table,textarea{font-family: "Noto San
     overflow:hidden;width:100%;margin:25px 0;border:1px solid $darkBlue3;border-bottom-width:3px;
     li{
         float:left;text-align:center;
-        a {display:block;height:32px;line-height:30px;font-size:12px;border-left:1px solid $darkBlue3;}
+        a {display:block;height:32px;line-height:30px;font-size:12px;border-left:1px solid $darkBlue3;word-wrap:break-word;word-break:keep-all;}
         &:first-child a{border-left:0;}
         &.on{
             a{background-color:$darkBlue3;color:$white;}
@@ -148,6 +148,30 @@ body,button,h1,h2,h3,h4,h5,h6,input,select,table,textarea{font-family: "Noto San
 #container{
     padding-top:51px;
 }
+
+.banner{
+    position:relative;display:table;width:100%;height:115px;background:url(../img/page/solution/m_banner.jpg) 50% 50% no-repeat;background-size:cover;
+    .inner{
+        display:table-cell;width:100%;padding:20px;vertical-align:middle;text-align:center;word-wrap:break-word;word-break:keep-all;
+    }
+    h1{font-weight:700;font-size:21px;line-height:21px;color:$darkBlue3;}
+    p{font-weight:300;font-size:7px;margin-top:5px;}
+}
+
+.breadcrumb{
+    text-align:right;padding:0 20px;border-bottom: 1px solid $gray6;
+    ul{ overflow:hidden;}
+    li{
+        display:inline-block;margin-right:10px;font-size:10px;line-height:25px;height:25px;
+        &:after{
+            display:inline-block;content:'>';margin-left:10px;
+        }
+        &:last-child{
+            margin-right:0;
+            &:after{display:none;}
+        }
+    }
+}
 // [E] container
 
 // [S] footer
@@ -228,18 +252,28 @@ body,button,h1,h2,h3,h4,h5,h6,input,select,table,textarea{font-family: "Noto San
         button, a {width:100%;cursor:pointer;text-align:left;}
         .depth1{
             > li{
-                line-height:50px;
-                > button,
-                > a {
-                    position:relative;height:50px;line-height:50px;padding-left:45px;font-size:15px;text-align:left;color:$white;border-bottom: 1px solid rgba(255,255,255,0.3);
+                position:relative;line-height:50px;
+                &:before{
+                    position:absolute;top:50px;left:0;width:100%;height:1px;content:'';background-color:rgba(255,255,255,0.3);
+                }
+                > button{
+                    position:relative;width:86%;height:50px;line-height:50px;padding-left:45px;font-size:15px;text-align:left;color:$white;
                     &:before{
                         position:absolute;top:50%;left:20px;width:12px;height:5px;margin-top:-2px;background-color:$white;opacity:0.5;content:'';
                         @include rnded(5px);
                     }
                 }
+                .btn_go{
+                    position:absolute;top:7px;right:20px;display:block;width:40px;height:35px;font-size:0;z-index:5;
+                    &:before{
+                        position:absolute;top:50%;right:1px;width:18px;height:1px;content:'';background-color:$white;
+                    }
+                    &:after{
+                        position:absolute;top:50%;right:1px;width:8px;height:8px;margin-top:-4px;content:'';border:solid white;border-width:0 1px 1px 0;transform:rotate(-45deg);-webkit-transform:rotate(-45deg);-ms-transform:rotate(-45deg);
+                    }
+                }
                 &:last-child{
-                    > button,
-                    > a {border-bottom:none;}
+                    > button{border-bottom:none;}
                 }
                 &.menuOpen{
                     > .depth2{
@@ -256,7 +290,7 @@ body,button,h1,h2,h3,h4,h5,h6,input,select,table,textarea{font-family: "Noto San
                 > a {
                     position:relative;height:33px;padding-left:50px;font-size:13px;line-height:33px;color:$white;
                     &:before{
-                        display:inline-block;margin-right:7px;content:'-';
+                        display:inline;margin-right:7px;content:'-';
                     }
                 }
                 &.menuOpen{
@@ -267,14 +301,13 @@ body,button,h1,h2,h3,h4,h5,h6,input,select,table,textarea{font-family: "Noto San
             }
         }
         .depth3{
-            display:none;background-color:$darkBlue3;padding:5px 0 10px 0;
+            display:none;background-color:$darkBlue2;padding:5px 0 10px 0;
             > li {
                 line-height:21px;
                 > a {
                     position:relative;display:inline-block;width:100%;height:21px;padding-left:57px;font-size:11px;line-height:30px;color:$white;
                     &:before{
-                        display:inline-block;
-                        width:3px;height:3px;margin-top:-1px;margin-right:10px;background-color:$white;content:'';
+                        display:inline-block;width:3px;height:3px;margin-top:-1px;margin-right:10px;background-color:$white;content:'';
                         @include rnded(50%);
                     }
                 }
@@ -314,6 +347,66 @@ body,button,h1,h2,h3,h4,h5,h6,input,select,table,textarea{font-family: "Noto San
 }
 // [E] m_layer_menu
 
+// [S] Form
+.ipbx_item {
+    overflow:hidden;position:relative;margin-bottom:10px;
+    input, textarea{
+        &::placeholder{color:$gray1;font-weight:300;}
+    }
+    .u_ipbx {
+        position:relative;overflow:hidden;display:block;
+        .int{
+            position:relative;width:100%;height:40px;padding:11px 8px 9px 8px;font-size:14px;line-height:14px;color:$black;border:1px solid $gray3;
+        }
+        &.w420{
+            width:100%;margin-right:10px;padding-right:40%;
+            & + span{ position:absolute;top:0;right:0;width:calc( 40% - 10px );}
+        }
+    }
+    [class^="txt_"]{
+        font-size:13px;
+    }
+    .txt_warning{
+        color:#eb3671;
+    }
+    .txt_accept{
+        color:$darkBlue1;
+    }
+    .u_radio{
+        overflow:hidden;font-size:0;height:40px;
+        input[type="radio"] + label{
+            position:absolute;top:0;display:block;width:50%;height:40px;line-height:40px;font-size:14px;cursor:pointer;text-align:center;border:1px solid $gray3;color:$gray1;
+            &:first-child{left:0;}
+            &:last-child{left:50%;margin-right:0 !important;}
+        }
+        input[type="radio"]:checked + label{background-color:$darkgray3;color:$white;font-weight:600;}
+    }
+    .u_selbox{
+        position:relative;overflow:hidden;display:block;
+        .sel{
+            position:relative;width:100%;border:1px solid $gray3;font-size:14px;line-height:14px;color:$black;height:40px;padding:11px 15px 11px 15px;background-color:$white;
+            &:after{
+                position: absolute;top:0;right:0;content: '';
+            }
+        }
+    }
+}
+.agree_form{
+    padding:22px 30px;background-color:$lightgray;border:1px solid #cccccc;
+    p{margin-bottom:10px;}
+}
+input[type="checkbox"] + label{	
+    position:relative;display:inline-block;font-size:14px;line-height:36px;cursor:pointer;
+    span{font-weight:300;}
+    &:before{display:inline-block;width:20px;height:20px;margin-right:10px;margin-bottom:-6px;
+        border:2px solid #ccc;content: '';background-color:$white;}
+}
+input[type="checkbox"]:checked + label {
+    &:before{background-color:#4d5eab;}
+    &:after{position:absolute;top:10px;left:8px;width:5px;height:10px;border:solid white;border-width:0 3px 3px 0;transform:rotate(45deg);-webkit-transform:rotate(45deg);-ms-transform:rotate(45deg);content: '';}
+}
+// [E] Form
+
 @media all and (min-width:1200px) {
     .onlymobile{display:none;}
     .onlypc{display:block;}
@@ -327,6 +420,7 @@ body,button,h1,h2,h3,h4,h5,h6,input,select,table,textarea{font-family: "Noto San
         .util{display:block;}
     }
 
+    // footer
     #footer{
         background-color:$darkgray1;
         .inner{
@@ -379,10 +473,50 @@ body,button,h1,h2,h3,h4,h5,h6,input,select,table,textarea{font-family: "Noto San
     // m_layer_menu
     #m_layer_menu{display:none;}
 
+    // form
+    .ipbx_item {
+        margin-bottom:30px;
+        .u_ipbx {
+            .int{padding:13px 15px 12px 15px;}
+            &.w420{
+                width:420px;margin-right:20px;padding-right:0;
+                & + span{width:200px;}
+            }
+        }
+        .u_radio{
+            input[type="radio"] + label{
+                width:95px;height:40px;line-height:40px;margin-right:10px;
+            }
+        }
+    }
+
     // content
     #container{padding-top:90px;}
     .container{
         max-width:1200px;margin:0 auto;
+    }
+
+    // banner
+    .banner{
+        height:200px;background:url(../img/page/solution/banner.jpg) 50% 50% no-repeat;background-size:cover;
+        .inner{padding:20px;}
+        h1{
+            position:relative;font-size:40px;line-height:40px;margin-top:35px;
+            &:after{
+                position:absolute;top:-15px;left:50%;width:40px;height:5px;margin-left:-20px;background-color:$darkBlue3;content:'';
+            }
+        }
+        p{font-size:16px;margin-top:6px;}
+    }
+
+    // breadcrumb
+    .breadcrumb{
+        padding:0;
+        ul{max-width:1200px;margin:0 auto;}
+        li{
+            margin-right:10px;font-size:14px;line-height:40px;height:40px;
+            &:after{margin-left:10px;}
+        }
     }
 
     .box_wrap{
@@ -397,6 +531,7 @@ body,button,h1,h2,h3,h4,h5,h6,input,select,table,textarea{font-family: "Noto San
         }
     }
 
+    // tab
     .tab_head{
         position:relative;
         &:before{
