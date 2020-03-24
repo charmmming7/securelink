@@ -97,9 +97,23 @@
 
 // 회원가입, 회원정보 수정 폼
 .form_field{
-    max-width:640px;width:100%;margin:20px auto;padding:0 20px;
+    max-width:640px;width:100%;margin:20px auto;padding:0 20px;overflow:hidden;
     hr{
         border:none;background-color:#7b9ad8;height:2px;margin:20px 0;
+    }
+}
+.btn_wrap{
+    overflow:hidden;margin:20px 0;
+    button{
+        width:100%;color:$white;font-size:16px;text-align:center;line-height:50px;
+    }
+    .btn_gray{
+        background-color:$darkgray3;
+        &:hover{background-color:$darkgray1;}
+    }
+    .btn_blue{
+        background-color:$blue2;
+        &:hover{background-color:$darkBlue1;}
     }
 }
 
@@ -127,22 +141,18 @@
         font-size:14px;color:$blue1;text-align:left;margin:15px 0;
     }
     .btn_wrap{
-        overflow:hidden;margin:20px 0;
+        margin:20px 0;
         button{
-            float:left;width:calc( 50% - 5px);color:$white;font-size:20px;text-align:center;line-height:50px;
+            float:left;width:calc( 50% - 5px);
         }
-        .btn_cancel{
-            margin-right:10px;background-color:$darkgray3;
-            &:hover{background-color:$darkgray1;}
-        }
-        .btn_save{
-            background-color:$blue2;
-            &:hover{background-color:$darkBlue1;}
+        .btn_gray{
+            margin-right:10px;
         }
     }
 }
 
 
+// mediaquery
 @media all and (min-width:1200px) {
     // 타이틀
     .title_wrap{
@@ -203,6 +213,10 @@
             height:3px;margin:40px 0;
         }
     }
+    .btn_wrap{
+        margin:50px 0;
+        button{font-size:20px;}
+    }
 
     // 회원정보 수정
     .field_edit{
@@ -210,9 +224,8 @@
             text-align:center;margin:15px 0 15px 0;
         }
         .btn_wrap{
-            margin:50px 0;
-            button{width:calc( 50% - 10px)}
-            .btn_cancel{margin-right:20px;}
+            button{width:calc( 50% - 10px);}
+            .btn_gray{margin-right:20px;}
         }
     }
 }

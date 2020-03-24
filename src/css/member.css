@@ -68,9 +68,21 @@
 
 .ipbx_item.ipbx_delete button { float: right; display: inline-block; font-size: 14px; width: 70px; height: 30px; color: #ffffff; background-color: #a2c9da; border: 1px solid #6f99ab; }
 
-.form_field { max-width: 640px; width: 100%; margin: 20px auto; padding: 0 20px; }
+.form_field { max-width: 640px; width: 100%; margin: 20px auto; padding: 0 20px; overflow: hidden; }
 
 .form_field hr { border: none; background-color: #7b9ad8; height: 2px; margin: 20px 0; }
+
+.btn_wrap { overflow: hidden; margin: 20px 0; }
+
+.btn_wrap button { width: 100%; color: #ffffff; font-size: 16px; text-align: center; line-height: 50px; }
+
+.btn_wrap .btn_gray { background-color: #707070; }
+
+.btn_wrap .btn_gray:hover { background-color: #474747; }
+
+.btn_wrap .btn_blue { background-color: #4464af; }
+
+.btn_wrap .btn_blue:hover { background-color: #1d4695; }
 
 .wrap_edit .member_step .u_tab li.on:after { display: none; }
 
@@ -82,17 +94,11 @@
 
 .field_edit .msg { font-size: 14px; color: #345299; text-align: left; margin: 15px 0; }
 
-.field_edit .btn_wrap { overflow: hidden; margin: 20px 0; }
+.field_edit .btn_wrap { margin: 20px 0; }
 
-.field_edit .btn_wrap button { float: left; width: calc( 50% - 5px); color: #ffffff; font-size: 20px; text-align: center; line-height: 50px; }
+.field_edit .btn_wrap button { float: left; width: calc( 50% - 5px); }
 
-.field_edit .btn_wrap .btn_cancel { margin-right: 10px; background-color: #707070; }
-
-.field_edit .btn_wrap .btn_cancel:hover { background-color: #474747; }
-
-.field_edit .btn_wrap .btn_save { background-color: #4464af; }
-
-.field_edit .btn_wrap .btn_save:hover { background-color: #1d4695; }
+.field_edit .btn_wrap .btn_gray { margin-right: 10px; }
 
 @media all and (min-width: 1200px) { .title_wrap { padding-top: 35px; }
   .title_wrap h2 { font-size: 30px; line-height: 30px; }
@@ -110,7 +116,8 @@
   .ipbx_item.ipbx_delete { padding: 15px 50px 15px 30px; line-height: 30px; }
   .form_field { padding: 0; }
   .form_field hr { height: 3px; margin: 40px 0; }
+  .btn_wrap { margin: 50px 0; }
+  .btn_wrap button { font-size: 20px; }
   .field_edit .msg { text-align: center; margin: 15px 0 15px 0; }
-  .field_edit .btn_wrap { margin: 50px 0; }
   .field_edit .btn_wrap button { width: calc( 50% - 10px); }
-  .field_edit .btn_wrap .btn_cancel { margin-right: 20px; } }
+  .field_edit .btn_wrap .btn_gray { margin-right: 20px; } }
