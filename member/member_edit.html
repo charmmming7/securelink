@@ -11,7 +11,6 @@
     <title>시큐어도그</title>
     <link rel="stylesheet" href="../src/css/reset.css">
     <link rel="stylesheet" href="../src/css/layout.css">
-    <link rel="stylesheet" href="../src/css/sub.css">
     <link rel="stylesheet" href="../src/css/member.css">
     <script src="../src/lib/js/jquery-2.1.4.min.js"></script>
     <script src="../src/js/common_ui.js"></script>
@@ -139,9 +138,9 @@
                                 </div>
                                 <!-- pw -->
                                 <div class="ipbx_item ipbx_pw">
-                                    <span class="u_ipbx">
+                                    <span class="u_ipbx ipbx_btn">
                                         <input type="password" class="int old_pw" maxlength="20" value="***********" readonly="readonly"> 
-                                        <button type="button" class="btn_change_pw">비밀번호 변경</button>
+                                        <button type="button" class="btn_chk">비밀번호 변경</button>
                                     </span>
 
                                     <span class="u_ipbx">
@@ -199,14 +198,14 @@
                                 </div>  
                                 <!-- 문자 인증번호 -->
                                 <div class="ipbx_item ipbx_sms">
-                                    <span class="u_ipbx">
-                                        <input type="password" class="int" maxlength="20"> 
-                                        <button type="button" class="btn_change_pw">중복확인</button>
+                                    <span class="u_ipbx ipbx_btn">
+                                        <input type="password" class="int" maxlength="20" placeholder="인증번호"> 
+                                        <button type="button" class="btn_chk">확인</button>
                                     </span>
                                 </div>
                                 <!-- email -->
                                 <div class="ipbx_item ipbx_email">
-                                    <span class="u_ipbx"><input type="text" class="int" autocapitalize="off" placeholder="이메일" value="aaaa@securelink.co.kr"></span>
+                                    <span class="u_ipbx ipbx_btn"><input type="text" class="int" autocapitalize="off" placeholder="이메일" value="aaaa@securelink.co.kr"></span>
                                     <button type="button" class="btn_chk">중복확인</button>
                                     <!-- [D] 사용자 입력시 경고 메세지 (확인을 위해 메세지를 보이게 해놓은 상태고, 개발 시 처음엔 display:none 상태로 만들어주세요) -->
                                     <p class="txt_warning">이메일 중복체크를 해주십시오.</p>
@@ -215,14 +214,26 @@
                                 
                                 <!-- 광고성 정보 수신동의 -->
                                 <h3 class="tit">광고성 정보 수신동의 <span>(선택)</span></h3>
-                                <div class="agree_form">
-                                    <p>주문 관련 정보, 주요 공지사항 및 이벤트 당첨 안내 등은 수신 동의 여부에 관계없이 자동 발송됩니다.</p>
-                                    <ul class="chkbx_wrap">
-                                        <li><span class="u_chkbx_sub"><input type="checkbox" id="agree_email"><label for="agree_email">이메일 수신동의 (선택)</label></span></li>
-                                        <li><span class="u_chkbx_sub"><input type="checkbox" id="agree_sms"><label for="agree_sms">SMS 수신동의 (선택)</label></span></li>
-                                    </ul>
+                                <div class="ipbx_item">
+                                    <div class="agree_form">
+                                        <p>주문 관련 정보, 주요 공지사항 및 이벤트 당첨 안내 등은 수신 동의 여부에 관계없이 자동 발송됩니다.</p>
+                                        <ul class="chkbx_wrap">
+                                            <li><span class="u_chkbx_sub"><input type="checkbox" id="agree_email"><label for="agree_email">이메일 수신동의 <span>(선택)</span></label></span></li>
+                                            <li><span class="u_chkbx_sub"><input type="checkbox" id="agree_sms"><label for="agree_sms">SMS 수신동의 <span>(선택)</span></label></span></li>
+                                        </ul>
+                                    </div>
+                                    <p class="msg">※ 선택항목은 동의하지 않아도 회원가입이 가능합니다.</p>
                                 </div>
 
+                                <!-- 탈퇴 -->
+                                <div class="ipbx_item ipbx_delete">
+                                    <span>탈퇴를 원하시면 우측의 회원탈퇴 버튼을 눌러주세요.</span>
+                                    <button type="button">탈퇴</button>
+                                </div>
+                                <div class="btn_wrap">
+                                    <button type="button" class="btn_cancel">취소</button>
+                                    <button type="button" class="btn_save">저장</button>
+                                </div>
                             </div>
                         </form>
                     </div>
@@ -277,7 +288,6 @@
     <!-- 모바일 레이어메뉴 -->
     <div id="m_layer_menu">
         <h1 class="blind">모바일 사이드 메뉴</h1>
-        <!-- <div class="layer_bg"></div> -->
         <div class="layer_wrap">
             <div class="top">
                 <!-- 로고 -->
@@ -290,7 +300,7 @@
             <!-- 유틸 -->
             <div class="util">
                 <a href="#" class="btn_login">login</a>
-                <a href="./join.html" class="btn_join">회원가입</a>
+                <a href="../join.html" class="btn_join">회원가입</a>
             </div>
 
             <!-- 메뉴 -->
@@ -298,6 +308,7 @@
                 <ul class="depth1">
                     <li>
                         <button>솔루션</button>
+                        <a href="../sub01/detail01.html" class="btn_go" title="바로가기">바로가기</a>
                         <ul class="depth2">
                             <li>
                                 <button>자사보안</button>
@@ -330,12 +341,14 @@
                     </li>
                     <li>
                         <button>의뢰</button>
+                        <a href="../sub02/detail01.html" class="btn_go" title="바로가기">바로가기</a>
                         <ul class="depth2">
                             <li><a href="#">개발자의뢰</a></li>
                         </ul>
                     </li>
                     <li>
                         <button>공유</button>
+                        <a href="../sub03/detail01.html" class="btn_go" title="바로가기">바로가기</a>
                         <ul class="depth2">
                             <li><a href="#">보안뉴스</a></li>
                             <li><a href="#">OPEN 소스</a></li>
@@ -344,6 +357,7 @@
                     </li>
                     <li>
                         <button>고객지원</button>
+                        <a href="../sub04/detail01.html" class="btn_go" title="바로가기">바로가기</a>
                         <ul class="depth2">
                             <li><a href="#">공지사항</a></li>
                             <li><a href="#">문의하기</a></li>
@@ -366,7 +380,6 @@
                 <a href="tel:070-4470-00261" class="phone">070-4470-00261</a>
                 <span class="hour">상담시간 : 09:00 - 18:00 (평일)</span>
             </div>
-
         </div>
     </div>
     <!-- // 모바일 레이어메뉴 -->
