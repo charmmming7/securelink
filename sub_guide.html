@@ -9,33 +9,33 @@
     <meta name="description" content="시큐도그 홈페이지입니다. 솔루션, 의뢰, 공유, 고객지원 소개">
     <!-- SEO END -->
     <title>시큐도그</title>
-    <link rel="stylesheet" href="../src/css/reset.css">
-    <link rel="stylesheet" href="../src/css/layout.css">
-    <link rel="stylesheet" href="../src/css/member.css">
-    <script src="../src/lib/js/jquery-2.1.4.min.js"></script>
-    <script src="../src/js/common_ui.js"></script>
+    <link rel="stylesheet" href="./src/css/reset.css">
+    <link rel="stylesheet" href="./src/css/layout.css">
+    <script src="./src/lib/js/jquery-2.1.4.min.js"></script>
+    <script src="./src/js/common_ui.js"></script>
 </head>
 <body>
     <div id="acc-nav">
         <a href="#gnb">메뉴 바로가기</a>
         <a href="#content">본문 바로가기</a>
     </div>
-    <main id="wrap">
+    <div id="wrap">
+        
         <!-- header -->
         <header id="header">
             <div class="gnb_bg"></div>
             <div class="inner">
                 <!-- 로고 -->
-                <h1 class="logo"><a href="../index.html"><span class="blind">시큐도그</span></a></h1>
-
+                <h1 class="logo"><a href="./index.html"><span class="blind">시큐도그</span></a></h1>
+        
                 <!-- 모바일메뉴 버튼 -->
                 <a href="#m_layer_menu" id="btn_m_menu" class="btn_m_menu" title="모바일 메뉴열기"></a>
-    
+        
                 <!-- 메뉴 -->
                 <nav id="gnb">
                     <ul class="depth1">
                         <li>
-                            <a href="../sub01/detail01.html">솔루션</a>
+                            <a href="./sub01/detail01.html">솔루션</a>
                             <ul class="depth2">
                                 <li>
                                     <a href="#">자사보안</a>
@@ -89,11 +89,11 @@
                         </li>
                     </ul>
                 </nav>
-
+        
                 <!-- 유틸 -->
                 <div class="util">
                     <a href="#" class="btn_login">login</a>
-                    <a href="../member/join.html" class="btn_join">회원가입</a>
+                    <a href="./member/join.html" class="btn_join">회원가입</a>
                 </div>
             </div>
         </header>
@@ -102,106 +102,7 @@
         <!-- container -->
         <main id="container">
             <div id="content">
-                <!-- banner -->
-                <div class="banner">
-                    <div class="inner">
-                    </div>
-                </div>
 
-                <!-- breadcrumb -->
-                <div class="breadcrumb">
-                    <ul>
-                        <li><a href="">HOME</a></li>
-                        <li><a href="">솔루션</a></li>
-                        <li><a href="">자사보안</a></li>
-                    </ul>
-                </div>
-
-                <div class="container">
-                    <div class="wrap_join">
-                        <div class="title_wrap">
-                            <h2>회원가입</h2>
-                        </div>
-
-                        <div class="member_step">
-                            <ul class="u_tab tab3">
-                                <li><span>약관동의</span></li>
-                                <li class="on"><span>정보입력</span></li>
-                                <li><span>가입완료</span></li>
-                            </ul>
-                        </div>
-
-                        <form action="">
-                            <div class="form_field field_join">
-                                <!-- id -->
-                                <div class="ipbx_item ipbx_id">
-                                    <span class="u_ipbx ipbx_btn"><input type="text" class="int" autocapitalize="off" maxlength="16" placeholder="아이디 (6 ~ 16자 영문 / 숫자)"></span>
-                                    <button type="button" class="btn_chk">중복확인</button>
-                                    <!-- [D] 사용자 입력시 경고 메세지 (확인을 위해 메세지를 보이게 해놓은 상태고, 개발 시 처음엔 display:none 상태로 만들어주세요) -->
-                                    <p class="txt_warning">아이디 중복체크를 해주십시오.</p>
-                                    <p class="txt_accept">사용가능한 아이디 입니다.</p>
-                                </div>
-                                <!-- pw -->
-                                <div class="ipbx_item ipbx_pw">
-                                    <span class="u_ipbx"> 
-                                        <!-- [D] 비밀번호 규칙 준수, 비밀번호 일치 할 경우 각 input.int 에 .success 클래스 붙여주세요 
-                                            아래 success 클래스는 예시로 붙여둔 것입니다.
-                                        -->
-                                        <input type="password" class="int pw success" maxlength="20" placeholder="비밀번호 입력 (8~20자의 영.숫자,특수문자)"> 
-                                    </span>
-                                    <!-- [D] 사용가능 특수문자는 개발가이드에 따라 수정하시면 됩니다. -->
-                                    <p class="txt_warning">사용가능 특수문자 : !"#$%&'()*+,-./:;<=>?@[＼]^_`{|}</p> 
-                                    <span class="u_ipbx"> 
-                                        <!-- [D] 비밀번호 규칙 준수, 비밀번호 일치 할 경우 각 input.int 에 .success 클래스 붙여주세요 -->
-                                        <input type="password" class="int re_pw" maxlength="20" placeholder="비밀번호 확인">
-                                    </span>
-                                    <p class="txt_warning">비밀번호가 일치하지 않습니다.</p>
-                                </div>
-                                <hr>
-                                <!-- 회사명 -->
-                                <div class="ipbx_item ipbx_company">
-                                    <span class="u_ipbx"><input type="text" class="int" placeholder="회사 상호명"></span>
-                                </div>
-                                <!-- 이름 -->
-                                <div class="ipbx_item ipbx_name">
-                                    <span class="u_ipbx w420"><input type="text" class="int" placeholder="이름"></span>
-                                    <span class="u_ipbx"><input type="text" class="int" placeholder="직급"></span>
-                                </div>
-                                <!-- 생년월일 -->
-                                <div class="ipbx_item ipbx_birthdate">
-                                    <!-- [D] 생년월일 placeholder 는 개발가이드에 따라 수정해주세요 -->
-                                    <span class="u_ipbx w420"><input type="text" class="int" placeholder="생년월일 (예:19900101)"></span>
-                                    <span class="u_radio">
-                                        <input type="radio" id="radio1" name="gender" checked="checked" />
-                                        <label for="radio1">남자</label>
-                                        <input type="radio" id="radio2" name="gender" />
-                                        <label for="radio2">여자</label>
-                                    </span>
-                                </div> 
-                                <!-- 전화번호 -->
-                                <div class="ipbx_item ipbx_phone">
-                                    <span class="u_selbox">
-                                        <label for="cell_no1"><span class="blind">휴대폰 앞자리</span></label>
-                                        <select id="cell_no1" name="cell_no1" class="sel"><option value="">선택</option><option value="010">010</option><option value="011">011</option><option value="016">016</option><option value="017">017</option><option value="018">018</option><option value="019">019</option></select>
-                                    </span>
-                                    <span class="u_ipbx"><input type="text" class="int" title="휴대폰번호 중간자리" maxlength="4"></span>
-                                    <span class="u_ipbx"><input type="text" class="int" title="휴대폰번호 마지막자리" maxlength="4"></span>
-                                </div>  
-                                <!-- email -->
-                                <div class="ipbx_item ipbx_email">
-                                    <span class="u_ipbx ipbx_btn"><input type="text" class="int" autocapitalize="off" placeholder="이메일"></span>
-                                    <button type="button" class="btn_chk">중복확인</button>
-                                    <!-- [D] 사용자 입력시 경고 메세지 (확인을 위해 메세지를 보이게 해놓은 상태고, 개발 시 처음엔 display:none 상태로 만들어주세요) -->
-                                    <p class="txt_warning">이메일 중복체크를 해주십시오.</p>
-                                    <p class="txt_accept">사용가능한 이메일 입니다.</p>
-                                </div>     
-                                <div class="btn_wrap">
-                                    <button type="button" class="btn_blue">회원 가입하기</button>
-                                </div>                        
-                            </div>
-                        </form>
-                    </div>
-                </div>
             </div>
         </main>
         <!-- // container -->
@@ -217,7 +118,7 @@
                         <li><a href="#">이용약관</a></li>
                     </ul>
                 </div>
-
+        
                 <div class="ft_btm">
                     <div class="logo"><span class="blind">시큐도그</span></div>
                     <div class="ft_policy">
@@ -255,7 +156,7 @@
         <div class="layer_wrap">
             <div class="top">
                 <!-- 로고 -->
-                <h1 class="logo"><a href="../index.html"><span class="blind">시큐도그</span></a></h1>
+                <h1 class="logo"><a href="./index.html"><span class="blind">시큐도그</span></a></h1>
     
                 <!-- 닫기버튼 -->
                 <a href="#btn_m_menu" class="btn_close_m_menu" title="모바일 메뉴 닫기">닫기</a>
@@ -264,7 +165,7 @@
             <!-- 유틸 -->
             <div class="util">
                 <a href="#" class="btn_login">login</a>
-                <a href="../member/join.html" class="btn_join">회원가입</a>
+                <a href="./member/join.html" class="btn_join">회원가입</a>
             </div>
 
             <!-- 메뉴 -->
@@ -272,7 +173,7 @@
                 <ul class="depth1">
                     <li>
                         <button>솔루션</button>
-                        <a href="../sub01/detail01.html" class="btn_go" title="바로가기">바로가기</a>
+                        <a href="./sub01/detail01.html" class="btn_go" title="바로가기">바로가기</a>
                         <ul class="depth2">
                             <li>
                                 <button>자사보안</button>
@@ -305,14 +206,14 @@
                     </li>
                     <li>
                         <button>의뢰</button>
-                        <a href="../sub02/detail01.html" class="btn_go" title="바로가기">바로가기</a>
+                        <a href="./sub02/detail01.html" class="btn_go" title="바로가기">바로가기</a>
                         <ul class="depth2">
                             <li><a href="#">개발자의뢰</a></li>
                         </ul>
                     </li>
                     <li>
                         <button>공유</button>
-                        <a href="../sub03/detail01.html" class="btn_go" title="바로가기">바로가기</a>
+                        <a href="./sub03/detail01.html" class="btn_go" title="바로가기">바로가기</a>
                         <ul class="depth2">
                             <li><a href="#">보안뉴스</a></li>
                             <li><a href="#">OPEN 소스</a></li>
@@ -321,7 +222,7 @@
                     </li>
                     <li>
                         <button>고객지원</button>
-                        <a href="../sub04/detail01.html" class="btn_go" title="바로가기">바로가기</a>
+                        <a href="./sub04/detail01.html" class="btn_go" title="바로가기">바로가기</a>
                         <ul class="depth2">
                             <li><a href="#">공지사항</a></li>
                             <li><a href="#">문의하기</a></li>

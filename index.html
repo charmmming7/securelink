@@ -1,252 +1,904 @@
-<!DOCTYPE html>
-<html lang="ko">
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
-    <meta content="index,follow" name="robots">
-    <meta name="Author" content="">
-    <meta name="description" content="시큐어도그 홈페이지입니다. 솔루션, 의뢰, 공유, 고객지원 소개">
-    <!-- SEO END -->
-    <title>시큐어도그</title>
-    <link rel="stylesheet" href="./src/css/reset.css">
-    <link rel="stylesheet" href="./src/css/layout.css">
+	<meta http-equiv="Content-Type" content="text/html" charset="utf-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+	<title>시큐도그 퍼블리싱 가이드</title>
     <script src="./src/lib/js/jquery-2.1.4.min.js"></script>
-    <script src="./src/js/common_ui.js"></script>
+    <style type="text/css">
+		html,
+		body,
+		p {
+			margin: 0;
+			padding: 0
+		}
+
+		body,
+		td {
+			font-size: 1em;
+			font-family: 'NotoSans', '맑은 고딕', 'malgun gothic', dotum, '돋움', Sans-Serif;
+			font-weight: normal;
+			color: #000
+        }
+        
+		table {
+			border-collapse: collapse;
+			border-spacing: 0
+        }
+        
+		#g_header {
+			padding: 23px 20px;
+			height: 90px;
+			background:#1d4695;
+			box-sizing: border-box
+		}
+
+		#g_header h1 {
+			max-width: 1240px;
+			margin: 0 auto;
+			font-size: 2.3em;
+			font-weight: 600;
+			line-height: 1em;
+			color: #fff;
+			text-shadow: 0 0 0 rgba(0, 32, 44, 1), 0 0 3px rgba(0, 32, 44, 1)
+		}
+
+		#g_body {
+			position: relative;
+			max-width: 1240px;
+			margin: 0 auto;
+			padding: 0 20px
+		}
+
+		#g_footer {
+			padding: 24px 20px;
+			background: #f6f6f6;
+			box-sizing: border-box
+		}
+
+		#g_footer span {
+			display: block;
+			max-width: 1240px;
+			margin: 0 auto;
+			font-size: 10px
+		}
+
+		.contents h2 {
+			margin: 50px 0 5px;
+			padding: 8px 0;
+			border-top: 3px dashed #999;
+			border-bottom: 3px dashed #999;
+			font-size: 1.6em;
+			font-weight: bold
+		}
+
+		.note_box {
+			max-width: 1240px;
+			margin: 0 auto 15px;
+			padding: 15px;
+			background: #c2f4ff;
+			line-height: 1.4em
+		}
+
+		.guide_table {
+			width: 100%;
+			margin-bottom: 80px;
+			border-bottom: 2px solid #c5c5c5
+		}
+
+		.guide_table thead th {
+			text-align: left;
+			padding: 6px 2px;
+			border-bottom: 2px solid #666;
+			border-right: 1px solid #292929;
+			border-left: 1px solid #292929;
+			background: #292929;
+			font-weight: 500;
+			color: #fff
+		}
+
+		.guide_table tbody tr:hover {
+			background: #efefef
+		}
+
+		.guide_table tbody td {
+			text-align: left;
+			padding: 5px 2px;
+			font-size: .9em;
+			border-bottom: 1px solid #ccc
+		}
+
+		.guide_table .no {
+			padding-right: 5px;
+			text-align: center
+		}
+
+		.count_bar {
+			float: right;
+			margin-top: 8px;
+			font-size: .6em;
+			font-weight: normal;
+			color: #666
+		}
+
+		.btn_area {
+			max-width: 1240px;
+			margin: 0 auto;
+			padding: 0 0 30px;
+			text-align: right;
+			margin-top: -50px
+		}
+
+		.btn_top {
+			display: inline-block;
+			box-sizing: border-box;
+			width: 40px;
+			height: 40px;
+			line-height: 40px;
+			text-align: center;
+			background: #292929;
+			color: #fff;
+			text-decoration: none
+		}
+
+		@media screen and (max-width:767px) {
+			body,
+			td,
+			.guide_table thead th {
+				font-size: .9em
+			}
+			#g_header {
+				padding: 20px 15px
+			}
+			#g_header h1 {
+				font-size: 1.6em;
+				line-height: 1.3em
+			}
+			#g_header {
+				height: auto
+			}
+			#g_body {
+				padding: 0 5px
+			}
+			.contents {
+				margin: 0
+			}
+			.contents h2 {
+				font-size: 1.3em;
+				margin-top: 20px;
+				padding: 4px 0;
+				border-top: 2px dotted #666;
+				border-bottom: 2px dotted #666
+			}
+			.guide_table {
+				margin-bottom: 40px
+			}
+			.note_box {
+				padding: 10px
+			}
+			.btn_area {
+				margin-top: -10px
+			}
+			.hidden-phone {
+				display: none !important
+			}
+			.t_center {
+				text-align: center !important
+			}
+		}
+	</style>
+	<script type="text/javascript">
+		//<![CDATA[
+		$(document).ready(function() {
+			var guideTable = $(".guide_table"),
+				len = 0,
+				idx = 0;
+
+			guideTable.each(function(i) {
+
+				len = $(this).find("td.no").length;
+				$(this).prev().find(".page_total").text(len);
+				$(this).find("td.no").each(function(n) {
+					$(this).text(n + 1);
+				});
+			});
+
+			guideTable.find("tbody tr").each(function() {
+
+				var idx = $(this).parents(".guide_table").find("thead th.condition").index(),
+					$this = $(this).find("td").eq(idx),
+					condition = $this.text();
+
+				switch (condition) {
+
+					case "작업중":
+						$this.css("color", "green");
+						break;
+
+					case " ":
+						$this.css("font-weight", "bold");
+					default:
+						break;
+				}
+
+			});
+
+			var $pageTotal = ($('table.guide_table tbody tr').length) - 1;
+			var $count_total = (($('table.guide_table tbody tr').find('td:eq("4")').children('a')).length) + 1;
+			var $pagePercent = (($count_total / $pageTotal) * 100).toFixed(2) + '%';
+		});
+		//]]>
+	</script>
 </head>
+
 <body>
-    <div id="acc-nav">
-        <a href="#gnb">메뉴 바로가기</a>
-        <a href="#content">본문 바로가기</a>
-    </div>
-    <div id="wrap">
-        
-        <!-- header -->
-        <header id="header">
-            <div class="gnb_bg"></div>
-            <div class="inner">
-                <!-- 로고 -->
-                <h1 class="logo"><a href="./index.html"><span class="blind">시큐어도그</span></a></h1>
-        
-                <!-- 모바일메뉴 버튼 -->
-                <a href="#m_layer_menu" id="btn_m_menu" class="btn_m_menu" title="모바일 메뉴열기"></a>
-        
-                <!-- 메뉴 -->
-                <nav id="gnb">
-                    <ul class="depth1">
-                        <li>
-                            <a href="./sub01/detail01.html">솔루션</a>
-                            <ul class="depth2">
-                                <li>
-                                    <a href="#">자사보안</a>
-                                    <ul class="depth3">
-                                        <li><a href="#">Ransome keeper</a></li>
-                                        <li><a href="#">Pharming Keeper</a></li>
-                                        <li><a href="#">SPK Solution</a></li>
-                                        <li><a href="#">ONE PASS</a></li>
-                                        <li><a href="#">One Power</a></li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a href="#">타사보안</a>
-                                    <ul class="depth3">
-                                        <li><a href="#">OTP인증</a></li>
-                                        <li><a href="#">파일박스</a></li>
-                                        <li><a href="#">시큐레터</a></li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a href="#">SI</a>
-                                    <ul class="depth3">
-                                        <li><a href="#">검색엔진</a></li>
-                                        <li><a href="#">레포팅툴</a></li>
-                                        <li><a href="#">조직도 관리</a></li>
-                                        <li><a href="#">ctI솔루션</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#">의뢰</a>
-                            <ul class="depth2">
-                                <li><a href="#">개발자의뢰</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#">공유</a>
-                            <ul class="depth2">
-                                <li><a href="#">보안뉴스</a></li>
-                                <li><a href="#">OPEN 소스</a></li>
-                                <li><a href="#">자료실</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#">고객지원</a>
-                            <ul class="depth2">
-                                <li><a href="#">공지사항</a></li>
-                                <li><a href="#">문의하기</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </nav>
-        
-                <!-- 유틸 -->
-                <div class="util">
-                    <a href="#" class="btn_login">login</a>
-                    <a href="./member/join.html" class="btn_join">회원가입</a>
-                </div>
-            </div>
-        </header>
-        <!-- //header -->
+	<div id="g_header">
+		<h1> 시큐도그 퍼블리싱 가이드</h1>
+	</div>
 
-        <!-- container -->
-        <main id="container">
-            <div id="content">
+	<div id="g_body">
+		<div class="contents">
 
-            </div>
-        </main>
-        <!-- // container -->
+			<!-- PC버전일경우 -->
+			<div class="note_box">
+				<ul>
+					<li>크로스 브라우징 기준 : PC / MOBILE (1200px 이하)</li>
+					<li>문서타입 및 인코딩 : &lt;!DOCTYPE html&gt; &nbsp; &lt;meta charset="utf-8"&gt;</li>
+				</ul>
+			</div>
 
-        <!-- footer -->
-        <footer id="footer" role="contentinfo">
-            <div class="inner">
-                <h2 class="blind">푸터 메뉴</h2>
-                <div class="ft_terms">
-                    <ul>
-                        <li><a href="#">이용안내</a></li>
-                        <li><a href="#">개인정보취급방침</a></li>
-                        <li><a href="#">이용약관</a></li>
-                    </ul>
-                </div>
-        
-                <div class="ft_btm">
-                    <div class="logo"><span class="blind">시큐어도그</span></div>
-                    <div class="ft_policy">
-                        <ul class="ft_info">
-                            <li class="title onlymobile"><span class="blind">상호</span>(주) SECUDOG</li>
-                            <li>
-                                <address class="ft_address">
-                                    <h3 class="blind">시큐어도그 사업자 정보</h3>
-                                    <span class="info"><span class="tit">주소</span>(06730)서울특별시 서초구 강남대로39길 26-7, 2층</span>
-                                    <span class="info"><span class="tit">대표</span>고 준 용</span>
-                                    <span class="info"><span class="tit">사업자등록번호</span>655-87-00515</span>
-                                    <span class="info"><span class="tit">통신판매업신고</span><button class="btn_busi_info">사업자정보확인</button></span>
-                                </address>
-                            </li>
-                            <li><span class="copyright">Copyright © secudog ALL Rights Reserved</span></li>
-                        </ul>
-                    </div>
-                    <div class="ft_contact onlypc">
-                        <span class="tit">고객센터</span>
-                        <a class="phone" href="tel:070-4470-00261">070-4470-00261</a>
-                        <span class="hour">
-                            <span class="category">평일</span>09:30 - 17:30<br>
-                            <span class="category">점심시간</span>12:30 - 13:30
-                        </span>
-                    </div>
-                </div>
-            </div>
-        </footer>
-        <!-- //footer -->
+			<h2>◈ 디자인 <span class="count_bar">- TOTAL <span class="page_total"></span></h2>
+			<table class="guide_table" summary=" 코딩가이드 상세내용" id="guide_table">
+				<colgroup>
+					<col />
+					<col />
+					<col />
+					<col />
+					<col />
+					<col />
+					<col />
+				</colgroup>
+				<thead>
+					<tr>
+						<th scope="col" class="no hidden-phone">NO</th>
+						<th scope="col">1depth</th>
+						<th scope="col">2depth</th>
+						<th scope="col">3depth</th>
+						<th scope="col" class="t_center">퍼블리싱 보기</th>
+						<th scope="col" class="hidden-phone condition">상태</th>
+						<th scope="col" class="hidden-phone">비고</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td class="no hidden-phone">
+							<!-- 번호 -->
+						</td>
+						<td>서브</td>
+						<td></td>
+						<td></td>
+						<td class="filelink">
+							<a href="./sub_guide.html" target="_blank">sub_guide.html</a>
+						</td>
+						<td class="hidden-phone">완료</td>
+						<td class="hidden-phone"></td>
+                    </tr>
+                    
+                    <tr class="dep00">
+                        <td class="no hidden-phone">
+                            <!-- 번호 -->
+						</td>
+						<td>메인</td>
+						<td>메인</td>
+						<td></td>
+						<td class="filelink">
+                            <a href="" target="_blank"></a>
+						</td>
+						<td class="hidden-phone"> </td>
+						<td class="hidden-phone"></td>
+                    </tr>
+                    <!-- // 메인 -->
 
-    </div>
-    <!-- 모바일 레이어메뉴 -->
-    <div id="m_layer_menu">
-        <h1 class="blind">모바일 사이드 메뉴</h1>
-        <div class="layer_wrap">
-            <div class="top">
-                <!-- 로고 -->
-                <h1 class="logo"><a href="./index.html"><span class="blind">시큐어도그</span></a></h1>
-    
-                <!-- 닫기버튼 -->
-                <a href="#btn_m_menu" class="btn_close_m_menu" title="모바일 메뉴 닫기">닫기</a>
-            </div>
+                    <!-- 솔루션 -->
+					<tr>
+						<td class="no hidden-phone">
+							<!-- 번호 -->
+						</td>
+						<td>솔루션</td>
+						<td></td>
+						<td></td>
+						<td class="filelink">
+							<a href="./sub01/detail01.html" target="_blank">sub01/detail01.html</a>
+						</td>
+						<td class="hidden-phone">완료</td>
+						<td class="hidden-phone"></td>
+                    </tr>
+                    <tr>
+						<td class="no hidden-phone">
+							<!-- 번호 -->
+						</td>
+						<td></td>
+						<td>자사보안</td>
+						<td></td>
+						<td class="filelink">
+							<a href="" target="_blank"></a>
+						</td>
+						<td class="hidden-phone"> </td>
+						<td class="hidden-phone"></td>
+                    </tr>
+                    <tr>
+						<td class="no hidden-phone">
+							<!-- 번호 -->
+						</td>
+						<td></td>
+						<td></td>
+						<td>Ransome keeper</td>
+						<td class="filelink">
+							<a href="" target="_blank"></a>
+						</td>
+						<td class="hidden-phone"> </td>
+						<td class="hidden-phone"></td>
+                    </tr>
+                    <tr>
+						<td class="no hidden-phone">
+							<!-- 번호 -->
+						</td>
+						<td></td>
+						<td></td>
+						<td>Pharming Keeper</td>
+						<td class="filelink">
+							<a href="" target="_blank"></a>
+						</td>
+						<td class="hidden-phone"> </td>
+						<td class="hidden-phone"></td>
+                    </tr>
+                    <tr>
+						<td class="no hidden-phone">
+							<!-- 번호 -->
+						</td>
+						<td></td>
+						<td></td>
+						<td>SPK Solution</td>
+						<td class="filelink">
+							<a href="" target="_blank"></a>
+						</td>
+						<td class="hidden-phone"> </td>
+						<td class="hidden-phone"></td>
+                    </tr>
+                    <tr>
+						<td class="no hidden-phone">
+							<!-- 번호 -->
+						</td>
+						<td></td>
+						<td></td>
+						<td>ONE PASS</td>
+						<td class="filelink">
+							<a href="" target="_blank"></a>
+						</td>
+						<td class="hidden-phone"> </td>
+						<td class="hidden-phone"></td>
+                    </tr>
+                    <tr>
+						<td class="no hidden-phone">
+							<!-- 번호 -->
+						</td>
+						<td></td>
+						<td></td>
+						<td>One Power</td>
+						<td class="filelink">
+							<a href="" target="_blank"></a>
+						</td>
+						<td class="hidden-phone"> </td>
+						<td class="hidden-phone"></td>
+                    </tr>
+                    <tr>
+						<td class="no hidden-phone">
+							<!-- 번호 -->
+						</td>
+						<td></td>
+						<td></td>
+						<td>- 제품 선택 및 현황 분석</td>
+						<td class="filelink">
+							<a href="" target="_blank"></a>
+						</td>
+						<td class="hidden-phone"> </td>
+						<td class="hidden-phone"></td>
+                    </tr>
+                    <tr>
+						<td class="no hidden-phone">
+							<!-- 번호 -->
+						</td>
+						<td></td>
+						<td></td>
+						<td>- 견적요청 완료</td>
+						<td class="filelink">
+							<a href="" target="_blank"></a>
+						</td>
+						<td class="hidden-phone"> </td>
+						<td class="hidden-phone"></td>
+                    </tr>
+                    <tr>
+						<td class="no hidden-phone">
+							<!-- 번호 -->
+						</td>
+						<td></td>
+						<td></td>
+						<td>- 결제</td>
+						<td class="filelink">
+							<a href="" target="_blank"></a>
+						</td>
+						<td class="hidden-phone"> </td>
+						<td class="hidden-phone"></td>
+                    </tr>
+                    <tr>
+						<td class="no hidden-phone">
+							<!-- 번호 -->
+						</td>
+						<td></td>
+						<td></td>
+						<td>- 주문완료</td>
+						<td class="filelink">
+							<a href="" target="_blank"></a>
+						</td>
+						<td class="hidden-phone"> </td>
+						<td class="hidden-phone"></td>
+                    </tr>
+                    <!-- //자사보안 -->
 
-            <!-- 유틸 -->
-            <div class="util">
-                <a href="#" class="btn_login">login</a>
-                <a href="./member/join.html" class="btn_join">회원가입</a>
-            </div>
+                    <tr>
+						<td class="no hidden-phone">
+							<!-- 번호 -->
+						</td>
+						<td></td>
+						<td>타사보안</td>
+						<td></td>
+						<td class="filelink">
+							<a href="" target="_blank"></a>
+						</td>
+						<td class="hidden-phone"> </td>
+						<td class="hidden-phone"></td>
+                    </tr>
+                    <tr>
+						<td class="no hidden-phone">
+							<!-- 번호 -->
+						</td>
+						<td></td>
+						<td></td>
+						<td>OTP인증</td>
+						<td class="filelink">
+							<a href="" target="_blank"></a>
+						</td>
+						<td class="hidden-phone"> </td>
+						<td class="hidden-phone"></td>
+                    </tr>
+                    <tr>
+						<td class="no hidden-phone">
+							<!-- 번호 -->
+						</td>
+						<td></td>
+						<td></td>
+						<td>파일박스</td>
+						<td class="filelink">
+							<a href="" target="_blank"></a>
+						</td>
+						<td class="hidden-phone"> </td>
+						<td class="hidden-phone"></td>
+                    </tr>
+                    <tr>
+						<td class="no hidden-phone">
+							<!-- 번호 -->
+						</td>
+						<td></td>
+						<td></td>
+						<td>시큐레터</td>
+						<td class="filelink">
+							<a href="" target="_blank"></a>
+						</td>
+						<td class="hidden-phone"> </td>
+						<td class="hidden-phone"></td>
+                    </tr>
+                    <!-- 타사보안 -->
 
-            <!-- 메뉴 -->
-            <nav id="m_gnb">
-                <ul class="depth1">
-                    <li>
-                        <button>솔루션</button>
-                        <a href="./sub01/detail01.html" class="btn_go" title="바로가기">바로가기</a>
-                        <ul class="depth2">
-                            <li>
-                                <button>자사보안</button>
-                                <ul class="depth3">
-                                    <li><a href="#">Ransome keeper</a></li>
-                                    <li><a href="#">Pharming Keeper</a></li>
-                                    <li><a href="#">SPK Solution</a></li>
-                                    <li><a href="#">ONE PASS</a></li>
-                                    <li><a href="#">One Power</a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <button>타사보안</button>
-                                <ul class="depth3">
-                                    <li><a href="#">OTP인증</a></li>
-                                    <li><a href="#">파일박스</a></li>
-                                    <li><a href="#">시큐레터</a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <button>SI</button>
-                                <ul class="depth3">
-                                    <li><a href="#">검색엔진</a></li>
-                                    <li><a href="#">레포팅툴</a></li>
-                                    <li><a href="#">조직도 관리</a></li>
-                                    <li><a href="#">ctI솔루션</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <button>의뢰</button>
-                        <a href="./sub02/detail01.html" class="btn_go" title="바로가기">바로가기</a>
-                        <ul class="depth2">
-                            <li><a href="#">개발자의뢰</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <button>공유</button>
-                        <a href="./sub03/detail01.html" class="btn_go" title="바로가기">바로가기</a>
-                        <ul class="depth2">
-                            <li><a href="#">보안뉴스</a></li>
-                            <li><a href="#">OPEN 소스</a></li>
-                            <li><a href="#">자료실</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <button>고객지원</button>
-                        <a href="./sub04/detail01.html" class="btn_go" title="바로가기">바로가기</a>
-                        <ul class="depth2">
-                            <li><a href="#">공지사항</a></li>
-                            <li><a href="#">문의하기</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </nav>
-            <!-- //메뉴 -->
+                    <tr>
+						<td class="no hidden-phone">
+							<!-- 번호 -->
+						</td>
+						<td></td>
+						<td>SI</td>
+						<td></td>
+						<td class="filelink">
+							<a href="" target="_blank"></a>
+						</td>
+						<td class="hidden-phone"> </td>
+						<td class="hidden-phone"></td>
+                    </tr>
+                    <tr>
+						<td class="no hidden-phone">
+							<!-- 번호 -->
+						</td>
+						<td></td>
+						<td></td>
+						<td>검색엔진</td>
+						<td class="filelink">
+							<a href="" target="_blank"></a>
+						</td>
+						<td class="hidden-phone"> </td>
+						<td class="hidden-phone"></td>
+                    </tr>
+                    <tr>
+						<td class="no hidden-phone">
+							<!-- 번호 -->
+						</td>
+						<td></td>
+						<td></td>
+						<td>레포팅툴</td>
+						<td class="filelink">
+							<a href="" target="_blank"></a>
+						</td>
+						<td class="hidden-phone"> </td>
+						<td class="hidden-phone"></td>
+                    </tr>
+                    <tr>
+						<td class="no hidden-phone">
+							<!-- 번호 -->
+						</td>
+						<td></td>
+						<td></td>
+						<td>조직도 관리</td>
+						<td class="filelink">
+							<a href="" target="_blank"></a>
+						</td>
+						<td class="hidden-phone"> </td>
+						<td class="hidden-phone"></td>
+                    </tr>
+                    <tr>
+						<td class="no hidden-phone">
+							<!-- 번호 -->
+						</td>
+						<td></td>
+						<td></td>
+						<td>ctI솔루션</td>
+						<td class="filelink">
+							<a href="" target="_blank"></a>
+						</td>
+						<td class="hidden-phone"> </td>
+						<td class="hidden-phone"></td>
+                    </tr>
+                    <!-- // SI -->
 
-            <div class="terms_link">
-                <ul>
-                    <li><a href="#">이용안내</a></li>
-                    <li><a href="#">개인정보취급방침</a></li>
-                    <li><a href="#">이용약관</a></li>
-                </ul>
-            </div>
+                    <tr>
+						<td class="no hidden-phone">
+							<!-- 번호 -->
+						</td>
+						<td>의뢰</td>
+						<td>개발자의뢰</td>
+						<td></td>
+						<td class="filelink">
+							<a href="" target="_blank"></a>
+						</td>
+						<td class="hidden-phone"> </td>
+						<td class="hidden-phone"></td>
+                    </tr>
+                    <tr>
+						<td class="no hidden-phone">
+							<!-- 번호 -->
+						</td>
+						<td></td>
+						<td></td>
+						<td>의뢰 완료</td>
+						<td class="filelink">
+							<a href="" target="_blank"></a>
+						</td>
+						<td class="hidden-phone"> </td>
+						<td class="hidden-phone"></td>
+                    </tr>
+                    <!-- // 의뢰 -->
 
-            <div class="contact">
-                <span class="blind">고객센터</span>
-                <a href="tel:070-4470-00261" class="phone">070-4470-00261</a>
-                <span class="hour">상담시간 : 09:00 - 18:00 (평일)</span>
-            </div>
-        </div>
-    </div>
-    <!-- // 모바일 레이어메뉴 -->
+                    <tr>
+						<td class="no hidden-phone">
+							<!-- 번호 -->
+						</td>
+						<td>공유</td>
+						<td>보안뉴스</td>
+						<td></td>
+						<td class="filelink">
+							<a href="" target="_blank"></a>
+						</td>
+						<td class="hidden-phone"> </td>
+						<td class="hidden-phone"></td>
+                    </tr>
+                    <tr>
+						<td class="no hidden-phone">
+							<!-- 번호 -->
+						</td>
+						<td></td>
+						<td>OPEN 소스</td>
+						<td></td>
+						<td class="filelink">
+							<a href="" target="_blank"></a>
+						</td>
+						<td class="hidden-phone"> </td>
+						<td class="hidden-phone"></td>
+                    </tr>
+                    <tr>
+						<td class="no hidden-phone">
+							<!-- 번호 -->
+						</td>
+						<td></td>
+						<td>자료실</td>
+						<td></td>
+						<td class="filelink">
+							<a href="" target="_blank"></a>
+						</td>
+						<td class="hidden-phone"> </td>
+						<td class="hidden-phone"></td>
+                    </tr>
+                    <!-- // 공유 -->
+
+                    <tr>
+						<td class="no hidden-phone">
+							<!-- 번호 -->
+						</td>
+						<td>고객지원</td>
+						<td>공지사항</td>
+						<td></td>
+						<td class="filelink">
+							<a href="" target="_blank"></a>
+						</td>
+						<td class="hidden-phone"> </td>
+						<td class="hidden-phone"></td>
+                    </tr>
+                    <tr>
+						<td class="no hidden-phone">
+							<!-- 번호 -->
+						</td>
+						<td></td>
+						<td>문의하기</td>
+						<td></td>
+						<td class="filelink">
+							<a href="" target="_blank"></a>
+						</td>
+						<td class="hidden-phone"> </td>
+						<td class="hidden-phone"></td>
+                    </tr>
+                    <!-- // 고객지원 -->
+
+                    <tr>
+						<td class="no hidden-phone">
+							<!-- 번호 -->
+						</td>
+						<td>회원</td>
+						<td>약관동의</td>
+						<td></td>
+						<td class="filelink">
+							<a href="" target="_blank"></a>
+						</td>
+						<td class="hidden-phone"></td>
+						<td class="hidden-phone"></td>
+                    </tr>
+                    <tr>
+						<td class="no hidden-phone">
+							<!-- 번호 -->
+						</td>
+						<td></td>
+						<td>정보입력</td>
+						<td></td>
+						<td class="filelink">
+							<a href="./member/join.html" target="_blank">member/join.html</a>
+						</td>
+						<td class="hidden-phone">완료</td>
+						<td class="hidden-phone"></td>
+                    </tr>
+                    <tr>
+						<td class="no hidden-phone">
+							<!-- 번호 -->
+						</td>
+						<td></td>
+						<td>가입완료</td>
+						<td></td>
+						<td class="filelink">
+							<a href="" target="_blank"></a>
+						</td>
+						<td class="hidden-phone"></td>
+						<td class="hidden-phone"></td>
+                    </tr>
+                    <tr>
+						<td class="no hidden-phone">
+							<!-- 번호 -->
+						</td>
+						<td></td>
+						<td>로그인</td>
+						<td></td>
+						<td class="filelink">
+							<a href="" target="_blank"></a>
+						</td>
+						<td class="hidden-phone"></td>
+						<td class="hidden-phone"></td>
+                    </tr>
+                    <tr>
+						<td class="no hidden-phone">
+							<!-- 번호 -->
+						</td>
+						<td></td>
+						<td>아이디 찾기</td>
+						<td></td>
+						<td class="filelink">
+							<a href="" target="_blank"></a>
+						</td>
+						<td class="hidden-phone"></td>
+						<td class="hidden-phone"></td>
+                    </tr>
+                    <tr>
+						<td class="no hidden-phone">
+							<!-- 번호 -->
+						</td>
+						<td></td>
+						<td>아이디 찾기완료</td>
+						<td></td>
+						<td class="filelink">
+							<a href="" target="_blank"></a>
+						</td>
+						<td class="hidden-phone"></td>
+						<td class="hidden-phone"></td>
+                    </tr>
+                    <tr>
+						<td class="no hidden-phone">
+							<!-- 번호 -->
+						</td>
+						<td></td>
+						<td>비밀번호 찾기</td>
+						<td></td>
+						<td class="filelink">
+							<a href="" target="_blank"></a>
+						</td>
+						<td class="hidden-phone"></td>
+						<td class="hidden-phone"></td>
+                    </tr>
+                    <tr>
+						<td class="no hidden-phone">
+							<!-- 번호 -->
+						</td>
+						<td></td>
+						<td>비밀번호 찾기완료</td>
+						<td></td>
+						<td class="filelink">
+							<a href="" target="_blank"></a>
+						</td>
+						<td class="hidden-phone"></td>
+						<td class="hidden-phone"></td>
+                    </tr>
+
+                    <!-- 마이페이지 -->
+                    <tr>
+						<td class="no hidden-phone">
+							<!-- 번호 -->
+						</td>
+						<td>마이페이지</td>
+						<td>견적요청내역</td>
+						<td></td>
+						<td class="filelink">
+							<a href="" target="_blank"></a>
+						</td>
+						<td class="hidden-phone"></td>
+						<td class="hidden-phone"></td>
+                    </tr>
+                    <tr>
+						<td class="no hidden-phone">
+							<!-- 번호 -->
+						</td>
+						<td></td>
+						<td></td>
+						<td>상세</td>
+						<td class="filelink">
+							<a href="" target="_blank"></a>
+						</td>
+						<td class="hidden-phone"></td>
+						<td class="hidden-phone"></td>
+                    </tr>
+                    <tr>
+						<td class="no hidden-phone">
+							<!-- 번호 -->
+						</td>
+						<td></td>
+						<td>주문조회</td>
+						<td></td>
+						<td class="filelink">
+							<a href="" target="_blank"></a>
+						</td>
+						<td class="hidden-phone"></td>
+						<td class="hidden-phone"></td>
+                    </tr>
+                    <tr>
+						<td class="no hidden-phone">
+							<!-- 번호 -->
+						</td>
+						<td></td>
+						<td></td>
+						<td>상세</td>
+						<td class="filelink">
+							<a href="" target="_blank"></a>
+						</td>
+						<td class="hidden-phone"></td>
+						<td class="hidden-phone"></td>
+                    </tr>
+                    <tr>
+						<td class="no hidden-phone">
+							<!-- 번호 -->
+						</td>
+						<td></td>
+						<td>회원정보 수정</td>
+						<td>비밀번호 확인</td>
+						<td class="filelink">
+							<a href="" target="_blank"></a>
+						</td>
+						<td class="hidden-phone"></td>
+						<td class="hidden-phone"></td>
+                    </tr>
+                    <tr>
+						<td class="no hidden-phone">
+							<!-- 번호 -->
+						</td>
+						<td></td>
+						<td></td>
+						<td>수정</td>
+						<td class="filelink">
+							<a href="./member/member_edit.html" target="_blank">member/member_edit.html</a>
+						</td>
+						<td class="hidden-phone">완료</td>
+						<td class="hidden-phone"></td>
+                    </tr>
+                    <tr>
+						<td class="no hidden-phone">
+							<!-- 번호 -->
+						</td>
+						<td></td>
+						<td>회원탈퇴</td>
+						<td></td>
+						<td class="filelink">
+							<a href="" target="_blank"></a>
+						</td>
+						<td class="hidden-phone"></td>
+						<td class="hidden-phone"></td>
+                    </tr>
+                    <tr>
+						<td class="no hidden-phone">
+							<!-- 번호 -->
+						</td>
+						<td></td>
+						<td></td>
+						<td>이메일 수신거부</td>
+						<td class="filelink">
+							<a href="" target="_blank"></a>
+						</td>
+						<td class="hidden-phone"></td>
+						<td class="hidden-phone"></td>
+                    </tr>
+                    <tr>
+						<td class="no hidden-phone">
+							<!-- 번호 -->
+						</td>
+						<td></td>
+						<td></td>
+						<td>SMS 수신거부</td>
+						<td class="filelink">
+							<a href="" target="_blank"></a>
+						</td>
+						<td class="hidden-phone"></td>
+						<td class="hidden-phone"></td>
+                    </tr>
+
+				</tbody>
+			</table>
+		</div>
+		<div class="btn_area">
+			<a href="#top" class="btn_top" title="상단으로 이동">TOP</a>
+		</div>
+	</div>
+	<div id="g_footer">
+		<span>Copyright &copy; 2018 by HIWEB All Rights Reserved.</span>
+	</div>
 </body>
+
 </html>
