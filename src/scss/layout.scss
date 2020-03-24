@@ -407,6 +407,41 @@ input[type="checkbox"]:checked + label {
 }
 // [E] Form
 
+// [S] content
+// 진행과정
+.u_step{
+    overflow:hidden;margin:30px 0;padding:0 20px;border-bottom:5px solid $darkBlue3;
+    .u_tab{
+        margin:0 auto;margin-bottom:-2px;border:none;
+        li{
+            display:table;position:relative;text-align:center;border:1px solid $darkBlue3;
+            // border-top:2px solid $darkBlue3;
+            span{
+                display:table-cell;height:40px;vertical-align:middle;font-size:14px;line-height:normal;color:$darkBlue3;word-wrap:break-word;word-break:keep-all;
+            }
+            // &:before{
+            //     position:absolute;top:0;left:0;width:2px;height:40px;content:'';background-color:$darkBlue3;
+            // }
+            &.on{
+                position:relative;
+                span{
+                    color:$white;font-weight:500;background-color:$darkBlue3;
+                }
+                &:after{
+                    position:absolute;top:-2px;left:100%;display:block;content:'';width:0;height:0;border:0 solid transparent;border-bottom-width:22px;border-top-width:22px;border-left:12px solid $darkBlue3;z-index: 2;
+                }
+            }
+            &:last-child{
+                // border-right:2px solid $darkBlue3;
+                &.on{
+                    &:after{display:none;}
+                }
+            }
+        }
+    }
+}
+// [E] content
+
 @media all and (min-width:1200px) {
     .onlymobile{display:none;}
     .onlypc{display:block;}
@@ -494,6 +529,28 @@ input[type="checkbox"]:checked + label {
     #container{padding-top:90px;}
     .container{
         max-width:1200px;margin:0 auto;
+    }
+
+    // 진행과정
+    .u_step{
+        margin:50px 0;padding:0;
+        .u_tab{
+            max-width:746px;
+            li{
+                span{
+                    font-size:22px;line-height:50px;
+                }
+                &:before{
+                    height:50px;
+                }
+                &.on{
+                    &:after{
+                        border-bottom-width:27px;border-top-width:27px;border-left:23px solid $darkBlue3;
+                    }
+                }
+                &:first-child:before{border-left:none;}
+            }
+        }
     }
 
     // banner

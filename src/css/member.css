@@ -1,123 +1,495 @@
-@font-face { font-family: 'Noto Sans KR'; font-style: normal; font-weight: 300; src: url(../fonts/NotoSans-Light.eot); src: local("Noto Sans Light"), local("NotoSans-Light"), local("NotoSansKR Light"), local("Noto Sans KR Light"), local("NotoSans Korean Light"), local("Noto Sans Korean Light"), url(../fonts/NotoSans-Light.eot?#iefix) format("embedded-opentype"), url(../fonts/NotoSans-Light.woff) format("woff"), url(../fonts/NotoSans-Light.woff2) format("woff2"), url(../fonts/NotoSans-Light.otf) format("opentype"); }
+@font-face {
+  font-family: 'Noto Sans KR';
+  font-style: normal;
+  font-weight: 300;
+  src: url(../fonts/NotoSans-Light.eot);
+  src: local("Noto Sans Light"), local("NotoSans-Light"), local("NotoSansKR Light"), local("Noto Sans KR Light"), local("NotoSans Korean Light"), local("Noto Sans Korean Light"), url(../fonts/NotoSans-Light.eot?#iefix) format("embedded-opentype"), url(../fonts/NotoSans-Light.woff) format("woff"), url(../fonts/NotoSans-Light.woff2) format("woff2"), url(../fonts/NotoSans-Light.otf) format("opentype");
+}
 
-@font-face { font-family: 'Noto Sans KR'; font-style: normal; font-weight: 400; src: url(../fonts/NotoSans-Regular.eot); src: local("Noto Sans Regular"), local("NotoSans-Regular"), local("NotoSansKR Regular"), local("Noto Sans KR Regular"), local("NotoSans Korean Regular"), local("Noto Sans Korean Regular"), url(../fonts/NotoSans-Regular.eot?#iefix) format("embedded-opentype"), url(../fonts/NotoSans-Regular.woff) format("woff"), url(../fonts/NotoSans-Regular.woff2) format("woff2"), url(../fonts/NotoSans-Regular.otf) format("opentype"); }
+@font-face {
+  font-family: 'Noto Sans KR';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/NotoSans-Regular.eot);
+  src: local("Noto Sans Regular"), local("NotoSans-Regular"), local("NotoSansKR Regular"), local("Noto Sans KR Regular"), local("NotoSans Korean Regular"), local("Noto Sans Korean Regular"), url(../fonts/NotoSans-Regular.eot?#iefix) format("embedded-opentype"), url(../fonts/NotoSans-Regular.woff) format("woff"), url(../fonts/NotoSans-Regular.woff2) format("woff2"), url(../fonts/NotoSans-Regular.otf) format("opentype");
+}
 
-@font-face { font-family: 'Noto Sans KR'; font-style: normal; font-weight: 500; src: local("Noto Sans Medium"), local("NotoSans-Medium"), local("NotoSansKR Medium"), url(../fonts/NotoSans-Medium.eot?#iefix) format("embedded-opentype"), url(../fonts/NotoSans-Medium.woff) format("woff"), url(../fonts/NotoSans-Medium.woff2) format("woff2"), url(../fonts/NotoSans-Medium.otf) format("opentype"); }
+@font-face {
+  font-family: 'Noto Sans KR';
+  font-style: normal;
+  font-weight: 500;
+  src: local("Noto Sans Medium"), local("NotoSans-Medium"), local("NotoSansKR Medium"), url(../fonts/NotoSans-Medium.eot?#iefix) format("embedded-opentype"), url(../fonts/NotoSans-Medium.woff) format("woff"), url(../fonts/NotoSans-Medium.woff2) format("woff2"), url(../fonts/NotoSans-Medium.otf) format("opentype");
+}
 
-@font-face { font-family: 'Noto Sans KR'; font-style: normal; font-weight: 700; src: local("Noto Sans Bold"), local("NotoSans-Bold"), local("NotoSansKR Bold"), url(../fonts/NotoSans-Bold.eot?#iefix) format("embedded-opentype"), url(../fonts/NotoSans-Bold.woff) format("woff"), url(../fonts/NotoSans-Bold.woff2) format("woff2"), url(../fonts/NotoSans-Bold.otf) format("opentype"); }
+@font-face {
+  font-family: 'Noto Sans KR';
+  font-style: normal;
+  font-weight: 700;
+  src: local("Noto Sans Bold"), local("NotoSans-Bold"), local("NotoSansKR Bold"), url(../fonts/NotoSans-Bold.eot?#iefix) format("embedded-opentype"), url(../fonts/NotoSans-Bold.woff) format("woff"), url(../fonts/NotoSans-Bold.woff2) format("woff2"), url(../fonts/NotoSans-Bold.otf) format("opentype");
+}
 
-@font-face { font-family: 'Noto Sans KR'; font-style: normal; font-weight: 900; src: local("Noto Sans Black"), local("NotoSans-Black"), local("NotoSansKR Black"), url(../fonts/NotoSans-Black.eot?#iefix) format("embedded-opentype"), url(../fonts/NotoSans-Black.woff) format("woff"), url(../fonts/NotoSans-Black.woff2) format("woff2"), url(../fonts/NotoSans-Black.otf) format("opentype"); }
+@font-face {
+  font-family: 'Noto Sans KR';
+  font-style: normal;
+  font-weight: 900;
+  src: local("Noto Sans Black"), local("NotoSans-Black"), local("NotoSansKR Black"), url(../fonts/NotoSans-Black.eot?#iefix) format("embedded-opentype"), url(../fonts/NotoSans-Black.woff) format("woff"), url(../fonts/NotoSans-Black.woff2) format("woff2"), url(../fonts/NotoSans-Black.otf) format("opentype");
+}
 
-.title_wrap { position: relative; text-align: center; padding-top: 30px; border-top: 1px solid #cfcfcf; }
+.title_wrap {
+  position: relative;
+  text-align: center;
+  padding-top: 30px;
+  border-top: 1px solid #cfcfcf;
+}
 
-.title_wrap:after { position: absolute; top: 0; left: 50%; width: 200px; height: 5px; margin-left: -100px; background-color: #cfcfcf; content: ''; }
+.title_wrap:after {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 200px;
+  height: 5px;
+  margin-left: -100px;
+  background-color: #cfcfcf;
+  content: '';
+}
 
-.title_wrap h2 { font-size: 24px; line-height: 24px; font-weight: 500; }
+.title_wrap h2 {
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 500;
+}
 
-.member_step { overflow: hidden; margin: 30px 0; padding: 0 20px; border-bottom: 5px solid #2d5ba8; }
+.u_step {
+  overflow: hidden;
+  margin: 30px 0;
+  padding: 0 20px;
+  border-bottom: 5px solid #2d5ba8;
+}
 
-.member_step .u_tab { margin: 0 auto; margin-bottom: -2px; border: none; }
+.u_step .u_tab {
+  margin: 0 auto;
+  margin-bottom: -2px;
+  border: none;
+}
 
-.member_step .u_tab li { display: table; position: relative; text-align: center; border-top: 2px solid #2d5ba8; }
+.u_step .u_tab li {
+  display: table;
+  position: relative;
+  text-align: center;
+  border-top: 2px solid #2d5ba8;
+}
 
-.member_step .u_tab li span { display: table-cell; height: 40px; vertical-align: middle; font-size: 14px; line-height: normal; color: #2d5ba8; word-wrap: break-word; word-break: keep-all; }
+.u_step .u_tab li span {
+  display: table-cell;
+  height: 40px;
+  vertical-align: middle;
+  font-size: 14px;
+  line-height: normal;
+  color: #2d5ba8;
+  word-wrap: break-word;
+  word-break: keep-all;
+}
 
-.member_step .u_tab li:before { position: absolute; top: 0; left: 0; width: 2px; height: 40px; content: ''; background-color: #2d5ba8; }
+.u_step .u_tab li:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2px;
+  height: 40px;
+  content: '';
+  background-color: #2d5ba8;
+}
 
-.member_step .u_tab li.on { position: relative; }
+.u_step .u_tab li.on {
+  position: relative;
+}
 
-.member_step .u_tab li.on span { color: #ffffff; font-weight: 500; background-color: #2d5ba8; }
+.u_step .u_tab li.on span {
+  color: #ffffff;
+  font-weight: 500;
+  background-color: #2d5ba8;
+}
 
-.member_step .u_tab li.on:after { position: absolute; top: -2px; left: 100%; display: block; content: ''; width: 0; height: 0; border: 0 solid transparent; border-bottom-width: 22px; border-top-width: 22px; border-left: 12px solid #2d5ba8; z-index: 2; }
+.u_step .u_tab li.on:after {
+  position: absolute;
+  top: -2px;
+  left: 100%;
+  display: block;
+  content: '';
+  width: 0;
+  height: 0;
+  border: 0 solid transparent;
+  border-bottom-width: 22px;
+  border-top-width: 22px;
+  border-left: 12px solid #2d5ba8;
+  z-index: 2;
+}
 
-.member_step .u_tab li:last-child { border-right: 2px solid #2d5ba8; }
+.u_step .u_tab li:last-child {
+  border-right: 2px solid #2d5ba8;
+}
 
-.member_step .u_tab li:last-child.on:after { display: none; }
+.u_step .u_tab li:last-child.on:after {
+  display: none;
+}
 
-.ipbx_item .ipbx_btn { padding-right: 100px; }
+.ipbx_item .ipbx_btn {
+  padding-right: 100px;
+}
 
-.ipbx_item .btn_chk { position: absolute; top: 0; right: 0; width: 90px; height: 40px; font-size: 14px; line-height: 40px; color: #ffffff; background-color: #7b9ad8; }
+.ipbx_item .btn_chk {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 90px;
+  height: 40px;
+  font-size: 14px;
+  line-height: 40px;
+  color: #ffffff;
+  background-color: #7b9ad8;
+}
 
-.ipbx_item.ipbx_pw .u_ipbx { margin-top: 10px; }
+.ipbx_item.ipbx_pw .u_ipbx {
+  margin-top: 10px;
+}
 
-.ipbx_item.ipbx_pw .u_ipbx:first-child { margin-top: 0; }
+.ipbx_item.ipbx_pw .u_ipbx:first-child {
+  margin-top: 0;
+}
 
-.ipbx_item.ipbx_pw .int { padding: 11px 30px 9px 8px; }
+.ipbx_item.ipbx_pw .int {
+  padding: 11px 30px 9px 8px;
+}
 
-.ipbx_item.ipbx_pw .int.pw { background: url(../img/page/member/ico_pwd.png) 97% 50% no-repeat; background-size: 19px 23px; }
+.ipbx_item.ipbx_pw .int.pw {
+  background: url(../img/page/member/ico_pwd.png) 97% 50% no-repeat;
+  background-size: 19px 23px;
+}
 
-.ipbx_item.ipbx_pw .int.pw.success { background: url(../img/page/member/ico_pwd_suc.png) 97% 50% no-repeat; background-size: 19px 23px; }
+.ipbx_item.ipbx_pw .int.pw.success {
+  background: url(../img/page/member/ico_pwd_suc.png) 97% 50% no-repeat;
+  background-size: 19px 23px;
+}
 
-.ipbx_item.ipbx_pw .int.re_pw { background: url(../img/page/member/ico_repwd.png) 97% 50% no-repeat; background-size: 19px 23px; }
+.ipbx_item.ipbx_pw .int.re_pw {
+  background: url(../img/page/member/ico_repwd.png) 97% 50% no-repeat;
+  background-size: 19px 23px;
+}
 
-.ipbx_item.ipbx_pw .int.re_pw.success { background: url(../img/page/member/ico_repwd_suc.png) 97% 50% no-repeat; background-size: 19px 23px; }
+.ipbx_item.ipbx_pw .int.re_pw.success {
+  background: url(../img/page/member/ico_repwd_suc.png) 97% 50% no-repeat;
+  background-size: 19px 23px;
+}
 
-.ipbx_item.ipbx_phone > span { float: left; width: calc( 33.3% - 7px); margin-right: 10px; overflow: visible; }
+.ipbx_item.ipbx_phone > span {
+  float: left;
+  width: calc( 33.3% - 7px);
+  margin-right: 10px;
+  overflow: visible;
+}
 
-.ipbx_item.ipbx_phone > span:last-child { margin-right: 0; }
+.ipbx_item.ipbx_phone > span:last-child {
+  margin-right: 0;
+}
 
-.ipbx_item.ipbx_phone > span:last-child:after { display: none; }
+.ipbx_item.ipbx_phone > span:last-child:after {
+  display: none;
+}
 
-.ipbx_item.ipbx_phone > span:after { position: absolute; top: 0; right: -6px; display: block; content: '-'; line-height: 40px; }
+.ipbx_item.ipbx_phone > span:after {
+  position: absolute;
+  top: 0;
+  right: -6px;
+  display: block;
+  content: '-';
+  line-height: 40px;
+}
 
-.ipbx_item.ipbx_birthdate .u_radio { position: absolute; top: 0; right: 0; width: 90px; }
+.ipbx_item.ipbx_birthdate .u_radio {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 90px;
+}
 
-.ipbx_item.ipbx_delete { overflow: hidden; padding: 15px 30px; font-size: 14px; color: #545454; background-color: #d7e7ee; border: 1px solid #6f99ab; }
+.ipbx_item.ipbx_delete {
+  overflow: hidden;
+  padding: 15px 30px;
+  font-size: 14px;
+  color: #545454;
+  background-color: #d7e7ee;
+  border: 1px solid #6f99ab;
+}
 
-.ipbx_item.ipbx_delete span { display: inline-block; }
+.ipbx_item.ipbx_delete span {
+  display: inline-block;
+}
 
-.ipbx_item.ipbx_delete button { float: right; display: inline-block; font-size: 14px; width: 70px; height: 30px; color: #ffffff; background-color: #a2c9da; border: 1px solid #6f99ab; }
+.ipbx_item.ipbx_delete button {
+  float: right;
+  display: inline-block;
+  font-size: 14px;
+  width: 70px;
+  height: 30px;
+  color: #ffffff;
+  background-color: #a2c9da;
+  border: 1px solid #6f99ab;
+}
 
-.form_field { max-width: 640px; width: 100%; margin: 20px auto; padding: 0 20px; overflow: hidden; }
+.form_field {
+  max-width: 640px;
+  width: 100%;
+  margin: 20px auto;
+  padding: 0 20px;
+  overflow: hidden;
+}
 
-.form_field hr { border: none; background-color: #7b9ad8; height: 2px; margin: 20px 0; }
+.form_field hr {
+  border: none;
+  background-color: #7b9ad8;
+  height: 2px;
+  margin: 20px 0;
+}
 
-.btn_wrap { overflow: hidden; margin: 20px 0; }
+.btn_wrap {
+  overflow: hidden;
+  margin: 20px 0;
+}
 
-.btn_wrap button { width: 100%; color: #ffffff; font-size: 16px; text-align: center; line-height: 50px; }
+.btn_wrap button {
+  width: 100%;
+  color: #ffffff;
+  font-size: 16px;
+  text-align: center;
+  line-height: 50px;
+}
 
-.btn_wrap .btn_gray { background-color: #707070; }
+.btn_wrap .btn_gray {
+  background-color: #707070;
+}
 
-.btn_wrap .btn_gray:hover { background-color: #474747; }
+.btn_wrap .btn_gray:hover {
+  background-color: #474747;
+}
 
-.btn_wrap .btn_blue { background-color: #4464af; }
+.btn_wrap .btn_blue {
+  background-color: #4464af;
+}
 
-.btn_wrap .btn_blue:hover { background-color: #1d4695; }
+.btn_wrap .btn_blue:hover {
+  background-color: #1d4695;
+}
 
-.wrap_edit .member_step .u_tab li.on:after { display: none; }
+.wrap_edit .u_step .u_tab li.on:after {
+  display: none;
+}
 
-.field_edit .tit { position: relative; font-size: 16px; line-height: 40px; }
+.field_edit .tit {
+  position: relative;
+  font-size: 16px;
+  line-height: 40px;
+}
 
-.field_edit .tit span { font-weight: 300; }
+.field_edit .tit span {
+  font-weight: 300;
+}
 
-.field_edit .tit:before { display: inline-block; width: 10px; height: 10px; margin-right: 6px; background-color: #57616d; content: ''; }
+.field_edit .tit:before {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin-right: 6px;
+  background-color: #57616d;
+  content: '';
+}
 
-.field_edit .msg { font-size: 14px; color: #345299; text-align: left; margin: 15px 0; }
+.field_edit .msg {
+  font-size: 14px;
+  color: #345299;
+  text-align: left;
+  margin: 15px 0;
+}
 
-.field_edit .btn_wrap { margin: 20px 0; }
+.field_edit .btn_wrap {
+  margin: 20px 0;
+}
 
-.field_edit .btn_wrap button { float: left; width: calc( 50% - 5px); }
+.field_edit .btn_wrap button {
+  float: left;
+  width: calc( 50% - 5px);
+}
 
-.field_edit .btn_wrap .btn_gray { margin-right: 10px; }
+.field_edit .btn_wrap .btn_gray {
+  margin-right: 10px;
+}
 
-@media all and (min-width: 1200px) { .title_wrap { padding-top: 35px; }
-  .title_wrap h2 { font-size: 30px; line-height: 30px; }
-  .member_step { margin: 50px 0; padding: 0; }
-  .member_step .u_tab { max-width: 746px; }
-  .member_step .u_tab li span { font-size: 22px; line-height: 50px; }
-  .member_step .u_tab li:before { height: 50px; }
-  .member_step .u_tab li.on:after { border-bottom-width: 27px; border-top-width: 27px; border-left: 23px solid #2d5ba8; }
-  .member_step .u_tab li:first-child:before { border-left: none; }
-  .ipbx_item .ipbx_btn { padding-right: 110px; }
-  .ipbx_item.ipbx_pw .u_ipbx { margin-top: 30px; }
-  .ipbx_item.ipbx_pw .int { padding: 13px 15px 12px 15px; }
-  .ipbx_item.ipbx_phone > span { width: 200px; margin-right: 20px; }
-  .ipbx_item.ipbx_phone > span:after { right: -12px; }
-  .ipbx_item.ipbx_delete { padding: 15px 50px 15px 30px; line-height: 30px; }
-  .form_field { padding: 0; }
-  .form_field hr { height: 3px; margin: 40px 0; }
-  .btn_wrap { margin: 50px 0; }
-  .btn_wrap button { font-size: 20px; }
-  .field_edit .msg { text-align: center; margin: 15px 0 15px 0; }
-  .field_edit .btn_wrap button { width: calc( 50% - 10px); }
-  .field_edit .btn_wrap .btn_gray { margin-right: 20px; } }
+.field_login .ipbx_id {
+  padding-right: 0;
+}
+
+.field_login .ipbx_id .int {
+  padding: 10px 30px 10px 45px;
+  background: url(../img/page/member/ico_id.png) 18px 50% no-repeat;
+  background-size: 16px 20px;
+}
+
+.field_login .ipbx_pw .int {
+  padding: 10px 30px 10px 45px;
+  background: url(../img/page/member/ico_pwd_bl.png) 18px 50% no-repeat;
+  background-size: 17px 20px;
+}
+
+.field_login .sub_link {
+  margin-top: 30px;
+  overflow: hidden;
+  text-align: center;
+}
+
+.field_login .sub_link > a {
+  position: relative;
+  display: inline-block;
+  padding-left: 20px;
+  margin: 0 10px;
+  font-size: 12px;
+  line-height: 36px;
+  color: #212121;
+}
+
+.field_login .sub_link > a:after {
+  position: absolute;
+  top: 7px;
+  right: -10px;
+  width: 2px;
+  height: 22px;
+  background-color: #7b9ad8;
+  content: '';
+}
+
+.field_login .sub_link > a:last-child:after {
+  display: none;
+}
+
+.field_login .sub_link .btn_join {
+  background: url(../img/page/member/ico_join.png) 0 50% no-repeat;
+  background-size: 16px 21px;
+}
+
+.field_login .sub_link .btn_find_id {
+  background: url(../img/page/member/ico_id.png) 0 50% no-repeat;
+  background-size: 16px 20px;
+}
+
+.field_login .sub_link .btn_find_pw {
+  background: url(../img/page/member/ico_pwd_bl.png) 0 50% no-repeat;
+  background-size: 17px 20px;
+}
+
+@media all and (min-width: 1200px) {
+  .title_wrap {
+    padding-top: 35px;
+  }
+  .title_wrap h2 {
+    font-size: 30px;
+    line-height: 30px;
+  }
+  .u_step {
+    margin: 50px 0;
+    padding: 0;
+  }
+  .u_step .u_tab {
+    max-width: 746px;
+  }
+  .u_step .u_tab li span {
+    font-size: 22px;
+    line-height: 50px;
+  }
+  .u_step .u_tab li:before {
+    height: 50px;
+  }
+  .u_step .u_tab li.on:after {
+    border-bottom-width: 27px;
+    border-top-width: 27px;
+    border-left: 23px solid #2d5ba8;
+  }
+  .u_step .u_tab li:first-child:before {
+    border-left: none;
+  }
+  .ipbx_item .ipbx_btn {
+    padding-right: 110px;
+  }
+  .ipbx_item.ipbx_pw .u_ipbx {
+    margin-top: 30px;
+  }
+  .ipbx_item.ipbx_pw .int {
+    padding: 13px 15px 12px 15px;
+  }
+  .ipbx_item.ipbx_phone > span {
+    width: 200px;
+    margin-right: 20px;
+  }
+  .ipbx_item.ipbx_phone > span:after {
+    right: -12px;
+  }
+  .ipbx_item.ipbx_delete {
+    padding: 15px 50px 15px 30px;
+    line-height: 30px;
+  }
+  .form_field {
+    padding: 0;
+  }
+  .form_field hr {
+    height: 3px;
+    margin: 40px 0;
+  }
+  .btn_wrap {
+    margin: 50px 0;
+  }
+  .btn_wrap button {
+    font-size: 20px;
+  }
+  .field_edit .msg {
+    text-align: center;
+    margin: 15px 0 15px 0;
+  }
+  .field_edit .btn_wrap button {
+    width: calc( 50% - 10px);
+  }
+  .field_edit .btn_wrap .btn_gray {
+    margin-right: 20px;
+  }
+  .field_login .ipbx_id {
+    padding-right: 0;
+  }
+  .field_login .ipbx_id .int {
+    padding: 10px 30px 10px 55px;
+    background: url(../img/page/member/ico_id.png) 28px 50% no-repeat;
+    background-size: 16px 20px;
+  }
+  .field_login .ipbx_pw .int {
+    padding: 10px 30px 10px 55px;
+    background: url(../img/page/member/ico_pwd_bl.png) 28px 50% no-repeat;
+    background-size: 17px 20px;
+  }
+  .field_login .sub_link {
+    margin-top: 30px;
+  }
+  .field_login .sub_link > a {
+    font-size: 16px;
+    line-height: 36px;
+    padding-left: 30px;
+    margin: 0 30px;
+  }
+  .field_login .sub_link > a:after {
+    right: -30px;
+  }
+}
+
+@media all and (max-width: 320px) {
+  .field_login .sub_link {
+    font-size: 0;
+  }
+  .field_login .sub_link > a {
+    padding-left: 0;
+    background: none !important;
+  }
+}

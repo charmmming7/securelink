@@ -1,0 +1,340 @@
+@font-face {
+  font-family: 'Noto Sans KR';
+  font-style: normal;
+  font-weight: 300;
+  src: url(../fonts/NotoSans-Light.eot);
+  src: local("Noto Sans Light"), local("NotoSans-Light"), local("NotoSansKR Light"), local("Noto Sans KR Light"), local("NotoSans Korean Light"), local("Noto Sans Korean Light"), url(../fonts/NotoSans-Light.eot?#iefix) format("embedded-opentype"), url(../fonts/NotoSans-Light.woff) format("woff"), url(../fonts/NotoSans-Light.woff2) format("woff2"), url(../fonts/NotoSans-Light.otf) format("opentype");
+}
+
+@font-face {
+  font-family: 'Noto Sans KR';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/NotoSans-Regular.eot);
+  src: local("Noto Sans Regular"), local("NotoSans-Regular"), local("NotoSansKR Regular"), local("Noto Sans KR Regular"), local("NotoSans Korean Regular"), local("Noto Sans Korean Regular"), url(../fonts/NotoSans-Regular.eot?#iefix) format("embedded-opentype"), url(../fonts/NotoSans-Regular.woff) format("woff"), url(../fonts/NotoSans-Regular.woff2) format("woff2"), url(../fonts/NotoSans-Regular.otf) format("opentype");
+}
+
+@font-face {
+  font-family: 'Noto Sans KR';
+  font-style: normal;
+  font-weight: 500;
+  src: local("Noto Sans Medium"), local("NotoSans-Medium"), local("NotoSansKR Medium"), url(../fonts/NotoSans-Medium.eot?#iefix) format("embedded-opentype"), url(../fonts/NotoSans-Medium.woff) format("woff"), url(../fonts/NotoSans-Medium.woff2) format("woff2"), url(../fonts/NotoSans-Medium.otf) format("opentype");
+}
+
+@font-face {
+  font-family: 'Noto Sans KR';
+  font-style: normal;
+  font-weight: 700;
+  src: local("Noto Sans Bold"), local("NotoSans-Bold"), local("NotoSansKR Bold"), url(../fonts/NotoSans-Bold.eot?#iefix) format("embedded-opentype"), url(../fonts/NotoSans-Bold.woff) format("woff"), url(../fonts/NotoSans-Bold.woff2) format("woff2"), url(../fonts/NotoSans-Bold.otf) format("opentype");
+}
+
+@font-face {
+  font-family: 'Noto Sans KR';
+  font-style: normal;
+  font-weight: 900;
+  src: local("Noto Sans Black"), local("NotoSans-Black"), local("NotoSansKR Black"), url(../fonts/NotoSans-Black.eot?#iefix) format("embedded-opentype"), url(../fonts/NotoSans-Black.woff) format("woff"), url(../fonts/NotoSans-Black.woff2) format("woff2"), url(../fonts/NotoSans-Black.otf) format("opentype");
+}
+
+.solution_lst {
+  padding: 0 20px;
+}
+
+.solution_lst .box {
+  position: relative;
+  overflow: hidden;
+  height: 165px;
+  margin-bottom: 25px;
+}
+
+.solution_lst .box .category {
+  position: absolute;
+  left: 15px;
+  top: 15px;
+  display: inline-block;
+  background-color: #f57b05;
+  z-index: 2;
+}
+
+.solution_lst .box .btn_view {
+  position: absolute;
+  right: 15px;
+  bottom: 15px;
+  display: inline-block;
+  width: 50px;
+  height: 15px;
+  line-height: 13px;
+  padding: 0 14px 0 8px;
+  font-size: 7px;
+  color: #4464af;
+  opacity: .8;
+  text-align: center;
+  border: 1px solid #4464af;
+  background: url(../img/common/ico_m_view.png) 34px 4px no-repeat;
+  background-size: 7px 7px;
+  overflow: hidden;
+  z-index: 2;
+  -webkit-border-top-left-radius: 7px;
+  -webkit-border-top-right-radius: 7px;
+  -webkit-border-bottom-left-radius: 7px;
+  -webkit-border-bottom-right-radius: 7px;
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px;
+}
+
+.solution_lst .box figure {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 160px;
+  height: 100%;
+  overflow: hidden;
+  vertical-align: middle;
+  z-index: 1;
+}
+
+.solution_lst .box .info {
+  height: 100%;
+  padding-left: 160px;
+}
+
+.solution_lst .box .info .inner {
+  padding: 20px 12px 35px;
+}
+
+.solution_lst .box .info .title {
+  display: block;
+  margin-bottom: 12px;
+  font-size: 15px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.solution_lst .box .info .sub {
+  margin-bottom: 10px;
+  font-size: 9px;
+  line-height: 15px;
+  font-weight: 500;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.solution_lst .box .info .txt {
+  font-size: 8px;
+  line-height: 12px;
+  font-weight: 300;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 3;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+}
+
+.prd_select_wrap {
+  padding: 20px 0;
+  text-align: center;
+  background-color: #f3f5f8;
+  border-top: 1px solid #dbdde3;
+  border-bottom: 3px solid #dbdde3;
+}
+
+.prd_select_wrap ul {
+  display: inline-block;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.prd_select_wrap li {
+  position: relative;
+  float: left;
+  margin: 0 14px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 16px;
+}
+
+.prd_select_wrap li:after {
+  position: absolute;
+  top: 50%;
+  right: -16px;
+  width: 8px;
+  height: 8px;
+  margin-top: -4px;
+  content: '';
+  border: solid #2d5ba8;
+  border-width: 0 1px 1px 0;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+}
+
+.prd_select_wrap li:first-child {
+  display: none;
+}
+
+.prd_select_wrap li:last-child:after {
+  display: none;
+}
+
+.prd_select_wrap .ipbx_item .u_selbox {
+  position: relative;
+}
+
+.prd_select_wrap .ipbx_item .u_selbox .sel {
+  height: 40px;
+  padding: 10px 30px 10px 12px;
+  font-size: 16px;
+  line-height: 16px;
+  border: 2px solid #2d5ba8;
+  background: #ffffff;
+}
+
+.prd_select_wrap .ipbx_item .u_selbox:after {
+  position: absolute;
+  top: 15px;
+  right: 8px;
+  width: 19px;
+  height: 13px;
+  content: '';
+  background: url(../img/common/ico_sel_arrow.png) 0 0 no-repeat;
+  background-size: 19px 13px;
+}
+
+.wrap_pay .u_step {
+  border-bottom: 1px solid #57616d;
+}
+
+.wrap_pay .u_step .u_tab li {
+  border-top: 1px solid #57616d;
+}
+
+.wrap_pay .u_step .u_tab li:before {
+  width: 1px;
+  background-color: #57616d;
+}
+
+.wrap_pay .u_step .u_tab li span {
+  color: #57616d;
+}
+
+.wrap_pay .u_step .u_tab li.on span {
+  color: #ffffff;
+  background-color: #57616d;
+}
+
+.wrap_pay .u_step .u_tab li.on:after {
+  border-left-color: #57616d;
+}
+
+@media all and (min-width: 1200px) {
+  .solution_lst {
+    padding: 0;
+    overflow: hidden;
+    padding-top: 20px;
+  }
+  .solution_lst .box {
+    float: left;
+    width: 580px;
+    height: 240px;
+    margin-bottom: 50px;
+    border: 1px solid #e1e2e4;
+  }
+  .solution_lst .box:nth-child(odd) {
+    margin-right: 20px;
+  }
+  .solution_lst .box:nth-child(even) {
+    margin-left: 20px;
+  }
+  .solution_lst .box .category {
+    position: unset;
+    margin-right: 10px;
+  }
+  .solution_lst .box .btn_view {
+    position: unset;
+    width: 25px;
+    height: 25px;
+    padding: 0;
+    font-size: 0;
+    opacity: 1;
+    border: none;
+    background: url(../img/common/ico_view.png) 50% 50% no-repeat;
+    background-size: 25px 25px;
+    -webkit-border-top-left-radius: 0;
+    -webkit-border-top-right-radius: 0;
+    -webkit-border-bottom-left-radius: 0;
+    -webkit-border-bottom-right-radius: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+  .solution_lst .box figure {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    bottom: unset;
+    width: 180px;
+    height: 180px;
+    border: 1px solid #e1e2e4;
+  }
+  .solution_lst .box .info {
+    height: 240px;
+    padding-left: 210px;
+    background-color: #ffffff;
+  }
+  .solution_lst .box .info .inner {
+    padding: 29px;
+  }
+  .solution_lst .box .info .title {
+    margin-top: 5px;
+    margin-bottom: 9px;
+    font-size: 24px;
+    line-height: 30px;
+  }
+  .solution_lst .box .info .sub {
+    margin-bottom: 7px;
+    font-size: 18px;
+    line-height: 30px;
+  }
+  .solution_lst .box .info .txt {
+    font-size: 15px;
+    line-height: 18px;
+  }
+  .prd_select_wrap {
+    padding: 30px 0;
+  }
+  .prd_select_wrap li {
+    margin: 0 35px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 18px;
+  }
+  .prd_select_wrap li:after {
+    right: -35px;
+  }
+  .prd_select_wrap .ipbx_item .u_selbox .sel {
+    height: 50px;
+    padding: 11px 50px 11px 30px;
+    font-size: 18px;
+    line-height: 18px;
+  }
+}
+
+@media all and (max-width: 320px) {
+  .prd_select_wrap li {
+    margin: 0 10px;
+  }
+  .prd_select_wrap li:after {
+    right: -12px;
+  }
+  .prd_select_wrap .ipbx_item .u_selbox .sel {
+    padding: 6px 30px 6px 11px;
+  }
+}

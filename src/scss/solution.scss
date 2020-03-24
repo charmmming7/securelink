@@ -3,10 +3,6 @@
 @import "./_variables";
 @import "./_mixin";
 
-// [S] container
-
-
-// solution
 .solution_lst{
     padding:0 20px;
     .box{
@@ -40,7 +36,50 @@
         }
     }
 }
-// [E] container
+
+.prd_select_wrap{
+    padding:20px 0;text-align:center;background-color:#f3f5f8;border-top:1px solid #dbdde3;border-bottom:3px solid #dbdde3;
+    ul{display:inline-block;margin: 0 auto;text-align:center;}
+    li{
+        position:relative;float:left;margin:0 14px;height:40px;line-height:40px;font-size:16px;
+        &:after{
+            position:absolute;top:50%;right:-16px;width:8px;height:8px;margin-top:-4px;content:'';border:solid $darkBlue3;border-width:0 1px 1px 0;transform:rotate(-45deg);-webkit-transform:rotate(-45deg);-ms-transform:rotate(-45deg);
+        }
+        &:first-child{display:none;}
+        &:last-child:after{display:none;}
+    }
+    .ipbx_item .u_selbox{
+        position:relative;
+        .sel{
+            height:40px;padding:10px 30px 10px 12px;font-size:16px;line-height:16px;border:2px solid $darkBlue3;background:$white;
+        }
+        &:after{
+            position:absolute;top:15px;right:8px;width:19px;height:13px;content:'';background:url(../img/common/ico_sel_arrow.png) 0 0 no-repeat;background-size:19px 13px;
+        }
+    }
+}
+
+// 결제
+.wrap_pay{
+    .u_step{
+        border-bottom:1px solid #57616d;
+        .u_tab{
+            li{
+                border-top:1px solid #57616d;
+                &:before{width:1px;background-color:#57616d;}
+                span{color:#57616d;}
+                &.on{
+                    span{color:$white;background-color:#57616d;}
+                    &:after{
+                        border-left-color:#57616d;
+                    }
+                }
+            }
+            
+        }
+    }
+     
+}
 
 
 @media all and (min-width:1200px) {
@@ -69,6 +108,34 @@
                 .txt{
                     font-size:15px;line-height:18px;
                 }
+            }
+        }
+    }
+
+    .prd_select_wrap{
+        padding:30px 0;
+        li{
+            margin:0 35px;height:50px;line-height:50px;font-size:18px;
+            &:after{
+                right:-35px;
+            }
+        }
+        .ipbx_item .u_selbox .sel{
+            height:50px;padding:11px 50px 11px 30px;font-size:18px;line-height:18px;
+        }
+    }
+}
+
+// 320 이하
+@media all and (max-width:320px) {
+    .prd_select_wrap{
+        li{
+            margin:0 10px;
+            &:after{right:-12px;}
+        }
+        .ipbx_item .u_selbox{
+            .sel{
+                padding:6px 30px 6px 11px;
             }
         }
     }

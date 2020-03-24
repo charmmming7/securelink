@@ -127,122 +127,37 @@
                 </div>
 
                 <div class="container">
-                    <div class="wrap_edit">
-
-                        <div class="member_step">
-                            <ul class="u_tab tab4">
-                                <li><span>견적 요청 내역</span></li>
-                                <li><span>주문 조회</span></li>
-                                <li class="on"><span>회원정보 수정</span></li>
-                                <li><span>회원탈퇴</span></li>
-                            </ul>
+                    <div class="wrap_join">
+                        <div class="title_wrap">
+                            <h2>로그인</h2>
                         </div>
 
                         <form action="">
-                            <div class="form_field field_edit">
-                                <h3 class="tit">기본정보</h3>
+                            <div class="form_field field_login">
                                 <!-- id -->
                                 <div class="ipbx_item ipbx_id">
-                                    <span class="u_ipbx"><input type="text" class="int" autocapitalize="off" maxlength="16" placeholder="asdfg123" readonly="readonly"></span>
+                                    <span class="u_ipbx"><input type="text" class="int" autocapitalize="off" maxlength="16" placeholder="아이디 입력"></span>
+                                    <!-- [D] 사용자 입력시 경고 메세지 (임시 메시지 이므로 가이드에 따라 수정해주세요)
+                                        확인을 위해 메세지를 보이게 해놓은 상태고, 개발 시 처음엔 display:none 상태로 만들어주세요. -->
+                                    <p class="txt_warning">아이디가 일치하지 않습니다.</p>
                                 </div>
                                 <!-- pw -->
                                 <div class="ipbx_item ipbx_pw">
-                                    <span class="u_ipbx ipbx_btn">
-                                        <input type="password" class="int old_pw" maxlength="20" value="***********" readonly="readonly"> 
-                                        <button type="button" class="btn_chk">비밀번호 변경</button>
-                                    </span>
-
-                                    <span class="u_ipbx">
-                                        <input type="password" class="int old_pw" maxlength="20" placeholder="현재 비밀번호"> 
-                                    </span>
-
-                                    <span class="u_ipbx">
-                                        <!-- [D] 비밀번호 규칙 준수, 비밀번호 일치 할 경우 각 input.int 에 .success 클래스 붙여주세요 -->
-                                        <input type="password" class="int pw success" maxlength="20" placeholder="새 비밀번호 (8~20자의 영.숫자,특수문자)"> 
-                                    </span>
-                                    <!-- [D] 사용가능 특수문자는 개발가이드에 따라 수정하시면 됩니다. -->
-                                    <p class="txt_warning">사용가능 특수문자 : !"#$%&'()*+,-./:;<=>?@[＼]^_`{|}</p> 
                                     <span class="u_ipbx"> 
-                                        <!-- [D] 비밀번호 규칙 준수, 비밀번호 일치 할 경우 각 input.int 에 .success 클래스 붙여주세요 -->
-                                        <input type="password" class="int re_pw success" maxlength="20" placeholder="새 비밀번호 확인">
+                                        <input type="password" class="int" maxlength="20" placeholder="비밀번호 입력 (8~20자의 영.숫자,특수문자)"> 
                                     </span>
+                                    <!-- [D] 사용자 입력시 경고 메세지 (임시 메시지 이므로 가이드에 따라 수정해주세요)
+                                    확인을 위해 메세지를 보이게 해놓은 상태고, 개발 시 처음엔 display:none 상태로 만들어주세요. -->
                                     <p class="txt_warning">비밀번호가 일치하지 않습니다.</p>
                                 </div>
-                                <hr>
-                                <!-- 회사명 -->
-                                <div class="ipbx_item ipbx_company">
-                                    <span class="u_ipbx"><input type="text" class="int" placeholder="회사 상호명" value="주식회사 SECUDOG"></span>
-                                </div>
-                                <!-- 이름 -->
-                                <div class="ipbx_item ipbx_name">
-                                    <span class="u_ipbx w420"><input type="text" class="int" placeholder="이름" value="홍길동"></span>
-                                    <span class="u_ipbx"><input type="text" class="int" placeholder="직급" value="부장"></span>
-                                </div>
-                                <!-- 생년월일 -->
-                                <div class="ipbx_item ipbx_birthdate">
-                                    <span class="u_ipbx w420"><input type="text" class="int" placeholder="생년월일 (예:19900101)" value="19800101"></span>
-                                    <span class="u_radio">
-                                        <input type="radio" id="radio1" name="gender" checked="checked" />
-                                        <label for="radio1">남자</label>
-                                        <input type="radio" id="radio2" name="gender" />
-                                        <label for="radio2">여자</label>
-                                    </span>
-                                </div> 
-                                <!-- 전화번호 -->
-                                <div class="ipbx_item ipbx_phone">
-                                    <span class="u_selbox">
-                                        <label for="cell_no1"><span class="blind">휴대폰 앞자리</span></label>
-                                        <select id="cell_no1" name="cell_no1" class="sel">
-                                            <option value="">선택</option>
-                                            <option value="010" selected="selected">010</option>
-                                            <option value="011">011</option>
-                                            <option value="016">016</option>
-                                            <option value="017">017</option>
-                                            <option value="018">018</option>
-                                            <option value="019">019</option>
-                                        </select>
-                                    </span>
-                                    <span class="u_ipbx"><input type="text" class="int" title="휴대폰번호 중간자리" maxlength="4" value="1234"></span>
-                                    <span class="u_ipbx"><input type="text" class="int" title="휴대폰번호 마지막자리" maxlength="4" value="5678"></span>
-                                </div>  
-                                <!-- 문자 인증번호 -->
-                                <div class="ipbx_item ipbx_sms">
-                                    <span class="u_ipbx ipbx_btn">
-                                        <input type="password" class="int" maxlength="20" placeholder="인증번호"> 
-                                        <button type="button" class="btn_chk">확인</button>
-                                    </span>
-                                </div>
-                                <!-- email -->
-                                <div class="ipbx_item ipbx_email">
-                                    <span class="u_ipbx ipbx_btn"><input type="text" class="int" autocapitalize="off" placeholder="이메일" value="aaaa@securelink.co.kr"></span>
-                                    <button type="button" class="btn_chk">중복확인</button>
-                                    <!-- [D] 사용자 입력시 경고 메세지 (확인을 위해 메세지를 보이게 해놓은 상태고, 개발 시 처음엔 display:none 상태로 만들어주세요) -->
-                                    <p class="txt_warning">이메일 중복체크를 해주십시오.</p>
-                                    <p class="txt_accept">사용가능한 이메일 입니다.</p>
-                                </div>      
-                                
-                                <!-- 광고성 정보 수신동의 -->
-                                <h3 class="tit">광고성 정보 수신동의 <span>(선택)</span></h3>
-                                <div class="ipbx_item">
-                                    <div class="agree_form">
-                                        <p>주문 관련 정보, 주요 공지사항 및 이벤트 당첨 안내 등은 수신 동의 여부에 관계없이 자동 발송됩니다.</p>
-                                        <ul class="chkbx_wrap">
-                                            <li><span class="u_chkbx_sub"><input type="checkbox" id="agree_email"><label for="agree_email">이메일 수신동의 <span>(선택)</span></label></span></li>
-                                            <li><span class="u_chkbx_sub"><input type="checkbox" id="agree_sms"><label for="agree_sms">SMS 수신동의 <span>(선택)</span></label></span></li>
-                                        </ul>
-                                    </div>
-                                    <p class="msg">※ 선택항목은 동의하지 않아도 회원가입이 가능합니다.</p>
-                                </div>
-
-                                <!-- 탈퇴 -->
-                                <div class="ipbx_item ipbx_delete">
-                                    <span>탈퇴를 원하시면 우측의 회원탈퇴 버튼을 눌러주세요.</span>
-                                    <button type="button">탈퇴</button>
-                                </div>
                                 <div class="btn_wrap">
-                                    <button type="button" class="btn_gray">취소</button>
-                                    <button type="button" class="btn_blue">저장</button>
-                                </div>
+                                    <button type="button" class="btn_blue">로그인</button>
+                                    <div class="sub_link">
+                                        <a href="./join.html" class="btn_join">회원가입</a>
+                                        <a href="" class="btn_find_id">아이디 찾기</a>
+                                        <a href="" class="btn_find_pw">비밀번호 찾기</a>
+                                    </div>
+                                </div>                        
                             </div>
                         </form>
                     </div>

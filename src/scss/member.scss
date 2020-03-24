@@ -11,7 +11,7 @@
 }
 
 // 진행과정
-.member_step{
+.u_step{
     overflow:hidden;margin:30px 0;padding:0 20px;border-bottom:5px solid $darkBlue3;
     .u_tab{
         margin:0 auto;margin-bottom:-2px;border:none;
@@ -119,7 +119,7 @@
 
 // 회원정보 수정
 .wrap_edit{
-    .member_step{
+    .u_step{
         .u_tab{
             li{
                 &.on:after{
@@ -151,6 +151,34 @@
     }
 }
 
+// 로그인
+.field_login{
+    .ipbx_id{
+        padding-right:0;
+        .int{
+            padding:10px 30px 10px 45px;background:url(../img/page/member/ico_id.png) 18px 50% no-repeat;background-size:16px 20px;
+        }
+    }
+    .ipbx_pw{
+        .int{
+            padding:10px 30px 10px 45px;background:url(../img/page/member/ico_pwd_bl.png) 18px 50% no-repeat;background-size:17px 20px;
+        }
+    }
+    .sub_link{
+        margin-top:30px;overflow:hidden;text-align:center;    
+        > a {
+            position:relative;display:inline-block;padding-left:20px;margin:0 10px;font-size:12px;line-height:36px;color:$black;
+            &:after{
+                position:absolute;top:7px;right:-10px;width:2px;height:22px;background-color:#7b9ad8;content: '';
+            }
+            &:last-child:after{display:none;}
+        }
+        .btn_join{background:url(../img/page/member/ico_join.png) 0 50% no-repeat;background-size:16px 21px;}
+        .btn_find_id{background:url(../img/page/member/ico_id.png) 0 50% no-repeat;background-size:16px 20px;}
+        .btn_find_pw{background:url(../img/page/member/ico_pwd_bl.png) 0 50% no-repeat;background-size:17px 20px;}        
+    }
+}
+
 
 // mediaquery
 @media all and (min-width:1200px) {
@@ -161,7 +189,7 @@
     }
 
     // 진행과정
-    .member_step{
+    .u_step{
         margin:50px 0;padding:0;
         .u_tab{
             max-width:746px;
@@ -227,5 +255,42 @@
             button{width:calc( 50% - 10px);}
             .btn_gray{margin-right:20px;}
         }
+    }
+
+    // 로그인
+    .field_login{
+        .ipbx_id{
+            padding-right:0;
+            .int{
+                padding:10px 30px 10px 55px;background:url(../img/page/member/ico_id.png) 28px 50% no-repeat;background-size:16px 20px;
+            }
+        }
+        .ipbx_pw{
+            .int{
+                padding:10px 30px 10px 55px;background:url(../img/page/member/ico_pwd_bl.png) 28px 50% no-repeat;background-size:17px 20px;
+            }
+        }
+        .sub_link{
+            margin-top:30px;
+            > a {
+                font-size:16px;line-height:36px;padding-left:30px;margin:0 30px;
+                &:after{
+                    right:-30px;
+                }
+            }    
+        }
+    }
+}
+
+// 320 이하
+@media all and (max-width:320px) {
+    // 로그인
+    .field_login{
+        .sub_link{
+            font-size:0;
+            > a {
+                padding-left:0;background:none !important;
+            }
+        }   
     }
 }
