@@ -158,7 +158,7 @@
   .field_pay .tit { margin-top: 20px; }
   .field_pay table { width: 100%; }
   .field_pay table th, .field_pay table td { font-size: 16px; text-align: left; }
-  .field_pay table th { padding: 12px 20px; }
+  .field_pay table th { width: 199px; padding: 12px 20px; }
   .field_pay table td { padding: 12px 30px; }
   .field_pay table th { background-color: #f7f7f7; font-weight: 400; }
   .field_pay table .tb-r { text-align: right !important; }
