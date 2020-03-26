@@ -455,7 +455,7 @@ input[type="checkbox"]:checked + label {
         li{
             display:table;position:relative;text-align:center;border:1px solid $darkBlue3;margin-right:-1px;
             span{
-                display:table-cell;height:40px;vertical-align:middle;font-size:14px;line-height:normal;color:$darkBlue3;word-wrap:break-word;word-break:keep-all;
+                display:table-cell;height:40px;vertical-align:middle;font-size:14px;line-height:16px;color:$darkBlue3;word-wrap:break-word;word-break:keep-all;
             }
             &.on{
                 position:relative;
