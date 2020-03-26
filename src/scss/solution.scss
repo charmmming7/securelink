@@ -91,18 +91,17 @@
     }
     table{
         width:100%;
-        th{width:80px;font-weight:normal;}
-        th, td{padding:6px 12px;font-size:14px;text-align:left;}
+        th{width:80px;font-weight:normal;padding:7px 13px;}
+        th, td{font-size:13px;text-align:left;}
+        td{padding:7px 14px;}
         th{background-color:$lightgray;font-weight:400;}
     }
     .tbl-customer{
         tr:last-child{
             th,td{height:100px;}
         }
-        td{width:70%;}
     }
     .tbl-order.onlymobile{
-        td{width:70%;}
         th{background-color:$darkgray3;color:$white;}
         tbody tr:last-child{
             th,td{background-color:#d7e7ee;color:$black;}

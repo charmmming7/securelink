@@ -68,17 +68,15 @@
 
 .field_pay table { width: 100%; }
 
-.field_pay table th { width: 80px; font-weight: normal; }
+.field_pay table th { width: 80px; font-weight: normal; padding: 7px 13px; }
 
-.field_pay table th, .field_pay table td { padding: 6px 12px; font-size: 14px; text-align: left; }
+.field_pay table th, .field_pay table td { font-size: 13px; text-align: left; }
+
+.field_pay table td { padding: 7px 14px; }
 
 .field_pay table th { background-color: #f7f7f7; font-weight: 400; }
 
 .field_pay .tbl-customer tr:last-child th, .field_pay .tbl-customer tr:last-child td { height: 100px; }
-
-.field_pay .tbl-customer td { width: 70%; }
-
-.field_pay .tbl-order.onlymobile td { width: 70%; }
 
 .field_pay .tbl-order.onlymobile th { background-color: #707070; color: #ffffff; }
 
