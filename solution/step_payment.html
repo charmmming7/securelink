@@ -7,14 +7,14 @@
     <meta content="index,follow" name="robots">
     <meta name="Author" content="">
     <meta name="description" content="시큐도그 홈페이지입니다. 솔루션, 의뢰, 공유, 고객지원 소개">
-    <link rel="shortcut icon" type="image/x-icon" href="/src/img/favicon/favicon-32x32.png">
+    <link rel="shortcut icon" type="image/x-icon" href="../src/img/favicon/favicon-32x32.png">
     <link rel="image_src" href=""> <!-- 이미지경로 -->
     <link rel="canonical" href=""> <!-- 사이트주소 -->
-    <link rel="icon" href="/src/img/favicon/android-icon-192x192.png">
-    <link rel="apple-touch-icon-precomposed" href="/src/img/favicon/apple-icon-180x180.png">
-    <link rel="manifest" href="/src/img/favicon/manifest.json">
+    <!-- <link rel="icon" href="../src/img/favicon/android-icon-192x192.png"> -->
+    <link rel="apple-touch-icon-precomposed" href="../src/img/favicon/apple-icon-180x180.png">
+    <link rel="manifest" href="../src/img/favicon/manifest.json">
     <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="/src/img/favicon/ms-icon-144x144.png">
+    <meta name="msapplication-TileImage" content="../src/img/favicon/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
     <!-- SEO END -->
     <title>시큐도그</title>
@@ -174,30 +174,474 @@
                         </div>
         
                         <form action="">
-                            <div class="form_field field_login">
-                                <!-- id -->
-                                <div class="ipbx_item ipbx_id">
-                                    <span class="u_ipbx"><input type="text" class="int" autocapitalize="off" maxlength="16" placeholder="아이디 입력"></span>
-                                    <!-- [D] 사용자 입력시 경고 메세지 (임시 메시지 이므로 가이드에 따라 수정해주세요)
-                                        확인을 위해 메세지를 보이게 해놓은 상태고, 개발 시 처음엔 display:none 상태로 만들어주세요. -->
-                                    <p class="txt_warning">아이디가 일치하지 않습니다.</p>
+                            <div class="form_field field_pay">
+                                <!-- 고객현황분석 -->
+                                <div class="tbl-customer">
+                                    <h3 class="tit">고객 현황분석</h3>
+                                    <table>
+                                        <caption>고객 현황분석</caption>
+                                        <tbody> 
+                                            <tr>
+                                                <th>구분</th> 
+                                                <td>업체</td>
+                                            </tr>
+                                            <tr>
+                                                <th>사용목적</th>
+                                                <td>상업용</td>
+                                            </tr>
+                                            <tr>
+                                                <th>제품 도입 구분</th>
+                                                <td>원백</td>
+                                            </tr>
+                                            <tr>
+                                                <th>프로젝트 명</th>
+                                                <td>가나다라 은행 도입건</td>
+                                            </tr>
+                                            <tr>
+                                                <th>지점 / 망 분리 여부</th>
+                                                <td>예</td>
+                                            </tr>
+                                            <tr>
+                                                <th>지점 / 망 분리 수</th>
+                                                <td>3</td>
+                                            </tr>
+                                            <tr>
+                                                <th>사용 PC 수량</th>
+                                                <td>32</td>
+                                            </tr>
+                                            <tr>
+                                                <th>서버 수량</th>
+                                                <td>2</td>
+                                            </tr>
+                                            <tr>
+                                                <th>운영 체제</th>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <th>CPU</th>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <th>RAM</th>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <th>하드디스크</th>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <th>기타<br>(요구사항)</th>
+                                                <td colspan="3">가나다라 은행 도입건</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
                                 </div>
-                                <!-- pw -->
-                                <div class="ipbx_item ipbx_pw">
-                                    <span class="u_ipbx"> 
-                                        <input type="password" class="int" maxlength="20" placeholder="비밀번호 입력 (8~20자의 영.숫자,특수문자)"> 
-                                    </span>
-                                    <!-- [D] 사용자 입력시 경고 메세지 (임시 메시지 이므로 가이드에 따라 수정해주세요)
-                                    확인을 위해 메세지를 보이게 해놓은 상태고, 개발 시 처음엔 display:none 상태로 만들어주세요. -->
-                                    <p class="txt_warning">비밀번호가 일치하지 않습니다.</p>
+
+                                <!-- 견적 내용 확인 -->
+                                <div class="tbl-order onlymobile">
+                                    <h3 class="tit">견적 내용 확인</h3>
+                                    <table>
+                                        <caption>견적 내용 확인</caption>
+                                        <tbody> 
+                                            <tr>
+                                                <th>솔루션 구분</th>
+                                                <td>AlphaSecure Ransom Keeper</td>
+                                            </tr>
+                                            <tr>
+                                                <th>수량</th>
+                                                <td>5</td>
+                                            </tr>
+                                            <tr>
+                                                <th>소비자가</th>
+                                                <td>80,000</td>
+                                            </tr>
+                                            <tr>
+                                                <th>공급단가</th>
+                                                <td>40,000</td>
+                                            </tr>
+                                            <tr>
+                                                <th>공급가액</th>
+                                                <td>160,000</td>
+                                            </tr>
+                                            <tr>
+                                                <th class="tb-r">공급가 합계 (VAT 별도)</th>
+                                                <td><strong>160,000</strong></td>
+                                            </tr>
+                                            <tr>
+                                                <th class="tb-r">부가가치세</th>
+                                                <td><strong>16,000</strong></td>
+                                            </tr>
+                                            <tr>
+                                                <th class="tb-r">합계 (VAT 별도)</th>
+                                                <td><strong>176,000</strong></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
                                 </div>
-                                <div class="btn_wrap">
-                                    <button type="button" class="btn_blue">로그인</button>
-                                    <div class="sub_link">
-                                        <a href="./join.html" class="btn_join">회원가입</a>
-                                        <a href="" class="btn_find_id">아이디 찾기</a>
-                                        <a href="" class="btn_find_pw">비밀번호 찾기</a>
+
+                                <!-- 견적 내용 확인 -->
+                                <div class="tbl-order onlypc">
+                                    <h3 class="tit">견적 내용 확인</h3>
+                                    <table>
+                                        <caption>견적 내용 확인</caption>
+                                        <colgroup>
+                                            <col>
+                                            <col style="width:16%;">
+                                            <col style="width:16%;">
+                                            <col style="width:16%;">
+                                            <col style="width:24%;">
+                                        </colgroup>
+                                        <thead>
+                                            <th scope="col">솔루션 구분</th>
+                                            <th scope="col">수량</th>
+                                            <th scope="col">소비자가</th>
+                                            <th scope="col">공급단가</th>
+                                            <th scope="col">공급가액</th>
+                                        </thead>
+                                        <tbody> 
+                                            <tr>
+                                                <td>AlphaSecure Ransom Keeper</td>
+                                                <td>5</td>
+                                                <td>80,000</td>
+                                                <td>40,000</td>
+                                                <td>160,000</td>
+                                            </tr>
+                                            <tr>
+                                                <th colspan="4" class="tb-r">공급가 합계 (VAT 별도)</th>
+                                                <td><strong>160,000</strong></td>
+                                            </tr>
+                                            <tr>
+                                                <th colspan="4" class="tb-r">부가가치세</th>
+                                                <td><strong>16,000</strong></td>
+                                            </tr>
+                                            <tr>   
+                                                <th colspan="4" class="tb-r">합계 (VAT 별도)</th>
+                                                <td><strong>176,000</strong></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+
+                                <!-- 결제 정보 확인1 -->
+                                <div class="tbl-order-chk">
+                                    <h3 class="tit">결제 정보 확인</h3>
+                                    <table>
+                                        <caption>결제 정보 확인</caption>
+                                        <tbody> 
+                                            <tr>
+                                                <th scope="col">결제정보</th> 
+                                                <td>
+                                                    <ul class="sel_list">
+                                                        <li>
+                                                            <input type="radio" id="radio_paymethod1" name="radio_paymethod" checked="checked" />
+                                                            <label for="radio_paymethod1">신용카드</label>
+                                                        </li>
+                                                        <li>
+                                                            <input type="radio" id="radio_paymethod1" name="radio_paymethod" />
+                                                            <label for="radio_paymethod2">무통장</label>
+                                                        </li>
+                                                        <li>
+                                                            <input type="radio" id="radio_paymethod3" name="radio_paymethod" />
+                                                            <label for="radio_paymethod3">청구서</label>
+                                                        </li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="col">카드선택</th> 
+                                                <td>
+                                                    <ul class="sel_list bank">
+                                                        <li>
+                                                            <input type="radio" id="radio_card1" name="radio_card" checked="checked" />
+                                                            <label for="radio_card1"><img src="../src/img/page/solution/bank_kb.png" alt="">국민은행</label>
+                                                        </li>
+                                                        <li>
+                                                            <input type="radio" id="radio_card2" name="radio_card" />
+                                                            <label for="radio_card2"><img src="../src/img/page/solution/bank_woori.png" alt="">우리은행</label>
+                                                        </li>
+                                                        <li>
+                                                            <input type="radio" id="radio_card3" name="radio_card" />
+                                                            <label for="radio_card3"><img src="../src/img/page/solution/bank_sh.png" alt="">신한은행</label>
+                                                        </li>
+                                                        <li>
+                                                            <input type="radio" id="radio_card4" name="radio_card" />
+                                                            <label for="radio_card4"><img src="../src/img/page/solution/bank_hana.png" alt="">하나은행</label>        
+                                                        </li>
+                                                        <li>
+                                                            <input type="radio" id="radio_card5" name="radio_card" />
+                                                            <label for="radio_card5"><img src="../src/img/page/solution/bank_nh.png" alt="">농협은행</label>                                                            
+                                                        </li>
+                                                        <li>
+                                                            <input type="radio" id="radio_card6" name="radio_card" />
+                                                            <label for="radio_card6"><img src="../src/img/page/solution/bank_ibk.png" alt="">기업은행</label>
+                                                        </li>
+                                                    </ul>                                                    
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="col">결제방식</th> 
+                                                <td>
+                                                    <ul class="sel_list">
+                                                        <li>
+                                                            <input type="radio" id="radio_paymethod2_1" name="radio_paymethod2" checked="checked" />
+                                                            <label for="radio_paymethod2_1">안전결제 (페이북/ISP)</label>
+                                                        </li>
+                                                        <li>
+                                                            <input type="radio" id="radio_paymethod2_2" name="radio_paymethod2" />
+                                                            <label for="radio_paymethod2_2">무통장</label>
+                                                        </li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="col">할부방식</th> 
+                                                <td>
+                                                    <div class="ipbx_item ipbx_month">
+                                                        <span class="u_selbox">
+                                                            <label for="select_month"><span class="blind">할부방식</span></label>
+                                                            <select id="select_month" name="select_month" class="sel">
+                                                                <option value="" selected="selected">일시불</option>
+                                                                <option value="">2개월</option>
+                                                                <option value="">3개월</option>
+                                                            </select>
+                                                        </span>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                                <!-- 결제 정보 확인2 -->
+                                <div class="tbl-order-chk">
+                                    <h3 class="tit">결제 정보 확인</h3>
+                                    <table>
+                                        <caption>결제 정보 확인</caption>
+                                        <colgroup class="onlypc">
+                                            <col style="width:19%;">
+                                            <col>
+                                            <col style="width:19%;">
+                                            <col style="width:20%;">
+                                        </colgroup>
+                                        <tbody> 
+                                            <tr>
+                                                <th scope="col">결제정보</th> 
+                                                <td>
+                                                    <ul class="sel_list">
+                                                        <li>
+                                                            <input type="radio" id="radio_paymethod1" name="radio_paymethod" />
+                                                            <label for="radio_paymethod1">신용카드</label>
+                                                        </li>
+                                                        <li>
+                                                            <input type="radio" id="radio_paymethod1" name="radio_paymethod" checked="checked"/>
+                                                            <label for="radio_paymethod2">무통장</label>
+                                                        </li>
+                                                        <li>
+                                                            <input type="radio" id="radio_paymethod3" name="radio_paymethod" />
+                                                            <label for="radio_paymethod3">청구서</label>
+                                                        </li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="col">보내는 사람 / 업체명</th> 
+                                                <td>
+                                                    <div class="ipbx_item">
+                                                        <span class="u_ipbx"><input type="text" class="int" placeholder="" value="" id=""></span>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="col" rowspan="2">은행선택</th> 
+                                                <td>
+                                                    <ul class="sel_list bank">
+                                                        <li>
+                                                            <input type="radio" id="radio_card1" name="radio_card" checked="checked" />
+                                                            <label for="radio_card1"><img src="../src/img/page/solution/bank_kb.png" alt="">국민은행</label>
+                                                        </li>
+                                                        <li>
+                                                            <input type="radio" id="radio_card2" name="radio_card" />
+                                                            <label for="radio_card2"><img src="../src/img/page/solution/bank_woori.png" alt="">우리은행</label>
+                                                        </li>
+                                                        <li>
+                                                            <input type="radio" id="radio_card3" name="radio_card" />
+                                                            <label for="radio_card3"><img src="../src/img/page/solution/bank_sh.png" alt="">신한은행</label>
+                                                        </li>
+                                                        <li>
+                                                            <input type="radio" id="radio_card4" name="radio_card" />
+                                                            <label for="radio_card4"><img src="../src/img/page/solution/bank_hana.png" alt="">하나은행</label>        
+                                                        </li>
+                                                        <li>
+                                                            <input type="radio" id="radio_card5" name="radio_card" />
+                                                            <label for="radio_card5"><img src="../src/img/page/solution/bank_nh.png" alt="">농협은행</label>                                                            
+                                                        </li>
+                                                        <li>
+                                                            <input type="radio" id="radio_card6" name="radio_card" />
+                                                            <label for="radio_card6"><img src="../src/img/page/solution/bank_ibk.png" alt="">기업은행</label>
+                                                        </li>
+                                                    </ul>                                                    
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <p>입금기한: 09월 19일</p>                                              
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="col">결제안내</th> 
+                                                <td>
+                                                    <p>주문 후 1일(영업일 기준, 주말/공휴일제외) 이내 입금확인이 되지 않으면 주문이 자동 취소 처리됩니다.<br> 입금시 예금주명은 ‘주식회사 SECUDOG’ 입니다.<br> 주문자 이름과 금액이 정확해야만 입금 완료 처리됩니다.</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="cashbill">
+                                                <th scope="col" rowspan="2">현금영수증 신청</th> 
+                                                <td>
+                                                    <ul class="sel_list">
+                                                        <li>
+                                                            <input type="radio" id="radio_cashbill1" name="radio_cashbill" checked="checked" />
+                                                            <label for="radio_cashbill1">소득공제용</label>
+                                                        </li>
+                                                        <li>
+                                                            <input type="radio" id="radio_cashbill2" name="radio_cashbill" />
+                                                            <label for="radio_cashbill2">지출증빙용</label>
+                                                        </li>
+                                                        <li>
+                                                            <input type="radio" id="radio_cashbill3" name="radio_cashbill" />
+                                                            <label for="radio_cashbill3">발행안함</label>
+                                                        </li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                            <tr class="cashbill2">
+                                                <td>
+                                                    <div class="ipbx_item">
+                                                        <label for="input_cashbill">신용카드번호 / 휴대폰번호</label>
+                                                        <span class="u_ipbx"><input type="text" class="int" placeholder="" value="" id="input_cashbill"></span>
+                                                    </div>
+                                                    <p class="msg">
+                                                    -  "-"를 제외하고 숫자만 입력해 주세요.<br>- 신용카드번호는 국세청 현금영수증 사이트에 등록된 카드번호만 가능합니다
+                                                    </p>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                                <!-- 결제 정보 확인3 -->
+                                <div class="tbl-order-chk">
+                                    <h3 class="tit">결제 정보 확인</h3>
+                                    <table>
+                                        <caption>결제 정보 확인</caption>
+                                        <colgroup class="onlypc">
+                                            <col style="width:19%;">
+                                            <col>
+                                        </colgroup>
+                                        <tbody> 
+                                            <tr>
+                                                <th scope="col">결제정보</th> 
+                                                <td>
+                                                    <ul class="sel_list">
+                                                        <li>
+                                                            <input type="radio" id="radio_paymethod1" name="radio_paymethod" />
+                                                            <label for="radio_paymethod1">신용카드</label>
+                                                        </li>
+                                                        <li>
+                                                            <input type="radio" id="radio_paymethod1" name="radio_paymethod" />
+                                                            <label for="radio_paymethod2">무통장</label>
+                                                        </li>
+                                                        <li>
+                                                            <input type="radio" id="radio_paymethod3" name="radio_paymethod" checked="checked" />
+                                                            <label for="radio_paymethod3">청구서</label>
+                                                        </li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="col">은행선택</th> 
+                                                <td>
+                                                    <ul class="sel_list bank">
+                                                        <li>
+                                                            <input type="radio" id="radio_card1" name="radio_card" checked="checked" />
+                                                            <label for="radio_card1"><img src="../src/img/page/solution/bank_kb.png" alt="">국민은행</label>
+                                                        </li>
+                                                        <li>
+                                                            <input type="radio" id="radio_card2" name="radio_card" />
+                                                            <label for="radio_card2"><img src="../src/img/page/solution/bank_woori.png" alt="">우리은행</label>
+                                                        </li>
+                                                        <li>
+                                                            <input type="radio" id="radio_card3" name="radio_card" />
+                                                            <label for="radio_card3"><img src="../src/img/page/solution/bank_sh.png" alt="">신한은행</label>
+                                                        </li>
+                                                        <li>
+                                                            <input type="radio" id="radio_card4" name="radio_card" />
+                                                            <label for="radio_card4"><img src="../src/img/page/solution/bank_hana.png" alt="">하나은행</label>        
+                                                        </li>
+                                                        <li>
+                                                            <input type="radio" id="radio_card5" name="radio_card" />
+                                                            <label for="radio_card5"><img src="../src/img/page/solution/bank_nh.png" alt="">농협은행</label>                                                            
+                                                        </li>
+                                                        <li>
+                                                            <input type="radio" id="radio_card6" name="radio_card" />
+                                                            <label for="radio_card6"><img src="../src/img/page/solution/bank_ibk.png" alt="">기업은행</label>
+                                                        </li>
+                                                    </ul>                                                    
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="col">결제안내</th> 
+                                                <td>
+                                                    <p>청구서 결제의 경우, 납품이 완료된 후 검수가 완료된 후에 세금계산서를 발행합니다.</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="col">사업자등록증</th> 
+                                                <td>
+                                                    <div class="ipbx_item ipbx_file">
+                                                        <span class="u_ipbx">
+                                                            <label for="file_business">파일첨부</label>
+                                                            <input type="file" name="" id="file_business" value="파일첨부">
+                                                            <input type="text" class="int upload_name" value="" disabled="disabled">
+                                                        </span>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="col">비고</th> 
+                                                <td>
+                                                    <div class="ipbx_item">                                                        
+                                                        <span class="u_ipbx">
+                                                            <textarea name="" id=""></textarea>
+                                                        </span>
+                                                    </div>
+                                                    <p>납품요청일자/ 세금계산서 발행 일자/ 결제일 정보를 확인가능하시다면 입력해주세요.</p>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                                <!-- 주문자 동의 -->
+                                <h3 class="tit">주문자 동의</h3>
+                                <div class="agree_wrap">
+                                    <div class="agree_form">
+                                        <div class="check_wrap">
+                                            <span class="u_chkbx">
+                                                <input type="checkbox" id="agree_pay"><label for="agree_pay">구매 및 결제대행서비스 이용약관 등에 모두 동의합니다. <span>(필수)</span></label>
+                                            </span>
+                                        </div>
+                                        <p class="cont">
+                                            - 구매조건 확인 및 결제 진행 동의<br>
+                                            - 개인정보 수집 이용 및 제3자 정보 제공 동의
+                                        </p>
                                     </div>
+                                    <p class="msg">위 주문 내용을 확인 하였으며, 회원 본인은 결제에 동의합니다.</p>
+                                </div>
+
+                                <div class="btn_wrap">
+                                    <a href="" class="btn_lb btn_m">상세견적 요청하기</a>
+                                    <a href="" class="btn_blue btn_sm">결제하기</a>
+                                    <a href="" class="btn_gray btn_sm">취소</a>
                                 </div>                        
                             </div>
                         </form>

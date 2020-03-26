@@ -53,3 +53,20 @@ $(function(){
         header.find('.gnb_bg').hide();
     });
 });
+
+
+// 파일첨부
+$(document).ready(function(){
+    var fileTarget = $('.ipbx_file input[type="file"]');
+    fileTarget.on('change', function(){ 
+        console.log("file")
+        if(window.FileReader){  // modern browser
+        var filename = $(this)[0].files[0].name;
+        } 
+        else {  // old IE
+        var filename = $(this).val().split('/').pop().split('\\').pop();  // 파일명만 추출
+        }
+        // 추출한 파일명 삽입
+        $(this).siblings('.upload_name').val(filename);
+    });
+}); 
