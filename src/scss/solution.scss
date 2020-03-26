@@ -65,9 +65,9 @@
         border-bottom:1px solid $gray2;
         .u_tab{
             li{
-                border-color:$gray2;
+                // border-color:$gray2;
                 &:before{width:1px;background-color:$gray2;}
-                span{color:$gray2;}
+                span{color:$gray2;border-color:$gray2;}
                 &.on{
                     span{color:$white;background-color:#57616d;}
                     &:after{

@@ -453,9 +453,10 @@ input[type="checkbox"]:checked + label {
     .u_tab{
         margin:0 auto;margin-bottom:-2px;border:none;
         li{
-            display:table;position:relative;text-align:center;border:1px solid $darkBlue3;margin-right:-1px;
+            display:table;position:relative;text-align:center;margin-right:-1px;//border:1px solid $darkBlue3;
             span{
                 display:table-cell;height:40px;vertical-align:middle;font-size:14px;line-height:16px;color:$darkBlue3;word-wrap:break-word;word-break:keep-all;
+                border:1px solid $darkBlue3;
             }
             &.on{
                 position:relative;
