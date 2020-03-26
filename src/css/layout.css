@@ -338,7 +338,7 @@ input[type="checkbox"]:checked + label:after { position: absolute; top: 10px; le
 
 .u_step .u_tab li.on span { color: #ffffff; font-weight: 500; background-color: #2d5ba8; }
 
-.u_step .u_tab li.on:after { position: absolute; top: -2px; left: 100%; display: block; content: ''; width: 0; height: 0; border: 0 solid transparent; border-bottom-width: 22px; border-top-width: 22px; border-left: 12px solid #2d5ba8; z-index: 2; }
+.u_step .u_tab li.on:after { position: absolute; top: -2px; right: 0; display: block; content: ''; width: 0; height: 0; border: 0 solid transparent; border-bottom-width: 22px; border-top-width: 22px; border-left: 12px solid #2d5ba8; z-index: 2; }
 
 .u_step .u_tab li:last-child { margin-right: 0; }
 
