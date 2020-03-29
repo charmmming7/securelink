@@ -28,8 +28,6 @@
 
 .solution_lst .box .info .txt { font-size: 8px; line-height: 12px; font-weight: 300; display: -webkit-box; -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis; -webkit-line-clamp: 3; -webkit-box-sizing: border-box; box-sizing: border-box; word-wrap: break-word; }
 
-.prd_select_wrap { padding: 20px 0; text-align: center; background-color: #f3f5f8; border-top: 1px solid #dbdde3; border-bottom: 3px solid #dbdde3; }
-
 .prd_select_wrap ul { display: inline-block; margin: 0 auto; text-align: center; }
 
 .prd_select_wrap li { position: relative; float: left; margin: 0 14px; height: 40px; line-height: 40px; font-size: 16px; }
@@ -48,11 +46,9 @@
 
 .wrap_pay .u_step { border-bottom: 1px solid #bebebe; }
 
-.wrap_pay .u_step .u_tab li { border-color: #bebebe; }
-
 .wrap_pay .u_step .u_tab li:before { width: 1px; background-color: #bebebe; }
 
-.wrap_pay .u_step .u_tab li span { color: #bebebe; }
+.wrap_pay .u_step .u_tab li span { color: #bebebe; border-color: #bebebe; }
 
 .wrap_pay .u_step .u_tab li.on span { color: #ffffff; background-color: #57616d; }
 
@@ -64,27 +60,19 @@
 
 .field_pay { padding: 0 20px; }
 
-.field_pay .tit { margin-top: 0; }
-
-.field_pay table { width: 100%; }
-
-.field_pay table th { width: 80px; font-weight: normal; padding: 7px 13px; }
-
-.field_pay table th, .field_pay table td { font-size: 13px; text-align: left; }
-
-.field_pay table td { padding: 7px 14px; }
-
-.field_pay table th { background-color: #f7f7f7; font-weight: 400; }
-
 .field_pay .tbl-customer tr:last-child th, .field_pay .tbl-customer tr:last-child td { height: 100px; }
 
 .field_pay .tbl-order.onlymobile th { background-color: #707070; color: #ffffff; }
 
 .field_pay .tbl-order.onlymobile tbody tr:last-child th, .field_pay .tbl-order.onlymobile tbody tr:last-child td { background-color: #d7e7ee; color: #212121; }
 
+.field_pay .tbl-order-chk th, .field_pay .tbl-order-chk td { display: block; width: 100%; margin-bottom: -1px; }
+
 .field_pay .cashbill td { background-color: #d7e7ee; }
 
 .field_pay .cashbill2 .ipbx_item label { margin-right: 10px; }
+
+.field_pay .cashbill2 .msg { margin-top: 15px; }
 
 .field_pay .sel_list { overflow: hidden; }
 
@@ -94,47 +82,37 @@
 
 .field_pay .sel_list li img { display: block; }
 
-.field_pay .sel_list.bank li { text-align: center; margin-right: 5px; }
+.field_pay .sel_list.bank li { text-align: center; margin-right: 18px; }
 
 .field_pay .sel_list.bank img { margin: 0 auto; margin-bottom: 4px; }
 
 .field_pay .sel_list.bank input[type="radio"] + label { font-size: 12px; }
 
-.field_pay .sel_list input[type="radio"] { display: inline-block; }
+.field_success .tbl-solution table th { width: 24%; }
 
-.field_pay .sel_list input[type="radio"] + label { display: inline-block; font-size: 14px; padding-left: 3px; }
+.field_success .tbl-solution table th, .field_success .tbl-solution table td { text-align: center; }
 
-.field_pay .ipbx_item { margin-bottom: 0; }
+.field_success .result { margin-top: 20px; padding: 60px 20px 30px 20px; text-align: center; background: #f7f7f7 url(../img/common/ico_page.png) 50% 20px no-repeat; background-size: 31px 34px; border: 1px solid #cfcfcf; }
 
-.field_pay .ipbx_item .u_selbox .sel { min-width: 150px; width: auto; padding: 11px 35px 11px 15px; font-size: 14px; line-height: 14px; background: #ffffff url(../img/page/solution/ico_arrow.png) 90% 50% no-repeat; background-size: 13px 9px; }
+.field_success .result h3 { font-size: 16px; font-weight: 500; }
 
-.field_pay .ipbx_item .u_ipbx .int { min-width: 120px; width: auto; }
+.field_success .result h3 + p { font-size: 14px; }
 
-.field_pay .ipbx_item.ipbx_file input[type="file"] { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); border: 0; }
+.field_success .result .point { color: #2d5ba8; }
 
-.field_pay .ipbx_item.ipbx_file label { display: inline-block; padding: 8px 14px 8px 40px; font-size: 12px; line-height: 24px; color: #ffffff; background: #545454 url(../img/common/ico_file.png) 14px 50% no-repeat; background-size: 16px 17px; cursor: pointer; }
+.field_success .result .detail { display: inline-block; background-color: #ffffff; margin: 20px 0; padding: 20px; font-size: 16px; border: 1px solid #7c848d; }
 
-.field_pay .ipbx_item.ipbx_file .upload_name { min-width: 100px; display: inline-block; padding: 5px 7px; background-color: #ffffff; cursor: pointer; }
+.field_success .result .detail .tit { padding: 5px 19px; color: #ffffff; background-color: #474747; font-size: 14px; margin-right: 10px; }
 
-.field_pay p { font-size: 14px; line-height: 18px; }
+.field_success .result .detail .sm { font-size: 14px; font-weight: 300; margin-left: 2px; }
 
-.field_pay .msg { margin-top: 15px; font-size: 12px; line-height: 16px; color: #4d5eab; }
+.field_success .result .detail li { text-align: left; margin-bottom: 20px; }
 
-.field_pay .ipbx_item + p { margin-top: 5px; font-size: 12px; }
+.field_success .result .detail li:last-child { margin-bottom: 0; }
 
-.field_pay .agree_wrap .agree_form { padding: 0; }
+.field_success .result .detail li span { display: inline-block; }
 
-.field_pay .agree_wrap .agree_form .check_wrap { padding: 6px 20px; border-bottom: 1px solid #cfcfcf; }
-
-.field_pay .agree_wrap .agree_form .check_wrap label span { color: #2d5ba8; line-height: 24px; }
-
-.field_pay .agree_wrap .agree_form .cont { max-height: 200px; margin: 0; padding: 10px 20px; background-color: #ffffff; overflow-y: auto; }
-
-.field_pay .agree_wrap .msg { color: #212121; }
-
-.field_pay input[type="checkbox"] + label { line-height: 24px; }
-
-.field_pay input[type="checkbox"]:checked + label:after { top: 5px; }
+.field_success .result .detail .price { font-size: 24px; font-weight: 500; margin-right: 2px; }
 
 @media all and (min-width: 1200px) { .solution_lst { padding: 0; overflow: hidden; padding-top: 20px; }
   .solution_lst .box { float: left; width: 580px; height: 240px; margin-bottom: 50px; border: 1px solid #e1e2e4; }
@@ -148,21 +126,13 @@
   .solution_lst .box .info .title { margin-top: 5px; margin-bottom: 9px; font-size: 24px; line-height: 30px; }
   .solution_lst .box .info .sub { margin-bottom: 7px; font-size: 18px; line-height: 30px; }
   .solution_lst .box .info .txt { font-size: 15px; line-height: 18px; }
-  .prd_select_wrap { padding: 30px 0; }
   .prd_select_wrap li { margin: 0 35px; height: 50px; line-height: 50px; font-size: 18px; }
   .prd_select_wrap li:after { right: -35px; }
+  .prd_select_wrap .ipbx_item { margin-bottom: 0; }
   .prd_select_wrap .ipbx_item .u_selbox .sel { height: 50px; padding: 10px 50px 10px 30px; font-size: 18px; }
   .prd_select_wrap .ipbx_item .u_selbox:after { right: 16px; }
   .wrap_pay .btn_wrap > a, .wrap_pay .btn_wrap button { margin-right: 10px; }
   .field_pay { padding: 0; }
-  .field_pay .tit { margin-top: 20px; }
-  .field_pay table { width: 100%; }
-  .field_pay table th, .field_pay table td { font-size: 16px; text-align: left; }
-  .field_pay table th { width: 199px; padding: 12px 20px; }
-  .field_pay table td { padding: 12px 30px; }
-  .field_pay table th { background-color: #f7f7f7; font-weight: 400; }
-  .field_pay table .tb-r { text-align: right !important; }
-  .field_pay table .tb-c { text-align: center !important; }
   .field_pay .tbl-customer { overflow: hidden; }
   .field_pay .tbl-customer tr:last-child { width: 100%; margin-right: -1px; margin-bottom: 0; }
   .field_pay .tbl-customer tr:last-child th { width: 199px; }
@@ -177,32 +147,24 @@
   .field_pay .tbl-order.onlypc tbody tr:not(:first-child) th { padding-right: 50px; }
   .field_pay .tbl-order.onlypc tbody tr:nth-last-child(2) th, .field_pay .tbl-order.onlypc tbody tr:nth-last-child(2) td { background-color: #f7f7f7; }
   .field_pay .tbl-order.onlypc tbody tr:last-child th, .field_pay .tbl-order.onlypc tbody tr:last-child td { background-color: #d7e7ee; }
-  .field_pay .cashbill td { background-color: #d7e7ee; }
+  .field_pay .tbl-order-chk th, .field_pay .tbl-order-chk td { display: table-cell; margin-bottom: 0; }
+  .field_pay .tbl-order-chk th { width: 200px; }
+  .field_pay .tbl-order-chk td { width: 400px; }
   .field_pay .cashbill2 .ipbx_item label { margin-right: 10px; }
-  .field_pay .sel_list { overflow: hidden; }
+  .field_pay .cashbill2 .msg { font-size: 14px; line-height: 18px; }
   .field_pay .sel_list li { float: left; margin-right: 50px; }
   .field_pay .sel_list li:last-child { margin-right: 0; }
   .field_pay .sel_list li img { display: block; }
   .field_pay .sel_list.bank li { margin-right: 40px; text-align: center; }
   .field_pay .sel_list.bank img { margin: 0 auto; margin-bottom: 4px; }
   .field_pay .sel_list.bank input[type="radio"] + label { font-size: 14px; }
-  .field_pay .sel_list input[type="radio"] { display: inline-block; }
-  .field_pay .sel_list input[type="radio"] + label { display: inline-block; font-size: 16px; padding-left: 3px; }
-  .field_pay .ipbx_item { margin-bottom: 0; }
-  .field_pay .ipbx_item .u_selbox .sel { min-width: 150px; width: auto; padding: 11px 35px 11px 15px; font-size: 16px; line-height: 16px; background: #ffffff url(../img/page/solution/ico_arrow.png) 90% 50% no-repeat; background-size: 13px 9px; }
-  .field_pay .ipbx_item .u_ipbx .int { min-width: 240px; width: auto; }
-  .field_pay .ipbx_item.ipbx_file input[type="file"] { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); border: 0; }
-  .field_pay .ipbx_item.ipbx_file label { display: inline-block; padding: 8px 14px 8px 40px; font-size: 14px; line-height: 24px; color: #ffffff; background: #545454 url(../img/common/ico_file.png) 14px 50% no-repeat; background-size: 16px 17px; cursor: pointer; }
-  .field_pay .ipbx_item.ipbx_file .upload_name { min-width: 300px; display: inline-block; padding: 5px 7px; background-color: #ffffff; cursor: pointer; }
-  .field_pay p { font-size: 16px; line-height: 26px; }
-  .field_pay .msg { margin-top: 15px; font-size: 14px; line-height: 18px; color: #4d5eab; }
-  .field_pay .ipbx_item + p { margin-top: 10px; font-size: 14px; }
-  .field_pay .agree_wrap .agree_form { padding: 0; }
-  .field_pay .agree_wrap .agree_form .check_wrap { padding: 16px 20px; border-bottom: 1px solid #cfcfcf; }
-  .field_pay .agree_wrap .agree_form .check_wrap span { color: #2d5ba8; }
-  .field_pay .agree_wrap .agree_form .cont { max-height: 200px; margin: 0; padding: 30px 80px; background-color: #ffffff; overflow-y: auto; }
-  .field_pay .agree_wrap .msg { color: #212121; } }
+  .field_success .tbl-solution table th, .field_success .tbl-solution table td { text-align: center !important; }
+  .field_success .result { margin-top: 30px; padding: 100px 20px 40px 20px; background: #f7f7f7 url(../img/common/ico_page.png) 50% 40px no-repeat; background-size: 42px 46px; border: 1px solid #cfcfcf; }
+  .field_success .result h3 { font-size: 24px; }
+  .field_success .result h3 + p { font-size: 18px; }
+  .field_success .result .manager { display: inline-block; background-color: #ffffff; margin: 20px 0; padding: 30px; font-size: 18px; border: 1px solid #7c848d; } }
 
 @media all and (max-width: 320px) { .prd_select_wrap li { margin: 0 10px; }
   .prd_select_wrap li:after { right: -12px; }
-  .prd_select_wrap .ipbx_item .u_selbox .sel { padding: 7px 30px 6px 11px; } }
+  .prd_select_wrap .ipbx_item .u_selbox .sel { padding: 7px 30px 6px 11px; }
+  .field_pay .ipbx_item.ipbx_file .upload_name { width: 148px; } }

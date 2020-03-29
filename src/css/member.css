@@ -58,6 +58,12 @@ input { -webkit-appearance: none; -moz-appearance: none; -o-appearance: none; ap
 
 .ipbx_item.ipbx_delete button { float: right; display: inline-block; font-size: 14px; width: 70px; height: 30px; color: #ffffff; background-color: #a2c9da; border: 1px solid #6f99ab; }
 
+.form_field .ipbx_item { margin-bottom: 10px; }
+
+.form_field .ipbx_item .u_ipbx .int { min-width: auto; width: 100%; }
+
+.form_field .ipbx_item .u_selbox .sel { min-width: auto; width: 100%; }
+
 .wrap_edit .u_step .u_tab li.on:after { display: none; }
 
 .field_edit .msg { font-size: 14px; color: #345299; text-align: left; margin: 15px 0; }
@@ -88,6 +94,52 @@ input { -webkit-appearance: none; -moz-appearance: none; -o-appearance: none; ap
 
 .field_login .sub_link .btn_find_pw { background: url(../img/page/member/ico_pwd_bl.png) 0 50% no-repeat; background-size: 17px 20px; }
 
+.top_select_wrap .tit { font-size: 16px; margin-right: 10px; }
+
+.top_select_wrap .btn_wrap span { display: inline-block; margin-right: 3px; padding: 1px 3px; font-size: 13px; background-color: #d7e7ee; border: 1px solid #cfcfcf; -webkit-border-top-left-radius: 5px; -webkit-border-top-right-radius: 5px; -webkit-border-bottom-left-radius: 5px; -webkit-border-bottom-right-radius: 5px; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px; }
+
+.top_select_wrap .choose_date { overflow: hidden; display: block; margin-top: 10px; }
+
+.top_select_wrap .choose_date > span { display: inline-block; vertical-align: top; }
+
+.top_select_wrap .choose_date .tild { line-height: 40px; font-weight: 500; font-size: 16px; margin: 0 4px; }
+
+.top_select_wrap .int input[type="text"] { border: 1px solid #2d5ba8; }
+
+.top_select_wrap .ipbx_item { width: 120px; }
+
+.top_select_wrap .sel { background: #ffffff url(../img/common/ico_sel_arrow.png) 90% 50% no-repeat; background-size: 13px 8px; }
+
+.top_select_wrap button { color: #ffffff; padding: 10px 16px; font-size: 14px; margin-left: 10px; }
+
+.top_util_wrap { padding: 10px 0; margin-bottom: 10px; background-color: #f7f7f7; text-align: center; border-bottom: 2px solid #dbdde3; }
+
+.top_util_wrap .step_wrap { display: inline-block; margin-bottom: 5px; vertical-align: middle; margin-right: 10px; }
+
+.top_util_wrap .step_wrap li { position: relative; display: inline-block; margin-right: 4px; padding: 5px 8px; font-size: 13px; background-color: #ebebeb; border: 1px solid #bebebe; color: #545454; -webkit-border-top-left-radius: 4px; -webkit-border-top-right-radius: 4px; -webkit-border-bottom-left-radius: 4px; -webkit-border-bottom-right-radius: 4px; border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-left-radius: 4px; border-bottom-right-radius: 4px; }
+
+.top_util_wrap .step_wrap li .tit { display: block; }
+
+.top_util_wrap .step_wrap li .num { font-size: 16px; }
+
+.top_util_wrap .point { display: inline-block; padding: 7px 0 8px 46px; vertical-align: top; color: #2d5ba8; font-size: 18px; font-weight: 600; margin: 10px 9px 0 0; background: url(../img/page/member/ico_point.png) 0 50% no-repeat; background-size: 40px; }
+
+.top_util_wrap .btn_shop { display: inline-block; vertical-align: middle; padding: 20px 14px 6px 14px; background: #d7e7ee url(../img/page/member/ico_cart.png) 50% 4px no-repeat; background-size: 16px; color: #545454; border: 1px solid #ffffff; -webkit-border-top-left-radius: 4px; -webkit-border-top-right-radius: 4px; -webkit-border-bottom-left-radius: 4px; -webkit-border-bottom-right-radius: 4px; border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-left-radius: 4px; border-bottom-right-radius: 4px; }
+
+.field_success { max-width: 100%; }
+
+.field_success .tbl-order-history { overflow-x: auto; }
+
+.field_success .tbl-order-history th { background-color: #7c848d; color: #ffffff; }
+
+.field_success .tbl-order-history td { color: #545454; font-size: 14px; }
+
+.field_success .tbl-order-history td:last-child { text-align: center; }
+
+.field_success .tbl-order-history .btn_email { display: inline-block; width: 80px; height: 26px; line-height: 26px; text-align: center; color: #545454; background-color: #d7e7ee; border: 1px solid #cfcfcf; -webkit-border-top-left-radius: 4px; -webkit-border-top-right-radius: 4px; -webkit-border-bottom-left-radius: 4px; -webkit-border-bottom-right-radius: 4px; border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-left-radius: 4px; border-bottom-right-radius: 4px; }
+
+.field_success .tbl-order-history .point { font-weight: 600; }
+
 @media all and (min-width: 1200px) { .title_wrap { padding-top: 35px; }
   .title_wrap h2 { font-size: 30px; line-height: 30px; }
   .ipbx_item .ipbx_btn { padding-right: 110px; }
@@ -96,19 +148,43 @@ input { -webkit-appearance: none; -moz-appearance: none; -o-appearance: none; ap
   .ipbx_item.ipbx_phone > span { width: 200px; margin-right: 20px; }
   .ipbx_item.ipbx_phone > span:after { right: -12px; }
   .ipbx_item.ipbx_delete { padding: 15px 50px 15px 30px; line-height: 30px; }
-  .form_field { padding: 0; }
+  .form_field { max-width: 640px; padding: 0; }
   .form_field hr { height: 3px; margin: 40px 0; }
   .btn_wrap { margin: 50px 0; }
   .btn_wrap button { font-size: 20px; }
   .field_edit .msg { text-align: center; margin: 15px 0 15px 0; }
   .field_edit .btn_wrap button { width: calc( 50% - 10px); }
   .field_edit .btn_wrap .btn_gray { margin-right: 20px; }
+  .field_edit .agree_form { padding: 22px 30px; }
   .field_login .ipbx_id { padding-right: 0; }
   .field_login .ipbx_id .int { padding: 10px 30px 10px 55px; background: url(../img/page/member/ico_id.png) 28px 50% no-repeat; background-size: 16px 20px; }
   .field_login .ipbx_pw .int { padding: 10px 30px 10px 55px; background: url(../img/page/member/ico_pwd_bl.png) 28px 50% no-repeat; background-size: 17px 20px; }
   .field_login .sub_link { margin-top: 30px; }
   .field_login .sub_link > a { padding: 10px 10px 10px 24px; margin: 0 16px; font-size: 16px; line-height: 36px; }
-  .field_login .sub_link > a:after { top: 13px; right: -10px; height: 20px; } }
+  .field_login .sub_link > a:after { top: 13px; right: -10px; height: 20px; }
+  .top_select_wrap { vertical-align: middle; }
+  .top_select_wrap .tit { font-size: 18px; margin-right: 30px; }
+  .top_select_wrap .btn_wrap span { margin-right: 5px; padding: 3px 6px; font-size: 15px; }
+  .top_select_wrap .choose_date { display: inline-block; margin: 0; vertical-align: middle; }
+  .top_select_wrap .choose_date > span { vertical-align: middle; margin-bottom: 0; }
+  .top_select_wrap .choose_date .tild { margin: 0 10px; }
+  .top_select_wrap .ipbx_item { width: 180px; }
+  .top_select_wrap button { padding: 7px 20px; font-size: 16px; vertical-align: middle; }
+  .top_util_wrap { padding: 20px 0; margin-bottom: 20px; }
+  .top_util_wrap > span { position: relative; }
+  .top_util_wrap > span:after { position: absolute; top: 0; right: -40px; content: ''; background-color: #bebebe; width: 2px; height: 100%; }
+  .top_util_wrap .step_wrap { margin-bottom: 0; margin-right: 30px; }
+  .top_util_wrap .step_wrap li { width: 100px; padding: 11px 8px; margin-right: 30px; font-size: 14px; }
+  .top_util_wrap .step_wrap li .num { font-size: 26px; margin-right: 2px; line-height: 1.4; }
+  .top_util_wrap .step_wrap li:after { position: absolute; top: 50%; right: -2px; content: '>'; color: #545454; font-size: 20px; margin-top: -13px; }
+  .top_util_wrap .step_wrap li:after { right: -20px; }
+  .top_util_wrap .step_wrap li:last-child { margin-right: 0; }
+  .top_util_wrap .step_wrap li:last-child:after { display: none; }
+  .top_util_wrap .point { padding: 21px 0 21px 90px; vertical-align: middle; color: #2d5ba8; font-size: 26px; margin: 0 80px 0 40px; background: url(../img/page/member/ico_point.png) 0 50% no-repeat; background-size: 80px; }
+  .top_util_wrap .btn_shop { display: inline-block; padding: 37px 27px 14px 27px; vertical-align: middle; line-height: 1.2; background: #d7e7ee url(../img/page/member/ico_cart.png) 50% 12px no-repeat; background-size: 21px; }
+  .field_success { max-width: 1150px; margin: 0 auto; }
+  .field_success .tbl-order-history td { font-size: 15px; }
+  .field_success .tbl-order-history .btn_email { display: inline-block; margin-left: 14px; color: #545454; background-color: #d7e7ee; border: 1px solid #cfcfcf; -webkit-border-top-left-radius: 4px; -webkit-border-top-right-radius: 4px; -webkit-border-bottom-left-radius: 4px; -webkit-border-bottom-right-radius: 4px; border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-left-radius: 4px; border-bottom-right-radius: 4px; } }
 
 @media all and (max-width: 320px) { .field_login .sub_link { font-size: 0; }
   .field_login .sub_link > a { padding-left: 0; background: none !important; } }

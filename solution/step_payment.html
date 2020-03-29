@@ -10,7 +10,7 @@
     <link rel="shortcut icon" type="image/x-icon" href="../src/img/favicon/favicon-32x32.png">
     <link rel="image_src" href=""> <!-- 이미지경로 -->
     <link rel="canonical" href=""> <!-- 사이트주소 -->
-    <!-- <link rel="icon" href="../src/img/favicon/android-icon-192x192.png"> -->
+    <link rel="icon" href="../src/img/favicon/android-icon-192x192.png">
     <link rel="apple-touch-icon-precomposed" href="../src/img/favicon/apple-icon-180x180.png">
     <link rel="manifest" href="../src/img/favicon/manifest.json">
     <meta name="msapplication-TileColor" content="#ffffff">
@@ -131,7 +131,7 @@
                 
                 <div class="container">
 
-                    <div class="prd_select_wrap">
+                    <div class="top_select_wrap prd_select_wrap">
                         <ul>
                             <li>솔루션</li>
                             <li>
@@ -418,12 +418,6 @@
                                     <h3 class="tit">결제 정보 확인</h3>
                                     <table>
                                         <caption>결제 정보 확인</caption>
-                                        <!-- <colgroup class="onlypc">
-                                            <col style="width:19%;">
-                                            <col>
-                                            <col style="width:19%;">
-                                            <col style="width:20%;">
-                                        </colgroup> -->
                                         <tbody> 
                                             <tr>
                                                 <th>결제정보</th> 
@@ -621,31 +615,119 @@
                                     </table>
                                 </div>
 
-                                <!-- 주문자 동의 -->
+                                <!-- 주문자 동의1 -->
                                 <h3 class="tit">주문자 동의</h3>
                                 <div class="agree_wrap">
-                                    <div class="agree_form">
+                                    <div class="agree_form type2">
                                         <div class="check_wrap">
-                                            <span class="u_chkbx"><input type="checkbox" id="agree_pay"><label for="agree_pay">구매 및 결제대행서비스 이용약관 등에 모두 동의합니다. <span>(필수)</span></label></span>
+                                            <span class="u_chkbx"><input type="checkbox" id="agree_pay1"><label for="agree_pay1">구매 및 결제대행서비스 이용약관 등에 모두 동의합니다. <span>(필수)</span></label></span>
+                                            <button type="button" class="btn_fold">내용보기</button>
                                         </div>
-                                        <p class="cont">
-                                            - 구매조건 확인 및 결제 진행 동의<br>
-                                            - 개인정보 수집 이용 및 제3자 정보 제공 동의
-                                        </p>
+                                        <div class="cont_wrap">
+                                            <div class="inner">
+                                                <p class="cont">
+                                                    - 구매조건 확인 및 결제 진행 동의<br>
+                                                    - 개인정보 수집 이용 및 제3자 정보 제공 동의
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="msg">위 주문 내용을 확인 하였으며, 회원 본인은 결제에 동의합니다.</p>
+                                </div>
+
+                                <!-- 주문자 동의2 -->
+                                <h3 class="tit">주문자 동의</h3>
+                                <div class="agree_wrap">
+                                    <!-- [D] 약관내용이 접혀있으면 .agree_form과 .btn_fold 에 .is_fold 클래스 추가. 열려있으면 제거. -->
+                                    <div class="agree_form type2">
+                                        <div class="check_wrap">
+                                            <span class="u_chkbx"><input type="checkbox" id="agree_pay2"><label for="agree_pay2">구매 및 결제대행서비스 이용약관 등에 모두 동의합니다. <span>(필수)</span></label></span>
+                                            <button type="button" class="btn_fold">내용보기</button>
+                                        </div>
+                                        <div class="cont_wrap">
+                                            <div class="inner">
+                                                <p class="cont">
+                                                    제 1장 총칙<br>
+                                                    제 1조 목적<br>
+                                                    - 구매조건 확인 및 결제 진행 동의<br>
+                                                    - 개인정보 수집 이용 및 제3자 정보 제공 동의<br>
+                                                    - 구매조건 확인 및 결제 진행 동의<br>
+                                                    - 개인정보 수집 이용 및 제3자 정보 제공 동의<br>
+                                                    - 구매조건 확인 및 결제 진행 동의<br>
+                                                    - 개인정보 수집 이용 및 제3자 정보 제공 동의<br>
+                                                    - 구매조건 확인 및 결제 진행 동의<br>
+                                                    - 개인정보 수집 이용 및 제3자 정보 제공 동의<br>
+                                                    - 구매조건 확인 및 결제 진행 동의<br>
+                                                    - 개인정보 수집 이용 및 제3자 정보 제공 동의<br>
+                                                    - 구매조건 확인 및 결제 진행 동의<br>
+                                                    - 개인정보 수집 이용 및 제3자 정보 제공 동의<br>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="agree_form type2">
+                                        <div class="check_wrap">
+                                            <span class="u_chkbx"><input type="checkbox" id="agree_pay3"><label for="agree_pay3">구매조건 확인 및 결제 진행 동의</label></span>
+                                            <button type="button" class="btn_fold">내용보기</button>
+                                        </div>
+                                        <div class="cont_wrap">
+                                            <div class="inner">
+                                                <p class="cont">
+                                                   위 상품과 구매조건을 확인하였으며, 구매에 동의합니다.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="agree_form type3">
+                                        <div class="check_wrap">
+                                            <span class="u_chkbx"><input type="checkbox" id="agree_pay4"><label for="agree_pay4">개인정보 수집 이용 및 제3자 정보 제공 동의</label></span>
+                                            <button type="button" class="btn_fold">내용보기</button>
+                                        </div>
+                                        <div class="cont_wrap">
+                                            <div class="inner">
+                                                <p class="cont">
+                                                    제 1장 총칙<br>
+                                                    제 1조 목적<br>
+                                                    .<br>
+                                                    .<br>
+                                                    .<br>                                                
+                                                    .<br>
+                                                    .<br>                                                
+                                                    .<br>
+                                                </p>
+                                                <div class="check_wrap">
+                                                    <span class="u_chkbx"><input type="checkbox" id="agree_personal1"><label for="agree_personal1">개인정보 수집 이용에 동의합니다.</label></span>
+                                                </div>
+                                            </div>
+                                            <div class="inner">
+                                                <p class="cont">
+                                                    제 1장 총칙<br>
+                                                    제 1조 목적<br>
+                                                    .<br>
+                                                    .<br>
+                                                    .<br>                                                
+                                                    .<br>
+                                                    .<br>                                                
+                                                    .<br>
+                                                </p>
+                                                <div class="check_wrap">
+                                                    <span class="u_chkbx"><input type="checkbox" id="agree_personal2"><label for="agree_personal2">개인정보 수집 이용에 동의합니다.</label></span>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                     <p class="msg">위 주문 내용을 확인 하였으며, 회원 본인은 결제에 동의합니다.</p>
                                 </div>
 
                                 <div class="btn_wrap">
-                                    <a href="" class="btn_lb btn_m">상세견적 요청하기</a>
-                                    <a href="" class="btn_blue btn_sm">결제하기</a>
-                                    <a href="" class="btn_gray btn_sm">취소</a>
+                                    <a href="#" class="btn_lb btn_m" id="btn_req_estimate">상세견적 요청하기</a>
+                                    <a href="#" class="btn_blue btn_sm">결제하기</a>
+                                    <a href="#" class="btn_gray btn_sm">취소</a>
                                 </div>                        
                             </div>
                         </form>
                     </div>
                 </div>
-
             </div>
         </main>
         <!-- // container -->
@@ -791,5 +873,23 @@
         </div>
     </div>
     <!-- // 모바일 레이어메뉴 -->
+
+    <!-- 상세견적요청 레이어 팝업 -->
+    <div class="layer_popup estimate">
+        <div class="layer_inner">
+            <span class="blind">상세견적요청 레이어팝업</span>
+            <a href="#btn_req_estimate" class="btn_close" title="모바일 메뉴 닫기">닫기</a>
+            <div class="pop_head">
+                <h1>상세견적요청</h1>
+            </div>
+            <div class="pop_body">
+                <div class="msg">상세한 내용을 기입해주시면, 확인 후 담당자가 연락 드리도록 하겠습니다.</div>
+                <div class="cont">
+                    <textarea name="" id="" placeholder="상세 견적 요청 내용 입력"></textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- // 상세견적요청 레이어 팝업 -->
 </body>
 </html>

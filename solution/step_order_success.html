@@ -29,22 +29,23 @@
         <a href="#gnb">메뉴 바로가기</a>
         <a href="#content">본문 바로가기</a>
     </div>
-    <main id="wrap">
+    <div id="wrap">
+        
         <!-- header -->
         <header id="header">
             <div class="gnb_bg"></div>
             <div class="inner">
                 <!-- 로고 -->
                 <h1 class="logo"><a href="../index.html"><span class="blind">시큐도그</span></a></h1>
-
+        
                 <!-- 모바일메뉴 버튼 -->
                 <a href="#m_layer_menu" id="btn_m_menu" class="btn_m_menu" title="모바일 메뉴열기"></a>
-    
+        
                 <!-- 메뉴 -->
                 <nav id="gnb">
                     <ul class="depth1">
                         <li>
-                            <a href="../solution/detail01.html">솔루션</a>
+                            <a href="../sub01/detail01.html">솔루션</a>
                             <ul class="depth2">
                                 <li>
                                     <a href="#">자사보안</a>
@@ -98,7 +99,7 @@
                         </li>
                     </ul>
                 </nav>
-
+        
                 <!-- 유틸 -->
                 <div class="util">
                     <a href="../member/login.html" class="btn_login">login</a>
@@ -111,11 +112,11 @@
         <!-- container -->
         <main id="container">
             <div id="content">
+
                 <!-- banner -->
                 <div class="banner">
                     <div class="inner">
                         <h1>Solution</h1>
-                        <p class="onlymobile">secudog의 솔루션 제품을 소개합니다. 클릭하시면 상세페이지로 이동합니다.</p>
                     </div>
                 </div>
 
@@ -127,78 +128,144 @@
                         <li><a href="">자사보안</a></li>
                     </ul>
                 </div>
-
+                
                 <div class="container">
-                    <div class="tab_wrap">
-                        <!-- tab -->
-                        <div class="tab_head">
-                            <ul class="u_tab tab4">
-                                <li class="on"><a href="">자사보안</a></li>
-                                <li><a href="">타사보안</a></li>
-                                <li><a href="">SI</a></li>
-                                <li><a href="">기타솔루션</a></li>
+
+                    <div class="top_select_wrap prd_select_wrap">
+                        <ul>
+                            <li>솔루션</li>
+                            <li>
+                                <div class="ipbx_item ipbx_depth2">
+                                    <span class="u_selbox">
+                                        <label for="sel_depth2"><span class="blind">두번째 하위메뉴</span></label>
+                                        <select id="sel_depth2" name="sel_depth2" class="sel">
+                                            <option value="">자사보안</option>
+                                            <option value="010">타사보안</option>
+                                            <option value="011">SI</option>
+                                        </select>
+                                    </span>
+                                </div>  
+                            </li>
+                            <li>
+                                <div class="ipbx_item ipbx_depth3">
+                                    <span class="u_selbox">
+                                        <label for="sel_depth3"><span class="blind">세번째 하위메뉴</span></label>
+                                        <select id="sel_depth3" name="sel_depth3" class="sel">
+                                            <option value="">Ransome keeper</option>
+                                            <option value="">Pharming Keeper</option>
+                                            <option value="">SPK Solution</option>
+                                            <option value="">ONE PASS</option>
+                                            <option value="">One Power</option>
+                                        </select>
+                                    </span>
+                                </div> 
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="wrap_success">
+
+                        <div class="u_step">
+                            <ul class="u_tab tab3 pay_step">
+                                <li><span>제품 선택 및 현황 분석</span></li>
+                                <li><span>결제</span></li>
+                                <li class="on"><span>주문완료</span></li>
                             </ul>
                         </div>
-                        <!-- tab content -->
-                        <div class="tab_body">
-                            <div class="solution_lst box_wrap">
-                                <!-- box 반복 시작 -->
-                                <div class="box">
-                                    <figure><img src="../src/img/page/prd/prd_ransome_keeper.jpg" alt="Ransome Keeper"></figure>
-                                    <div class="info">
-                                        <div class="inner">
-                                            <div class="category"><span class="blind">카테고리</span>보안</div>
-                                            <a href="" class="btn_view" title="자세히 보기"><span class="blind">자세히보기</span>VIEW</a>
-                                            <strong class="title">Ransome Keeper</strong>
-                                            <p class="sub">랜섬웨어로 인한 피해 예방 솔루션</p>
-                                            <p class="txt">랜섬웨어로 인한 피해 예방 솔루션<br>랜섬웨어로 인한 피해 예방 솔루션</p>
-                                        </div>
-                                    </div>
+        
+                        <form action="">
+                            <div class="form_field field_success">
+                                <!-- 주문하신 솔루션 정보 : 구매완료 (모바일) -->
+                                <div class="tbl-solution onlymobile">
+                                    <h3 class="tit">주문하신 솔루션 정보</h3>
+                                    <table>
+                                        <caption>주문하신 솔루션 정보</caption>
+                                        <tbody> 
+                                            <tr>
+                                                <th>번호</th>
+                                                <td>보안솔루션</td>
+                                                <td><img src="../src/img/temp/prd_one_pass.jpg" alt=""></td>
+                                            </tr>
+                                            <tr>
+                                                <th>제품명</th>
+                                                <td colspan="2">AlphaSecure Ransom Keeper<br>랜섬웨어 차단 솔루션</td>
+                                            </tr>
+                                            <tr>
+                                                <th>제조사</th>
+                                                <td colspan="2">(주)SECUDOG</td>
+                                            </tr>
+                                            <tr>
+                                                <th>수량</th>
+                                                <td colspan="2">5개</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
                                 </div>
-                                <!-- // box -->
-                                <div class="box">
-                                    <figure><img src="../src/img/page/prd/prd_spk_solution.jpg" alt="Pharming Keeper"></figure>
-                                    <div class="info">
-                                        <div class="inner">
-                                            <div class="category"><span class="blind">카테고리</span>보안</div>
-                                            <a href="" class="btn_view" title="자세히 보기"><span class="blind">자세히보기</span>VIEW</a>
-                                            <strong class="title">Pharming Keeper</strong>
-                                            <p class="sub">개인정보 및 문서 유출방지를 위한 통합보안 솔루션</p>
-                                            <p class="txt">개인정보 및 문서 유출방지를 위한 통합보안 솔루션<br>개인정보 및 문서 유출방지를 위한 통합보안 솔루션</p>
-                                        </div>
-                                    </div>
+
+                                <!-- 주문하신 솔루션 정보 : 구매완료 (모바일) -->
+                                <div class="tbl-order onlypc">
+                                    <h3 class="tit">주문하신 솔루션 정보</h3>
+                                    <table>
+                                        <caption>주문하신 솔루션 정보</caption>
+                                        <colgroup>
+                                            <col>
+                                            <col>
+                                            <col style="width:35%;">
+                                            <col>
+                                            <col>
+                                        </colgroup>
+                                        <thead>
+                                            <th scope="col" colspan="2">번호</th>
+                                            <th scope="col">제품명</th>
+                                            <th scope="col">제조사</th>
+                                            <th scope="col">수량</th>
+                                        </thead>
+                                        <tbody> 
+                                            <tr>
+                                                <td>보안솔루션</td>
+                                                <td><img src="../src/img/temp/prd_one_pass.jpg" alt=""></td>
+                                                <td>AlphaSecure Ransom Keeper<br>랜섬웨어 차단 솔루션</td>
+                                                <td>(주)SECUDOG</td>
+                                                <td>5개</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
                                 </div>
-                                <!-- // box -->
-                                <div class="box">
-                                    <figure><img src="../src/img/page/prd/prd_one_pass.jpg" alt="One Power"></figure>
-                                    <div class="info">
-                                        <div class="inner">
-                                            <div class="category"><span class="blind">카테고리</span>보안</div>
-                                            <a href="" class="btn_view" title="자세히 보기"><span class="blind">자세히보기</span>VIEW</a>
-                                            <strong class="title">One Power</strong>
-                                            <p class="sub">작업능률 향상 솔루션</p>
-                                            <p class="txt">PC의 전원 및 근무시간관리를 통한 작업능률 향상 솔루션 입니다.</p>
-                                        </div>
+
+                                <!-- 구매완료 -->
+                                <div class="result">
+                                    <h3>감사합니다.<br class="mobilebr"> 솔루션구매가 완료되었습니다</h3>
+                                    <p>솔루션 납품 일정 조율 후에 담당자가 연락드리도록 하겠습니다.</p>
+                                    <div class="detail">
+                                        담당자 : <span class="point">홍길동 부장 (aaaaa@secudog.co.kr)</span>
                                     </div>
+                                    <p>여러분의 편의를 위해 노력하는 <span class="point">SECUDOG</span>이 되겠습니다.</p>
                                 </div>
-                                <!-- // box -->
-                                <div class="box">
-                                    <figure><img src="../src/img/page/prd/prd_pharming_keeper.jpg" alt="Pharming Keeper"></figure>
-                                    <div class="info">
-                                        <div class="inner">
-                                            <div class="category"><span class="blind">카테고리</span>보안</div>
-                                            <a href="" class="btn_view" title="자세히 보기"><span class="blind">자세히보기</span>VIEW</a>                                    
-                                            <strong class="title">Pharming Keeper Pharming Keeper</strong>
-                                            <p class="sub">인터넷 뱅킹을 실시간 보호 인터넷 뱅킹을 실시간 보호</p>
-                                            <p class="txt">인터넷 뱅킹 환경에서 발생 할 수 있는 다양한 변종 악성코드의 파밍 공격으로부터 인터넷 뱅킹을 실시간 보호합니다. 인터넷 뱅킹 환경에서 발생 할 수 있는 다양한 변종 악성코드의 파밍 공격으로부터 인터넷 뱅킹을 실시간 보호합니다.</p>
-                                        </div>
+
+                                <!-- 주문완료 -->
+                                <div class="result">
+                                    <h3>감사합니다.<br class="mobilebr"> 주문이 정상적으로 처리되었습니다.</h3>
+                                    <p>입금이 확인된 후에, 솔루션이 제공 됩니다.</p>
+                                    <div class="detail">
+                                        <ul>
+                                            <li><span class="tit">입금정보</span>
+                                                <span>국민은행 0000-12-12345 <span class="sm">(예금주명은 ‘주식회사 SECUDOG’로 확인됩니다.)</span></span>
+                                            </li>
+                                            <li>
+                                                <span class="tit">입금정보</span>
+                                                <span><span class="point price">176,000</span>원 <span class="sm">(2019-10-10 까지)</span></span>
+                                            </li>
+                                        </ul>
                                     </div>
-                                </div>
-                                <!-- // box -->
-                                <!-- box 반복 끝 -->
+                                    <p>여러분의 편의를 위해 노력하는 <span class="point">SECUDOG</span>이 되겠습니다.</p>
+                                </div>                              
+
+                                <div class="btn_wrap">
+                                    <a href="#" class="btn_blue btn_l">주문조회</a>
+                                </div>                        
                             </div>
-                        </div>
-                    </div>  
+                        </form>
+                    </div>
                 </div>
             </div>
         </main>
@@ -215,7 +282,7 @@
                         <li><a href="#">이용약관</a></li>
                     </ul>
                 </div>
-
+        
                 <div class="ft_btm">
                     <div class="logo"><span class="blind">시큐도그</span></div>
                     <div class="ft_policy">
@@ -270,7 +337,7 @@
                 <ul class="depth1">
                     <li>
                         <button>솔루션</button>
-                        <a href="../solution/detail01.html" class="btn_go" title="바로가기">바로가기</a>
+                        <a href="../sub01/detail01.html" class="btn_go" title="바로가기">바로가기</a>
                         <ul class="depth2">
                             <li>
                                 <button>자사보안</button>

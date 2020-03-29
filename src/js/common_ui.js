@@ -2,6 +2,12 @@ $(function(){
     var header = $('#header');
     var m_layer_menu = $('#m_layer_menu');
     var pc_gnb = $('#gnb');
+    var btn_req_estimate = $('#btn_req_estimate');
+
+    // datepicker
+    $( ".datepicker" ).each(function(){
+        $(this).datepicker();
+    });
 
     // 모바일 메뉴 열기
     $('#btn_m_menu').on('click', function(){
@@ -42,16 +48,48 @@ $(function(){
     // pc 메뉴 열기
     pc_gnb.find('.depth1 > li').on('mouseover', function(){
         var $thisLi = $(this);
-        // $thisLi.addClass('menuOpen').siblings().removeClass('menuOpen');
         header.find('.gnb_bg').show();
     });
 
     // pc 메뉴 닫기
     pc_gnb.find('.depth1 > li').on('mouseout', function(){
         var $thisLi = $(this);
-        // $thisLi.removeClass('menuOpen');
         header.find('.gnb_bg').hide();
     });
+
+    // 유의사항 내용보기
+    var btn_fold = $('.btn_fold');
+    btn_fold.on('click', function(){
+        var $this = $(this);
+        var $agree_form = $this.parent().parent('.agree_form');
+        if($agree_form.hasClass('is_fold')){
+            $agree_form.removeClass('is_fold').find('.cont_wrap').slideDown();
+            $this.removeClass('is_fold');
+        }else{
+            $agree_form.addClass('is_fold').find('.cont_wrap').slideUp();
+            $this.addClass('is_fold');
+        }
+    });
+
+    // 견적요청 레이어팝업 열기
+    btn_req_estimate.on('click', function(){
+        var $this = $(this);
+        var $thisPopup = $('.layer_popup.estimate');
+        if($thisPopup.css('display') === 'none'){
+            $thisPopup.css('display', 'block');
+        }
+    });
+
+    // 레이어팝업 닫기
+    $('.layer_popup .btn_close').on('click', function(){
+        var $this = $(this);
+        var $thisPopup = $this.parent().parent('.layer_popup');
+        if($thisPopup.css('display') === 'block'){
+            $thisPopup.css('display','none');
+        }
+    });
+
+    
 });
 
 
@@ -59,12 +97,11 @@ $(function(){
 $(document).ready(function(){
     var fileTarget = $('.ipbx_file input[type="file"]');
     fileTarget.on('change', function(){ 
-        console.log("file")
         if(window.FileReader){  // modern browser
-        var filename = $(this)[0].files[0].name;
+           var filename = $(this)[0].files[0].name;
         } 
         else {  // old IE
-        var filename = $(this).val().split('/').pop().split('\\').pop();  // 파일명만 추출
+         var filename = $(this).val().split('/').pop().split('\\').pop();  // 파일명만 추출
         }
         // 추출한 파일명 삽입
         $(this).siblings('.upload_name').val(filename);
