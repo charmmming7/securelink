@@ -183,6 +183,10 @@ input{-webkit-appearance:none;-moz-appearance:none;-o-appearance:none;appearance
             color:$darkgray2;font-size:14px;
             &:last-child{text-align: center;}
         }
+        .btn_more{
+            display:inline-block;width:80px;height: 26px;line-height: 26px;text-align: center;color:$darkgray2;background-color:#b7d5e2;border:1px solid $gray3;
+            @include rnded(4px);
+        }
         .btn_email{
             display:inline-block;width:80px;height: 26px;line-height: 26px;text-align: center;color:$darkgray2;background-color:#d7e7ee;border:1px solid $gray3;
             @include rnded(4px);
@@ -330,9 +334,11 @@ input{-webkit-appearance:none;-moz-appearance:none;-o-appearance:none;appearance
         max-width:1150px;margin:0 auto;
         .tbl-order-history{
             td{font-size:15px;}
+            .btn_more{
+                margin-left:14px;
+            }
             .btn_email{
-                display:inline-block;margin-left:14px;color:$darkgray2;background-color:#d7e7ee;border:1px solid $gray3;
-                @include rnded(4px);
+                margin-left:14px;
             }
         }
     }

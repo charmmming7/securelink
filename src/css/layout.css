@@ -428,6 +428,8 @@ input[type="checkbox"]:checked + label:after { position: absolute; top: 10px; le
 
 .u_tab.tab4 li { width: 25%; }
 
+.u_tab.tab5 li { width: 20%; }
+
 .u_step { overflow: hidden; margin: 20px 0; border-bottom: 5px solid #2d5ba8; }
 
 .u_step .u_tab { margin: 0 auto; margin-bottom: -2px; border: none; }
