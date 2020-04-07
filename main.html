@@ -115,7 +115,7 @@
         <main id="container">
             <div id="content">
 
-                <div class="main_banner">
+                <div class="main_banner onlypc">
                     <div class="main-slider">
                         <ul>
                             <li class="slide01"></li>
@@ -139,8 +139,16 @@
                     </div>
                 </div>
 
+                <div class="main_banner onlymobile">
+                    <h1>필요한 <span>솔루션</span>을 <span>연결</span>해주는 <strong>SECUDOG</strong></h1>
+                </div>
 
                 <div class="container">
+                    <div class="title_wrap solution">
+                        <h1>Solution</h1>
+                        <p>secudog의 솔루션 제품을 소개합니다. 클릭하시면 상세페이지로 이동합니다.</p>
+                    </div>
+
                     <div class="tab_wrap">
                         <!-- tab -->
                         <div class="tab_head">
@@ -317,7 +325,87 @@
                     </div>
                 </div>
 
+                <div class="container">
 
+                    <div class="notice_banner">
+                        <div class="title_wrap notice">
+                            <h1>공지 및 보안뉴스</h1>
+                            <p>궁금한 점이 있으시면 언제든지 물어보세요. 해결될 때까지 친절히 상담해드리겠습니다</p>
+                        </div>
+                        
+                        <div class="notice-slider">
+                            <ul>
+                                <li>
+                                    <div class="inner">
+                                        <div class="tit">
+                                            <h2>공지사항</h2>
+                                            <a href="#" class="btn_read">read more</a>
+                                        </div>
+                                        <div class="cont">
+                                            <h3>"경찰 출석해 조사받으세요"..이메일 열어 보면 랜섬웨어</h3>
+                                            <p>2020.01.15 ‘렌섬웨어의 위험성’ 세미나를 코엑스에서 15:00 – 15:30 동안 진행합니다. </p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="inner">
+                                        <div class="tit">
+                                            <h2>보안뉴스</h2>
+                                            <a href="#" class="btn_read">read more</a>
+                                        </div>
+                                        <div class="cont">
+                                            <h3>"경찰 출석해 조사받으세요"..이메일 열어 보면 랜섬웨어</h3>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="inner">
+                                        <div class="tit">
+                                            <h2>보안뉴스</h2>
+                                            <a href="#" class="btn_read">read more</a>
+                                        </div>
+                                        <div class="cont">
+                                            <h3>"경찰 출석해 조사받으세요"..이메일 열어 보면 랜섬웨어</h3>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="inner">
+                                        <div class="tit">
+                                            <h2>보안뉴스</h2>
+                                            <a href="#" class="btn_read">read more</a>
+                                        </div>
+                                        <div class="cont">
+                                            <h3>"경찰 출석해 조사받으세요"..이메일 열어 보면 랜섬웨어</h3>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="inner">
+                                        <div class="tit">
+                                            <h2>보안뉴스</h2>
+                                            <a href="#" class="btn_read">read more</a>
+                                        </div>
+                                        <div class="cont">
+                                            <h3>"경찰 출석해 조사받으세요"..이메일 열어 보면 랜섬웨어</h3>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="inner">
+                                        <div class="tit">
+                                            <h2>보안뉴스</h2>
+                                            <a href="#" class="btn_read">read more</a>
+                                        </div>
+                                        <div class="cont">
+                                            <h3>"경찰 출석해 조사받으세요"..이메일 열어 보면 랜섬웨어</h3>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
         </main>
         <!-- // container -->
@@ -473,6 +561,33 @@
             var desc = $('.hidden-paging li').eq(index).find('p').html();
             return '<div class="bullet_' + index + '"><strong>'+ title +'</strong><p>' + desc + '</p><span class="ico"></span></div>';
         }
+    });
+
+    $('.notice-slider ul').slick({
+        dots:false,
+        arrows: true,
+        slidesToShow: 4,
+        slidesToScroll: 4,
+        responsive: [
+            {
+            breakpoint: 1200,
+            settings: {
+                centerMode: true,
+                slidesToShow: 3,
+                infinite: false,
+                centerPadding: '0px',
+                }
+            },
+            {
+            breakpoint: 768,
+            settings: {
+                centerMode: true,
+                slidesToShow: 1,
+                infinite: true,
+                centerPadding: '40px',
+                }
+            }
+        ]
     });
     </script>
 </body>
